@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B07DC2727B2BB9C00EDEB7F /* AcessorioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B07DC2627B2BB9C00EDEB7F /* AcessorioTableViewCell.swift */; };
 		2B26023727B2990B00746775 /* DetalhesViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26023627B2990B00746775 /* DetalhesViewMock.swift */; };
 		2B26023927B299B800746775 /* DetalhesCafePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26023827B299B800746775 /* DetalhesCafePresenterTests.swift */; };
 		2B26023B27B29F3000746775 /* FavoritosMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26023A27B29F3000746775 /* FavoritosMock.swift */; };
 		2B26023D27B2A64700746775 /* APIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26023C27B2A64700746775 /* APIMock.swift */; };
+		2B26024227B2B38200746775 /* AcessoriosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26024127B2B38200746775 /* AcessoriosViewController.swift */; };
+		2B269B6F27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269B6E27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift */; };
+		2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */; };
+		2B3965C627B2F02F0093CF85 /* SacolaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */; };
+		2B3965C827B2FD5E0093CF85 /* Sacola.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3965C727B2FD5E0093CF85 /* Sacola.storyboard */; };
+		2B3965CB27B301970093CF85 /* SacolaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CA27B301970093CF85 /* SacolaTableViewCell.swift */; };
+		2B3965CD27B306660093CF85 /* Sacola.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CC27B306660093CF85 /* Sacola.swift */; };
+		2B3965CF27B306960093CF85 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CE27B306960093CF85 /* Produto.swift */; };
+		2B3965D127B30FD80093CF85 /* SacolaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965D027B30FD80093CF85 /* SacolaPresenter.swift */; };
 		2B7BEBFA27B1BFA80088CFE4 /* Favoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7BEBF927B1BFA80088CFE4 /* Favoritos.swift */; };
 		2B7F7F4227B197300054E2D6 /* ContandorIntensidadeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7F7F4127B197300054E2D6 /* ContandorIntensidadeStackView.swift */; };
 		2B87C4F627B142C800F91DAD /* UIImageView+Carregamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C4F527B142C800F91DAD /* UIImageView+Carregamento.swift */; };
@@ -77,10 +87,20 @@
 
 /* Begin PBXFileReference section */
 		1CB1BAF6424E647F643EC60E /* Pods-NospressoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NospressoTests.release.xcconfig"; path = "Target Support Files/Pods-NospressoTests/Pods-NospressoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B07DC2627B2BB9C00EDEB7F /* AcessorioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessorioTableViewCell.swift; sourceTree = "<group>"; };
 		2B26023627B2990B00746775 /* DetalhesViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewMock.swift; sourceTree = "<group>"; };
 		2B26023827B299B800746775 /* DetalhesCafePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesCafePresenterTests.swift; sourceTree = "<group>"; };
 		2B26023A27B29F3000746775 /* FavoritosMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosMock.swift; sourceTree = "<group>"; };
 		2B26023C27B2A64700746775 /* APIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMock.swift; sourceTree = "<group>"; };
+		2B26024127B2B38200746775 /* AcessoriosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosViewController.swift; sourceTree = "<group>"; };
+		2B269B6E27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioViewController.swift; sourceTree = "<group>"; };
+		2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioPresenter.swift; sourceTree = "<group>"; };
+		2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaViewController.swift; sourceTree = "<group>"; };
+		2B3965C727B2FD5E0093CF85 /* Sacola.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sacola.storyboard; sourceTree = "<group>"; };
+		2B3965CA27B301970093CF85 /* SacolaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaTableViewCell.swift; sourceTree = "<group>"; };
+		2B3965CC27B306660093CF85 /* Sacola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sacola.swift; sourceTree = "<group>"; };
+		2B3965CE27B306960093CF85 /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
+		2B3965D027B30FD80093CF85 /* SacolaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaPresenter.swift; sourceTree = "<group>"; };
 		2B7BEBF927B1BFA80088CFE4 /* Favoritos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favoritos.swift; sourceTree = "<group>"; };
 		2B7F7F4127B197300054E2D6 /* ContandorIntensidadeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContandorIntensidadeStackView.swift; sourceTree = "<group>"; };
 		2B87C4F527B142C800F91DAD /* UIImageView+Carregamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Carregamento.swift"; sourceTree = "<group>"; };
@@ -165,11 +185,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B07DC2527B2BB7D00EDEB7F /* Celulas */ = {
+			isa = PBXGroup;
+			children = (
+				2B07DC2627B2BB9C00EDEB7F /* AcessorioTableViewCell.swift */,
+			);
+			path = Celulas;
+			sourceTree = "<group>";
+		};
+		2B07DC2827B2CC5F00EDEB7F /* Celulas */ = {
+			isa = PBXGroup;
+			children = (
+				2B87C4FC27B15BE100F91DAD /* CabecalhoView.xib */,
+				2B87C4FE27B15E5A00F91DAD /* CabecalhoView.swift */,
+			);
+			path = Celulas;
+			sourceTree = "<group>";
+		};
 		2B26023E27B2ADDA00746775 /* Cafes */ = {
 			isa = PBXGroup;
 			children = (
-				2B89113027ADBFC500E9B473 /* Celulas */,
 				2BD9080D27AD934F00A6E07A /* CafesViewController.swift */,
+				2B89113027ADBFC500E9B473 /* Celulas */,
 			);
 			path = Cafes;
 			sourceTree = "<group>";
@@ -180,14 +217,52 @@
 				2BBCF23427AD5D99004F7DE7 /* LaunchScreen.storyboard */,
 				2B87C4FA27B1559A00F91DAD /* Produtos.storyboard */,
 				2BBCF22F27AD5D97004F7DE7 /* Main.storyboard */,
+				2B3965C727B2FD5E0093CF85 /* Sacola.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2B26024027B2B36600746775 /* Acessorios */ = {
+			isa = PBXGroup;
+			children = (
+				2B07DC2527B2BB7D00EDEB7F /* Celulas */,
+				2B26024127B2B38200746775 /* AcessoriosViewController.swift */,
+			);
+			path = Acessorios;
+			sourceTree = "<group>";
+		};
+		2B269B6D27B2DBAD00CA559C /* DetalhesAcessorio */ = {
+			isa = PBXGroup;
+			children = (
+				2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */,
+				2B269B6E27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift */,
+			);
+			path = DetalhesAcessorio;
+			sourceTree = "<group>";
+		};
+		2B3965C427B2F01E0093CF85 /* Sacola */ = {
+			isa = PBXGroup;
+			children = (
+				2B3965C927B301710093CF85 /* Celulas */,
+				2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */,
+				2B3965D027B30FD80093CF85 /* SacolaPresenter.swift */,
+			);
+			path = Sacola;
+			sourceTree = "<group>";
+		};
+		2B3965C927B301710093CF85 /* Celulas */ = {
+			isa = PBXGroup;
+			children = (
+				2B3965CA27B301970093CF85 /* SacolaTableViewCell.swift */,
+			);
+			path = Celulas;
 			sourceTree = "<group>";
 		};
 		2B7BEBF827B1BF870088CFE4 /* Servicos */ = {
 			isa = PBXGroup;
 			children = (
 				2B7BEBF927B1BFA80088CFE4 /* Favoritos.swift */,
+				2B3965CC27B306660093CF85 /* Sacola.swift */,
 			);
 			path = Servicos;
 			sourceTree = "<group>";
@@ -224,8 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				2B89113127ADBFFF00E9B473 /* CafeTableViewCell.swift */,
-				2B87C4FC27B15BE100F91DAD /* CabecalhoView.xib */,
-				2B87C4FE27B15E5A00F91DAD /* CabecalhoView.swift */,
 			);
 			path = Celulas;
 			sourceTree = "<group>";
@@ -308,6 +381,7 @@
 				2BBCF26327AD5E74004F7DE7 /* Capsulas.swift */,
 				2BBCF26527AD5E99004F7DE7 /* Acessorios.swift */,
 				2BBCF26727AD5EA7004F7DE7 /* Maquinas.swift */,
+				2B3965CE27B306960093CF85 /* Produto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -343,6 +417,10 @@
 		2BD9080A27AD928700A6E07A /* Telas */ = {
 			isa = PBXGroup;
 			children = (
+				2B3965C427B2F01E0093CF85 /* Sacola */,
+				2B269B6D27B2DBAD00CA559C /* DetalhesAcessorio */,
+				2B07DC2827B2CC5F00EDEB7F /* Celulas */,
+				2B26024027B2B36600746775 /* Acessorios */,
 				2B26023E27B2ADDA00746775 /* Cafes */,
 				2B87C50027B168AB00F91DAD /* DetalhesCafe */,
 				2BD9080B27AD931D00A6E07A /* MenuProdutosViewController.swift */,
@@ -507,6 +585,7 @@
 				2B87C4FD27B15BE100F91DAD /* CabecalhoView.xib in Resources */,
 				2BBCF23127AD5D97004F7DE7 /* Main.storyboard in Resources */,
 				2BD9080827AD8F4F00A6E07A /* OpenSans-Regular.ttf in Resources */,
+				2B3965C827B2FD5E0093CF85 /* Sacola.storyboard in Resources */,
 				2BD9080027AD8F4F00A6E07A /* OpenSans-LightItalic.ttf in Resources */,
 				2BD9080527AD8F4F00A6E07A /* OpenSans-Italic.ttf in Resources */,
 			);
@@ -637,6 +716,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B87C50227B168CE00F91DAD /* DetalhesCafeViewController.swift in Sources */,
+				2B269B6F27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift in Sources */,
 				2B87C4F627B142C800F91DAD /* UIImageView+Carregamento.swift in Sources */,
 				2BBCF22A27AD5D97004F7DE7 /* AppDelegate.swift in Sources */,
 				2B89113227ADBFFF00E9B473 /* CafeTableViewCell.swift in Sources */,
@@ -646,17 +726,25 @@
 				2BD9080C27AD931D00A6E07A /* MenuProdutosViewController.swift in Sources */,
 				2BBCF25F27AD5DF6004F7DE7 /* ErroRequisicao.swift in Sources */,
 				2B87C50627B16B2B00F91DAD /* DetalhesCafeView.swift in Sources */,
+				2B07DC2727B2BB9C00EDEB7F /* AcessorioTableViewCell.swift in Sources */,
 				2BBCF25B27AD5DD3004F7DE7 /* API.swift in Sources */,
+				2B3965CF27B306960093CF85 /* Produto.swift in Sources */,
 				2BBCF22C27AD5D97004F7DE7 /* SceneDelegate.swift in Sources */,
+				2B3965CD27B306660093CF85 /* Sacola.swift in Sources */,
 				2BBCF26627AD5E99004F7DE7 /* Acessorios.swift in Sources */,
+				2B3965CB27B301970093CF85 /* SacolaTableViewCell.swift in Sources */,
 				2B87C4F927B144CD00F91DAD /* Double+Dinheiros.swift in Sources */,
 				2B87C4FF27B15E5A00F91DAD /* CabecalhoView.swift in Sources */,
+				2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */,
 				2B87C50427B1699200F91DAD /* DetalhesCafePresenter.swift in Sources */,
+				2B3965C627B2F02F0093CF85 /* SacolaViewController.swift in Sources */,
 				2B7F7F4227B197300054E2D6 /* ContandorIntensidadeStackView.swift in Sources */,
 				2BBCF26427AD5E74004F7DE7 /* Capsulas.swift in Sources */,
 				2BD9080E27AD934F00A6E07A /* CafesViewController.swift in Sources */,
 				2BBCF25D27AD5DDF004F7DE7 /* Endpoint.swift in Sources */,
+				2B3965D127B30FD80093CF85 /* SacolaPresenter.swift in Sources */,
 				2BBCF26227AD5E67004F7DE7 /* Cafe.swift in Sources */,
+				2B26024227B2B38200746775 /* AcessoriosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,8 +8,6 @@
 import UIKit
 
 class CafeTableViewCell: UITableViewCell {
-
-    
     @IBOutlet weak var capsulaImageView: UIImageView!
     @IBOutlet weak var intensidadeLabel: UILabel!
     @IBOutlet weak var nomeLabel: UILabel!

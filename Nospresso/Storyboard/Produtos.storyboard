@@ -30,11 +30,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item-->
+        <!--Produtos-->
         <scene sceneID="Uhm-d7-o1k">
             <objects>
                 <navigationController navigationBarHidden="YES" id="DVi-6T-Rti" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gqe-wK-DMR"/>
+                    <tabBarItem key="tabBarItem" title="Produtos" image="cart" catalog="system" id="gqe-wK-DMR"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Ea-Ff-P40">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -44,7 +44,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CU3-6s-57h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-718.84057971014499" y="77.678571428571431"/>
+            <point key="canvasLocation" x="191.30434782608697" y="77.678571428571431"/>
         </scene>
         <!--Produtos-->
         <scene sceneID="Yei-oB-Nuu">
@@ -55,13 +55,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCx-NO-1p2" userLabel="CafeView">
-                                <rect key="frame" x="0.0" y="44" width="414" height="272.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="256.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="capsulas-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="BXv-eo-WKh">
-                                        <rect key="frame" x="278" y="68.5" width="136" height="136"/>
+                                        <rect key="frame" x="278" y="60" width="136" height="136"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s4J-en-6Bl">
-                                        <rect key="frame" x="20" y="187.5" width="207.5" height="65"/>
+                                        <rect key="frame" x="20" y="171.5" width="207.5" height="65"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafés" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khf-ab-Vbp">
                                                 <rect key="frame" x="0.0" y="0.0" width="71" height="35.5"/>
@@ -91,13 +91,13 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nt3-a3-FUg" userLabel="MaquinasView">
-                                <rect key="frame" x="0.0" y="316.5" width="414" height="273.5"/>
+                                <rect key="frame" x="0.0" y="300.5" width="414" height="256.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maquina-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="v8T-YG-54e">
-                                        <rect key="frame" x="294" y="64" width="120" height="146"/>
+                                        <rect key="frame" x="294" y="55.5" width="120" height="146"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1wz-vR-KXk">
-                                        <rect key="frame" x="20" y="188.5" width="141.5" height="65"/>
+                                        <rect key="frame" x="20" y="171.5" width="141.5" height="65"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Máquinas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba2-NL-hBZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="127.5" height="35.5"/>
@@ -115,21 +115,25 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="maquinas"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="v8T-YG-54e" firstAttribute="centerY" secondItem="Nt3-a3-FUg" secondAttribute="centerY" id="3zT-Mh-sJu"/>
                                     <constraint firstItem="1wz-vR-KXk" firstAttribute="leading" secondItem="Nt3-a3-FUg" secondAttribute="leading" constant="20" id="fm3-lp-GqQ"/>
                                     <constraint firstAttribute="trailing" secondItem="v8T-YG-54e" secondAttribute="trailing" id="iXp-K2-hVk"/>
                                     <constraint firstAttribute="bottom" secondItem="1wz-vR-KXk" secondAttribute="bottom" constant="20" id="muQ-8n-rmH"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cdZ-NY-hqh" appends="YES" id="zK5-GU-ex5"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mM0-A3-HMp" userLabel="AcessoriosView">
-                                <rect key="frame" x="0.0" y="590" width="414" height="272"/>
+                                <rect key="frame" x="0.0" y="557" width="414" height="256"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xicaras-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="9ar-Tl-BkY">
-                                        <rect key="frame" x="268" y="62.5" width="146" height="147"/>
+                                        <rect key="frame" x="268" y="54.5" width="146" height="147"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NcP-mW-h9f">
-                                        <rect key="frame" x="20" y="187" width="144" height="65"/>
+                                        <rect key="frame" x="20" y="171" width="144" height="65"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acessórios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn5-Gr-d4F">
                                                 <rect key="frame" x="0.0" y="0.0" width="137.5" height="35.5"/>
@@ -147,12 +151,16 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" name="acessorios"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="9ar-Tl-BkY" firstAttribute="centerY" secondItem="mM0-A3-HMp" secondAttribute="centerY" id="SeX-f6-tpa"/>
                                     <constraint firstAttribute="trailing" secondItem="9ar-Tl-BkY" secondAttribute="trailing" id="YGo-7a-8nY"/>
                                     <constraint firstItem="NcP-mW-h9f" firstAttribute="leading" secondItem="mM0-A3-HMp" secondAttribute="leading" constant="20" id="dxd-jJ-S4i"/>
                                     <constraint firstAttribute="bottom" secondItem="NcP-mW-h9f" secondAttribute="bottom" constant="20" id="wgd-rD-HxO"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PVU-yD-AFW" appends="YES" id="GcU-3r-SFJ"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bA0-tU-4W4"/>
@@ -173,6 +181,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Produtos" id="bTQ-YY-hIu"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WI7-ce-cCG" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="nWe-hL-wpC" userLabel="Toque cafe">
@@ -180,8 +189,243 @@
                         <segue destination="wm2-Yd-Ap7" kind="show" id="uFI-od-nBM"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="cdZ-NY-hqh"/>
+                <tapGestureRecognizer id="PVU-yD-AFW" userLabel="Toque Acessorios">
+                    <connections>
+                        <segue destination="suF-ph-lgQ" kind="show" id="ErQ-fX-T0r"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="252.17391304347828" y="77.678571428571431"/>
+            <point key="canvasLocation" x="1162.3188405797102" y="77.678571428571431"/>
+        </scene>
+        <!--Acessórios-->
+        <scene sceneID="8lF-H2-Nix">
+            <objects>
+                <viewController title="Acessórios" id="suF-ph-lgQ" customClass="AcessoriosViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kgn-5U-E8R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-m4-OM7">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="acessorio-celula" rowHeight="100" id="PEz-vK-6JW" customClass="AcessorioTableViewCell" customModule="Nospresso" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PEz-vK-6JW" id="mCb-R8-ST3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xicaras-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="G4S-go-paM">
+                                                    <rect key="frame" x="16" y="9" width="82" height="82"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="82" id="rnw-1A-Nd3"/>
+                                                        <constraint firstAttribute="width" constant="82" id="shZ-8W-k0K"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ui6-dk-Y3t">
+                                                    <rect key="frame" x="119" y="9" width="231" height="48"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gd0-86-YEu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="231" height="27.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="20"/>
+                                                            <color key="textColor" name="texto-cinza"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb8-cx-2hx" userLabel="PrecoLabel">
+                                                            <rect key="frame" x="0.0" y="28.5" width="231" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                            <color key="textColor" name="preco"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-7l-RD9">
+                                                    <rect key="frame" x="350" y="8.5" width="40" height="83"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gze-Si-m4K" userLabel="LikeButton">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="r6M-kc-Cw5"/>
+                                                            </constraints>
+                                                            <color key="tintColor" name="texto-cinza"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" title="" image="heart" catalog="system">
+                                                                <color key="titleColor" name="texto-cinza"/>
+                                                            </state>
+                                                            <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="">
+                                                                <color key="baseForegroundColor" name="texto-cinza"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhN-5z-afe" userLabel="BagButton">
+                                                            <rect key="frame" x="0.0" y="43" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="sPV-KJ-V0Y"/>
+                                                            </constraints>
+                                                            <color key="tintColor" name="texto-cinza"/>
+                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <state key="normal" image="bag.badge.plus" catalog="system">
+                                                                <color key="titleColor" name="texto-cinza"/>
+                                                            </state>
+                                                            <buttonConfiguration key="configuration" style="plain" image="bag.badge.plus" catalog="system">
+                                                                <color key="baseForegroundColor" name="texto-cinza"/>
+                                                            </buttonConfiguration>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="4iZ-fc-Ir0"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ui6-dk-Y3t" firstAttribute="leading" secondItem="G4S-go-paM" secondAttribute="trailing" constant="21" id="9Bh-BJ-5Tb"/>
+                                                <constraint firstItem="vMc-7l-RD9" firstAttribute="centerY" secondItem="mCb-R8-ST3" secondAttribute="centerY" id="MmB-BP-OcF"/>
+                                                <constraint firstItem="G4S-go-paM" firstAttribute="leading" secondItem="mCb-R8-ST3" secondAttribute="leading" constant="16" id="azU-yI-u7Z"/>
+                                                <constraint firstItem="G4S-go-paM" firstAttribute="centerY" secondItem="mCb-R8-ST3" secondAttribute="centerY" id="fCE-NI-hfX"/>
+                                                <constraint firstItem="Ui6-dk-Y3t" firstAttribute="top" secondItem="G4S-go-paM" secondAttribute="top" id="v54-Th-Df7"/>
+                                                <constraint firstAttribute="trailing" secondItem="vMc-7l-RD9" secondAttribute="trailing" constant="24" id="vgt-Cj-nP3"/>
+                                                <constraint firstItem="Ui6-dk-Y3t" firstAttribute="trailing" secondItem="vMc-7l-RD9" secondAttribute="leading" id="woZ-0X-rHV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="acessorioImageView" destination="G4S-go-paM" id="cBI-bD-SWZ"/>
+                                            <outlet property="nomeLabel" destination="gd0-86-YEu" id="Os2-8z-jVp"/>
+                                            <outlet property="precoLabel" destination="Cb8-cx-2hx" id="gqb-0N-BHk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Da-Il-ZDR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="X4X-m4-OM7" firstAttribute="top" secondItem="8Da-Il-ZDR" secondAttribute="top" id="6Ey-wo-HKJ"/>
+                            <constraint firstItem="X4X-m4-OM7" firstAttribute="leading" secondItem="8Da-Il-ZDR" secondAttribute="leading" id="DwK-Xp-JJM"/>
+                            <constraint firstItem="8Da-Il-ZDR" firstAttribute="trailing" secondItem="X4X-m4-OM7" secondAttribute="trailing" id="aRg-37-lwH"/>
+                            <constraint firstItem="8Da-Il-ZDR" firstAttribute="bottom" secondItem="X4X-m4-OM7" secondAttribute="bottom" id="xTa-ZF-NdW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Acessórios" id="6o2-R3-2md"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="X4X-m4-OM7" id="b9U-hV-dHy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o4F-zO-Oxe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="806"/>
+        </scene>
+        <!--Detalhes Acessorio View Controller-->
+        <scene sceneID="xKx-nl-rk7">
+            <objects>
+                <viewController storyboardIdentifier="DetalhesAcessorioViewController" id="gsB-Ih-AXY" customClass="DetalhesAcessorioViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NyL-QP-NQ5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="y9y-TQ-bMs">
+                                <rect key="frame" x="16" y="60" width="382" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diW-Hs-x6r">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8ba-Fq-cx9"/>
+                                            <constraint firstAttribute="width" constant="40" id="wMp-1P-KMI"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="toqueBotaoFechar:" destination="gsB-Ih-AXY" eventType="touchUpInside" id="l7k-2I-dmW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVb-tr-V3N">
+                                        <rect key="frame" x="342" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="9Wb-uj-XwW"/>
+                                            <constraint firstAttribute="height" constant="40" id="FDR-Nx-Qoy"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="heart" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xicaras-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="tfh-kc-q90">
+                                <rect key="frame" x="0.0" y="100" width="414" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tfh-kc-q90" secondAttribute="height" multiplier="2:1" id="oD5-Aw-3oa"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Te-ag-OtW">
+                                <rect key="frame" x="16" y="331" width="382" height="228"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xícaras ORIGIN Espresso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mot-AA-xha">
+                                        <rect key="frame" x="2" y="0.0" width="378" height="44"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 115,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4J-3c-whM">
+                                        <rect key="frame" x="136" y="54" width="110" height="33"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uV4-Zj-jzD">
+                                        <rect key="frame" x="1" y="97" width="380" height="131"/>
+                                        <string key="text">As xícaras da coleção Origins são feitas de porcelana com camada dupla, desenhadas pela renomada designer internacional India Mahdavi. A sua forma é inspirada num grão de café, com o exterior branco fosco e um interior colorido envernizado.</string>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORF-2R-mFa">
+                                <rect key="frame" x="16" y="816" width="382" height="46"/>
+                                <color key="backgroundColor" name="verdao-vendedor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="kxX-BO-aEw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=" Adicionar a sacola">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="adicionarASacola:" destination="gsB-Ih-AXY" eventType="touchUpInside" id="zp0-9T-DYf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QBm-Pe-4d7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y9y-TQ-bMs" firstAttribute="top" secondItem="QBm-Pe-4d7" secondAttribute="top" constant="16" id="KUV-6N-CYJ"/>
+                            <constraint firstItem="y9y-TQ-bMs" firstAttribute="leading" secondItem="QBm-Pe-4d7" secondAttribute="leading" constant="16" id="Oka-Nr-idX"/>
+                            <constraint firstItem="tfh-kc-q90" firstAttribute="trailing" secondItem="QBm-Pe-4d7" secondAttribute="trailing" id="XRB-14-Ir5"/>
+                            <constraint firstItem="QBm-Pe-4d7" firstAttribute="trailing" secondItem="y9y-TQ-bMs" secondAttribute="trailing" constant="16" id="bGC-CX-DDS"/>
+                            <constraint firstItem="ORF-2R-mFa" firstAttribute="leading" secondItem="QBm-Pe-4d7" secondAttribute="leading" constant="16" id="ciw-2b-zcw"/>
+                            <constraint firstItem="QBm-Pe-4d7" firstAttribute="trailing" secondItem="ORF-2R-mFa" secondAttribute="trailing" constant="16" id="jwB-aZ-78d"/>
+                            <constraint firstItem="tfh-kc-q90" firstAttribute="top" secondItem="y9y-TQ-bMs" secondAttribute="bottom" id="lNg-1t-QJb"/>
+                            <constraint firstItem="QBm-Pe-4d7" firstAttribute="bottom" secondItem="ORF-2R-mFa" secondAttribute="bottom" id="nJF-ry-Piy"/>
+                            <constraint firstItem="6Te-ag-OtW" firstAttribute="top" secondItem="tfh-kc-q90" secondAttribute="bottom" constant="24" id="o6h-HM-nHe"/>
+                            <constraint firstItem="QBm-Pe-4d7" firstAttribute="trailing" secondItem="6Te-ag-OtW" secondAttribute="trailing" constant="16" id="ueZ-3v-T5o"/>
+                            <constraint firstItem="6Te-ag-OtW" firstAttribute="leading" secondItem="QBm-Pe-4d7" secondAttribute="leading" constant="16" id="utg-vC-jUX"/>
+                            <constraint firstItem="tfh-kc-q90" firstAttribute="leading" secondItem="QBm-Pe-4d7" secondAttribute="leading" id="y8f-um-8sg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="acessorioImageView" destination="tfh-kc-q90" id="C0y-YF-CRH"/>
+                        <outlet property="descricaoLabel" destination="uV4-Zj-jzD" id="AGm-tw-nHY"/>
+                        <outlet property="favoritoButton" destination="jVb-tr-V3N" id="EsQ-hx-GaG"/>
+                        <outlet property="nomeLabel" destination="Mot-AA-xha" id="aKI-ez-wDx"/>
+                        <outlet property="precoLabel" destination="b4J-3c-whM" id="YrD-Eq-G6F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K3m-0I-3Jb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2013" y="806"/>
         </scene>
         <!--Cafés-->
         <scene sceneID="x49-fu-3Pb">
@@ -192,10 +436,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Vp-cu-vgk">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erro ao carregar os dados..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAD-us-nvY">
-                                        <rect key="frame" x="8" y="373.5" width="398" height="27.5"/>
+                                        <rect key="frame" x="8" y="349" width="398" height="27.5"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -209,7 +453,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dRT-t4-yy0">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cafe-celula" rowHeight="100" id="f2A-IL-uTU" customClass="CafeTableViewCell" customModule="Nospresso" customModuleProvider="target">
@@ -314,7 +558,7 @@
                                 </prototypes>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XPQ-QJ-B54">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rVW-fP-lYc"/>
@@ -344,7 +588,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLN-OV-RlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102.8985507246377" y="77.678571428571431"/>
+            <point key="canvasLocation" x="2013.0434782608697" y="77.678571428571431"/>
         </scene>
         <!--Detalhes Cafe View Controller-->
         <scene sceneID="WyT-JQ-l0a">
@@ -545,15 +789,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rK4-eC-A74" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944.9275362318842" y="77.678571428571431"/>
+            <point key="canvasLocation" x="2855.072463768116" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>
         <image name="bag.badge.plus" catalog="system" width="124" height="128"/>
         <image name="capsulas-inicio" width="136" height="136"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="maquina-inicio" width="120" height="146"/>
         <image name="xicaras-inicio" width="146" height="147"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="acessorios">
             <color red="0.94901960784313721" green="0.8901960784313725" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -29,7 +29,6 @@ class CafesViewController: UIViewController {
             case .erro:
                 activityIndicator.isHidden = true
                 erroView.isHidden = false
-                // TODO: criar view de erro
                 break
             }
         }
@@ -46,7 +45,7 @@ class CafesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // exibe novamente a barra de navegação
-        configurarBarraDeNavegação()
+        configurarBarraDeNavegacao()
     }
     
     // quando a view aparaceu
@@ -59,7 +58,7 @@ class CafesViewController: UIViewController {
         tableView.dataSource = self
     }
     
-    private func configurarBarraDeNavegação() {
+    private func configurarBarraDeNavegacao() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.barTintColor = .cafes
         navigationController?.navigationBar.tintColor = .label
@@ -75,7 +74,6 @@ extension CafesViewController {
 }
 
 // MARK: Delegates
-
 // extension referente por modificar UI
 extension CafesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { 100 }
@@ -85,7 +83,7 @@ extension CafesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let secao = capsulas[section]
         
-        let cabecalho = UINib(nibName: "CabecalhoView", bundle: Bundle.main)
+        let cabecalho = UINib(nibName: "CabecalhoView", bundle: .main)
             .instantiate(withOwner: nil, options: nil).first as? CabecalhoView
         
         cabecalho?.configurar(texto: secao.categoria)
@@ -110,7 +108,7 @@ extension CafesViewController: UITableViewDelegate {
     }
 }
 
-// extension referente por passar os dados para listagem
+// extension respnsável por passar os dados para listagem
 extension CafesViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         capsulas.count

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7pI-mJ-tlX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sacola-->
+        <scene sceneID="3br-nX-6ad">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKM-I0-Qhq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Sacola" id="Usu-zh-eX7" customClass="SacolaViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eUd-Ku-j5w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="158" translatesAutoresizingMaskIntoConstraints="NO" id="ls5-dV-Rxw">
+                                <rect key="frame" x="0.0" y="733" width="414" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB6-q5-aCI">
+                                        <rect key="frame" x="16" y="0.0" width="47" height="80"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
+                                        <color key="textColor" name="texto-cinza"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dt-f0-kUz">
+                                        <rect key="frame" x="351" y="0.0" width="47" height="80"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="18"/>
+                                        <color key="textColor" name="preco"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="fundo-cinza"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3gj-y2-87c"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="0.0" left="16" bottom="0.0" right="16"/>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ESN-e0-rpp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="645"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sacola-celula" rowHeight="100" id="C3e-fc-fv5" customClass="SacolaTableViewCell" customModule="Nospresso" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C3e-fc-fv5" id="m7j-pB-Zcc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maquina-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="9xx-n8-hxj">
+                                                    <rect key="frame" x="16" y="10" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="9xx-n8-hxj" secondAttribute="height" multiplier="1:1" id="UCD-2E-kNF"/>
+                                                        <constraint firstAttribute="width" constant="80" id="fG4-Oq-OCr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="153" translatesAutoresizingMaskIntoConstraints="NO" id="tSm-7s-zMn">
+                                                    <rect key="frame" x="112" y="27.5" width="258" height="45.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="63c-fm-bwe">
+                                                            <rect key="frame" x="0.0" y="0.0" width="67" height="45.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln2-1Z-znQ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="52.5" height="27.5"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="20"/>
+                                                                    <color key="textColor" name="texto-cinza"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gse-99-fbe">
+                                                                    <rect key="frame" x="0.0" y="31.5" width="25.5" height="14"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="10"/>
+                                                                    <color key="textColor" name="maquinas"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMf-iP-gIv">
+                                                            <rect key="frame" x="220" y="13" width="38" height="19.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="14"/>
+                                                            <color key="textColor" name="preco"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tSm-7s-zMn" secondAttribute="trailing" constant="24" id="0Gl-xA-7YR"/>
+                                                <constraint firstItem="tSm-7s-zMn" firstAttribute="centerY" secondItem="m7j-pB-Zcc" secondAttribute="centerY" id="8jV-6q-9l5"/>
+                                                <constraint firstItem="9xx-n8-hxj" firstAttribute="centerY" secondItem="m7j-pB-Zcc" secondAttribute="centerY" id="FHi-nL-I65"/>
+                                                <constraint firstItem="9xx-n8-hxj" firstAttribute="leading" secondItem="m7j-pB-Zcc" secondAttribute="leading" constant="16" id="Sze-Fz-Whs"/>
+                                                <constraint firstItem="tSm-7s-zMn" firstAttribute="leading" secondItem="9xx-n8-hxj" secondAttribute="trailing" constant="16" id="nrL-D3-XfH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aHr-8e-FCN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ESN-e0-rpp" firstAttribute="leading" secondItem="aHr-8e-FCN" secondAttribute="leading" id="6Tz-5s-Nvd"/>
+                            <constraint firstItem="ls5-dV-Rxw" firstAttribute="leading" secondItem="aHr-8e-FCN" secondAttribute="leading" id="7bc-bK-WE6"/>
+                            <constraint firstItem="ls5-dV-Rxw" firstAttribute="top" secondItem="ESN-e0-rpp" secondAttribute="bottom" id="Jbz-Pd-Ifo"/>
+                            <constraint firstItem="aHr-8e-FCN" firstAttribute="bottom" secondItem="ls5-dV-Rxw" secondAttribute="bottom" id="JmE-5B-naM"/>
+                            <constraint firstItem="ESN-e0-rpp" firstAttribute="top" secondItem="aHr-8e-FCN" secondAttribute="top" id="VME-fa-KvJ"/>
+                            <constraint firstItem="aHr-8e-FCN" firstAttribute="trailing" secondItem="ESN-e0-rpp" secondAttribute="trailing" id="YDZ-7Y-FWB"/>
+                            <constraint firstItem="aHr-8e-FCN" firstAttribute="trailing" secondItem="ls5-dV-Rxw" secondAttribute="trailing" id="c4B-4C-pTu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sacola" id="HFZ-jx-tai"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="ESN-e0-rpp" id="bDp-ST-Se2"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1100" y="-643.52678571428567"/>
+        </scene>
+        <!--Sacola-->
+        <scene sceneID="oPn-6c-zma">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7pI-mJ-tlX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sacola" image="bag" catalog="system" id="8IY-Gy-H3b">
+                        <color key="badgeColor" systemColor="systemGray2Color"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dFz-H4-AZN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Usu-zh-eX7" kind="relationship" relationship="rootViewController" id="0s3-2E-5tD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3e-49-WLN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189.85507246376812" y="-643.52678571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bag" catalog="system" width="128" height="128"/>
+        <image name="maquina-inicio" width="120" height="146"/>
+        <namedColor name="fundo-cinza">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="maquinas">
+            <color red="0.86274509803921573" green="0.72156862745098038" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="preco">
+            <color red="0.050980392156862744" green="0.62352941176470589" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="texto-cinza">
+            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
