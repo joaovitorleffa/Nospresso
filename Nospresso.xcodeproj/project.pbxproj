@@ -1,0 +1,1019 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B26023727B2990B00746775 /* DetalhesViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26023627B2990B00746775 /* DetalhesViewMock.swift */; };
+		2B26023927B299B800746775 /* DetalhesCafePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26023827B299B800746775 /* DetalhesCafePresenterTests.swift */; };
+		2B26023B27B29F3000746775 /* FavoritosMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26023A27B29F3000746775 /* FavoritosMock.swift */; };
+		2B26023D27B2A64700746775 /* APIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26023C27B2A64700746775 /* APIMock.swift */; };
+		2B7BEBFA27B1BFA80088CFE4 /* Favoritos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7BEBF927B1BFA80088CFE4 /* Favoritos.swift */; };
+		2B7F7F4227B197300054E2D6 /* ContandorIntensidadeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7F7F4127B197300054E2D6 /* ContandorIntensidadeStackView.swift */; };
+		2B87C4F627B142C800F91DAD /* UIImageView+Carregamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C4F527B142C800F91DAD /* UIImageView+Carregamento.swift */; };
+		2B87C4F927B144CD00F91DAD /* Double+Dinheiros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C4F827B144CD00F91DAD /* Double+Dinheiros.swift */; };
+		2B87C4FB27B1559A00F91DAD /* Produtos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B87C4FA27B1559A00F91DAD /* Produtos.storyboard */; };
+		2B87C4FD27B15BE100F91DAD /* CabecalhoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B87C4FC27B15BE100F91DAD /* CabecalhoView.xib */; };
+		2B87C4FF27B15E5A00F91DAD /* CabecalhoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C4FE27B15E5A00F91DAD /* CabecalhoView.swift */; };
+		2B87C50227B168CE00F91DAD /* DetalhesCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C50127B168CE00F91DAD /* DetalhesCafeViewController.swift */; };
+		2B87C50427B1699200F91DAD /* DetalhesCafePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C50327B1699200F91DAD /* DetalhesCafePresenter.swift */; };
+		2B87C50627B16B2B00F91DAD /* DetalhesCafeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C50527B16B2B00F91DAD /* DetalhesCafeView.swift */; };
+		2B89113227ADBFFF00E9B473 /* CafeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89113127ADBFFF00E9B473 /* CafeTableViewCell.swift */; };
+		2BBCF22A27AD5D97004F7DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */; };
+		2BBCF22C27AD5D97004F7DE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */; };
+		2BBCF23127AD5D97004F7DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCF22F27AD5D97004F7DE7 /* Main.storyboard */; };
+		2BBCF23327AD5D99004F7DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCF23227AD5D99004F7DE7 /* Assets.xcassets */; };
+		2BBCF23627AD5D99004F7DE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCF23427AD5D99004F7DE7 /* LaunchScreen.storyboard */; };
+		2BBCF24127AD5D99004F7DE7 /* NospressoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF24027AD5D99004F7DE7 /* NospressoTests.swift */; };
+		2BBCF24B27AD5D99004F7DE7 /* NospressoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF24A27AD5D99004F7DE7 /* NospressoUITests.swift */; };
+		2BBCF24D27AD5D99004F7DE7 /* NospressoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF24C27AD5D99004F7DE7 /* NospressoUITestsLaunchTests.swift */; };
+		2BBCF25B27AD5DD3004F7DE7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF25A27AD5DD3004F7DE7 /* API.swift */; };
+		2BBCF25D27AD5DDF004F7DE7 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF25C27AD5DDF004F7DE7 /* Endpoint.swift */; };
+		2BBCF25F27AD5DF6004F7DE7 /* ErroRequisicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF25E27AD5DF6004F7DE7 /* ErroRequisicao.swift */; };
+		2BBCF26227AD5E67004F7DE7 /* Cafe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF26127AD5E67004F7DE7 /* Cafe.swift */; };
+		2BBCF26427AD5E74004F7DE7 /* Capsulas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF26327AD5E74004F7DE7 /* Capsulas.swift */; };
+		2BBCF26627AD5E99004F7DE7 /* Acessorios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF26527AD5E99004F7DE7 /* Acessorios.swift */; };
+		2BBCF26827AD5EA7004F7DE7 /* Maquinas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF26727AD5EA7004F7DE7 /* Maquinas.swift */; };
+		2BD907FB27AD8F4F00A6E07A /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907EC27AD8F4E00A6E07A /* OpenSans-Light.ttf */; };
+		2BD907FC27AD8F4F00A6E07A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907ED27AD8F4E00A6E07A /* OpenSans-Bold.ttf */; };
+		2BD907FF27AD8F4F00A6E07A /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F027AD8F4E00A6E07A /* LICENSE.txt */; };
+		2BD9080027AD8F4F00A6E07A /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F127AD8F4E00A6E07A /* OpenSans-LightItalic.ttf */; };
+		2BD9080127AD8F4F00A6E07A /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F227AD8F4E00A6E07A /* OpenSans-SemiBoldItalic.ttf */; };
+		2BD9080227AD8F4F00A6E07A /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F327AD8F4E00A6E07A /* OpenSans-SemiBold.ttf */; };
+		2BD9080327AD8F4F00A6E07A /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F427AD8F4E00A6E07A /* OpenSans-ExtraBoldItalic.ttf */; };
+		2BD9080427AD8F4F00A6E07A /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F527AD8F4F00A6E07A /* OpenSans-BoldItalic.ttf */; };
+		2BD9080527AD8F4F00A6E07A /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F627AD8F4F00A6E07A /* OpenSans-Italic.ttf */; };
+		2BD9080627AD8F4F00A6E07A /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F727AD8F4F00A6E07A /* OpenSans-Medium.ttf */; };
+		2BD9080727AD8F4F00A6E07A /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F827AD8F4F00A6E07A /* OpenSans-ExtraBold.ttf */; };
+		2BD9080827AD8F4F00A6E07A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907F927AD8F4F00A6E07A /* OpenSans-Regular.ttf */; };
+		2BD9080927AD8F4F00A6E07A /* OpenSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BD907FA27AD8F4F00A6E07A /* OpenSans-MediumItalic.ttf */; };
+		2BD9080C27AD931D00A6E07A /* MenuProdutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9080B27AD931D00A6E07A /* MenuProdutosViewController.swift */; };
+		2BD9080E27AD934F00A6E07A /* CafesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9080D27AD934F00A6E07A /* CafesViewController.swift */; };
+		2BD9081127AD982F00A6E07A /* UIColor+Paleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9081027AD982F00A6E07A /* UIColor+Paleta.swift */; };
+		367C5BD2F79EA2FB32801901 /* Pods_Nospresso_NospressoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889C84A4C1CC250D57C4EBA1 /* Pods_Nospresso_NospressoUITests.framework */; };
+		C3FFC44CE7549C8BF25784E2 /* Pods_NospressoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A304639A3B0C7EB5EEB2901C /* Pods_NospressoTests.framework */; };
+		C6B07FE66C98B271055F9C68 /* Pods_Nospresso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB14939DA49F1B82FC2CAA6 /* Pods_Nospresso.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BBCF23D27AD5D99004F7DE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BBCF21E27AD5D97004F7DE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BBCF22527AD5D97004F7DE7;
+			remoteInfo = Nospresso;
+		};
+		2BBCF24727AD5D99004F7DE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BBCF21E27AD5D97004F7DE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BBCF22527AD5D97004F7DE7;
+			remoteInfo = Nospresso;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CB1BAF6424E647F643EC60E /* Pods-NospressoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NospressoTests.release.xcconfig"; path = "Target Support Files/Pods-NospressoTests/Pods-NospressoTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B26023627B2990B00746775 /* DetalhesViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewMock.swift; sourceTree = "<group>"; };
+		2B26023827B299B800746775 /* DetalhesCafePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesCafePresenterTests.swift; sourceTree = "<group>"; };
+		2B26023A27B29F3000746775 /* FavoritosMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosMock.swift; sourceTree = "<group>"; };
+		2B26023C27B2A64700746775 /* APIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMock.swift; sourceTree = "<group>"; };
+		2B7BEBF927B1BFA80088CFE4 /* Favoritos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favoritos.swift; sourceTree = "<group>"; };
+		2B7F7F4127B197300054E2D6 /* ContandorIntensidadeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContandorIntensidadeStackView.swift; sourceTree = "<group>"; };
+		2B87C4F527B142C800F91DAD /* UIImageView+Carregamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Carregamento.swift"; sourceTree = "<group>"; };
+		2B87C4F827B144CD00F91DAD /* Double+Dinheiros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Dinheiros.swift"; sourceTree = "<group>"; };
+		2B87C4FA27B1559A00F91DAD /* Produtos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Produtos.storyboard; sourceTree = "<group>"; };
+		2B87C4FC27B15BE100F91DAD /* CabecalhoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CabecalhoView.xib; sourceTree = "<group>"; };
+		2B87C4FE27B15E5A00F91DAD /* CabecalhoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabecalhoView.swift; sourceTree = "<group>"; };
+		2B87C50127B168CE00F91DAD /* DetalhesCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesCafeViewController.swift; sourceTree = "<group>"; };
+		2B87C50327B1699200F91DAD /* DetalhesCafePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesCafePresenter.swift; sourceTree = "<group>"; };
+		2B87C50527B16B2B00F91DAD /* DetalhesCafeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesCafeView.swift; sourceTree = "<group>"; };
+		2B89113127ADBFFF00E9B473 /* CafeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeTableViewCell.swift; sourceTree = "<group>"; };
+		2BBCF22627AD5D97004F7DE7 /* Nospresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nospresso.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2BBCF23027AD5D97004F7DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2BBCF23227AD5D99004F7DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BBCF23527AD5D99004F7DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BBCF23727AD5D99004F7DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BBCF23C27AD5D99004F7DE7 /* NospressoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NospressoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBCF24027AD5D99004F7DE7 /* NospressoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NospressoTests.swift; sourceTree = "<group>"; };
+		2BBCF24627AD5D99004F7DE7 /* NospressoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NospressoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BBCF24A27AD5D99004F7DE7 /* NospressoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NospressoUITests.swift; sourceTree = "<group>"; };
+		2BBCF24C27AD5D99004F7DE7 /* NospressoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NospressoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2BBCF25A27AD5DD3004F7DE7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		2BBCF25C27AD5DDF004F7DE7 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		2BBCF25E27AD5DF6004F7DE7 /* ErroRequisicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErroRequisicao.swift; sourceTree = "<group>"; };
+		2BBCF26127AD5E67004F7DE7 /* Cafe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe.swift; sourceTree = "<group>"; };
+		2BBCF26327AD5E74004F7DE7 /* Capsulas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capsulas.swift; sourceTree = "<group>"; };
+		2BBCF26527AD5E99004F7DE7 /* Acessorios.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acessorios.swift; sourceTree = "<group>"; };
+		2BBCF26727AD5EA7004F7DE7 /* Maquinas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maquinas.swift; sourceTree = "<group>"; };
+		2BD907EC27AD8F4E00A6E07A /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Light.ttf"; path = "Open_Sans/OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		2BD907ED27AD8F4E00A6E07A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		2BD907F027AD8F4E00A6E07A /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.txt; path = Open_Sans/LICENSE.txt; sourceTree = "<group>"; };
+		2BD907F127AD8F4E00A6E07A /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-LightItalic.ttf"; path = "Open_Sans/OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		2BD907F227AD8F4E00A6E07A /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiBoldItalic.ttf"; path = "Open_Sans/OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		2BD907F327AD8F4E00A6E07A /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-SemiBold.ttf"; path = "Open_Sans/OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		2BD907F427AD8F4E00A6E07A /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBoldItalic.ttf"; path = "Open_Sans/OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		2BD907F527AD8F4F00A6E07A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-BoldItalic.ttf"; path = "Open_Sans/OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		2BD907F627AD8F4F00A6E07A /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic.ttf"; path = "Open_Sans/OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		2BD907F727AD8F4F00A6E07A /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Medium.ttf"; path = "Open_Sans/OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		2BD907F827AD8F4F00A6E07A /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-ExtraBold.ttf"; path = "Open_Sans/OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2BD907F927AD8F4F00A6E07A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "Open_Sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		2BD907FA27AD8F4F00A6E07A /* OpenSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-MediumItalic.ttf"; path = "Open_Sans/OpenSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		2BD9080B27AD931D00A6E07A /* MenuProdutosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProdutosViewController.swift; sourceTree = "<group>"; };
+		2BD9080D27AD934F00A6E07A /* CafesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesViewController.swift; sourceTree = "<group>"; };
+		2BD9081027AD982F00A6E07A /* UIColor+Paleta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Paleta.swift"; sourceTree = "<group>"; };
+		359DE79E610BD6425A8CD069 /* Pods-Nospresso-NospressoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A635C7947898F20ECAA6A14 /* Pods-Nospresso-NospressoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.release.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4C33088E0CDF2A69F4DC0E1F /* Pods-Nospresso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso.release.xcconfig"; path = "Target Support Files/Pods-Nospresso/Pods-Nospresso.release.xcconfig"; sourceTree = "<group>"; };
+		889C84A4C1CC250D57C4EBA1 /* Pods_Nospresso_NospressoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nospresso_NospressoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CBFCDC1928927FBB92CDFD1 /* Pods-NospressoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NospressoTests.debug.xcconfig"; path = "Target Support Files/Pods-NospressoTests/Pods-NospressoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A00C163146105E09FC9166D9 /* Pods-Nospresso.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso.debug.xcconfig"; path = "Target Support Files/Pods-Nospresso/Pods-Nospresso.debug.xcconfig"; sourceTree = "<group>"; };
+		A304639A3B0C7EB5EEB2901C /* Pods_NospressoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NospressoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB14939DA49F1B82FC2CAA6 /* Pods_Nospresso.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nospresso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BBCF22327AD5D97004F7DE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B07FE66C98B271055F9C68 /* Pods_Nospresso.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BBCF23927AD5D99004F7DE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FFC44CE7549C8BF25784E2 /* Pods_NospressoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BBCF24327AD5D99004F7DE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				367C5BD2F79EA2FB32801901 /* Pods_Nospresso_NospressoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B26023E27B2ADDA00746775 /* Cafes */ = {
+			isa = PBXGroup;
+			children = (
+				2B89113027ADBFC500E9B473 /* Celulas */,
+				2BD9080D27AD934F00A6E07A /* CafesViewController.swift */,
+			);
+			path = Cafes;
+			sourceTree = "<group>";
+		};
+		2B26023F27B2AE2500746775 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				2BBCF23427AD5D99004F7DE7 /* LaunchScreen.storyboard */,
+				2B87C4FA27B1559A00F91DAD /* Produtos.storyboard */,
+				2BBCF22F27AD5D97004F7DE7 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		2B7BEBF827B1BF870088CFE4 /* Servicos */ = {
+			isa = PBXGroup;
+			children = (
+				2B7BEBF927B1BFA80088CFE4 /* Favoritos.swift */,
+			);
+			path = Servicos;
+			sourceTree = "<group>";
+		};
+		2B7F7F4027B196EA0054E2D6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2B7F7F4127B197300054E2D6 /* ContandorIntensidadeStackView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2B87C4F727B144AD00F91DAD /* Extensoes */ = {
+			isa = PBXGroup;
+			children = (
+				2BD9080F27AD980800A6E07A /* UI */,
+				2B87C4F827B144CD00F91DAD /* Double+Dinheiros.swift */,
+			);
+			path = Extensoes;
+			sourceTree = "<group>";
+		};
+		2B87C50027B168AB00F91DAD /* DetalhesCafe */ = {
+			isa = PBXGroup;
+			children = (
+				2B7F7F4027B196EA0054E2D6 /* Components */,
+				2B87C50127B168CE00F91DAD /* DetalhesCafeViewController.swift */,
+				2B87C50327B1699200F91DAD /* DetalhesCafePresenter.swift */,
+				2B87C50527B16B2B00F91DAD /* DetalhesCafeView.swift */,
+			);
+			path = DetalhesCafe;
+			sourceTree = "<group>";
+		};
+		2B89113027ADBFC500E9B473 /* Celulas */ = {
+			isa = PBXGroup;
+			children = (
+				2B89113127ADBFFF00E9B473 /* CafeTableViewCell.swift */,
+				2B87C4FC27B15BE100F91DAD /* CabecalhoView.xib */,
+				2B87C4FE27B15E5A00F91DAD /* CabecalhoView.swift */,
+			);
+			path = Celulas;
+			sourceTree = "<group>";
+		};
+		2BBCF21D27AD5D97004F7DE7 = {
+			isa = PBXGroup;
+			children = (
+				2BBCF22827AD5D97004F7DE7 /* Nospresso */,
+				2BBCF23F27AD5D99004F7DE7 /* NospressoTests */,
+				2BBCF24927AD5D99004F7DE7 /* NospressoUITests */,
+				2BBCF22727AD5D97004F7DE7 /* Products */,
+				5265DF920DAE31FB6E1B21D7 /* Pods */,
+				B723645101E1C40665AE6F98 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2BBCF22727AD5D97004F7DE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BBCF22627AD5D97004F7DE7 /* Nospresso.app */,
+				2BBCF23C27AD5D99004F7DE7 /* NospressoTests.xctest */,
+				2BBCF24627AD5D99004F7DE7 /* NospressoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BBCF22827AD5D97004F7DE7 /* Nospresso */ = {
+			isa = PBXGroup;
+			children = (
+				2B26023F27B2AE2500746775 /* Storyboard */,
+				2B7BEBF827B1BF870088CFE4 /* Servicos */,
+				2B87C4F727B144AD00F91DAD /* Extensoes */,
+				2BD9080A27AD928700A6E07A /* Telas */,
+				2BD907E827AD8DD100A6E07A /* Recursos */,
+				2BBCF26027AD5E44004F7DE7 /* Models */,
+				2BBCF25927AD5DBC004F7DE7 /* API */,
+				2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */,
+				2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */,
+				2BBCF23227AD5D99004F7DE7 /* Assets.xcassets */,
+				2BBCF23727AD5D99004F7DE7 /* Info.plist */,
+			);
+			path = Nospresso;
+			sourceTree = "<group>";
+		};
+		2BBCF23F27AD5D99004F7DE7 /* NospressoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BBCF24027AD5D99004F7DE7 /* NospressoTests.swift */,
+				2B26023627B2990B00746775 /* DetalhesViewMock.swift */,
+				2B26023827B299B800746775 /* DetalhesCafePresenterTests.swift */,
+				2B26023A27B29F3000746775 /* FavoritosMock.swift */,
+				2B26023C27B2A64700746775 /* APIMock.swift */,
+			);
+			path = NospressoTests;
+			sourceTree = "<group>";
+		};
+		2BBCF24927AD5D99004F7DE7 /* NospressoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BBCF24A27AD5D99004F7DE7 /* NospressoUITests.swift */,
+				2BBCF24C27AD5D99004F7DE7 /* NospressoUITestsLaunchTests.swift */,
+			);
+			path = NospressoUITests;
+			sourceTree = "<group>";
+		};
+		2BBCF25927AD5DBC004F7DE7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2BBCF25A27AD5DD3004F7DE7 /* API.swift */,
+				2BBCF25C27AD5DDF004F7DE7 /* Endpoint.swift */,
+				2BBCF25E27AD5DF6004F7DE7 /* ErroRequisicao.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2BBCF26027AD5E44004F7DE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2BBCF26127AD5E67004F7DE7 /* Cafe.swift */,
+				2BBCF26327AD5E74004F7DE7 /* Capsulas.swift */,
+				2BBCF26527AD5E99004F7DE7 /* Acessorios.swift */,
+				2BBCF26727AD5EA7004F7DE7 /* Maquinas.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2BD907E827AD8DD100A6E07A /* Recursos */ = {
+			isa = PBXGroup;
+			children = (
+				2BD907E927AD8DD900A6E07A /* Fontes */,
+			);
+			path = Recursos;
+			sourceTree = "<group>";
+		};
+		2BD907E927AD8DD900A6E07A /* Fontes */ = {
+			isa = PBXGroup;
+			children = (
+				2BD907F027AD8F4E00A6E07A /* LICENSE.txt */,
+				2BD907ED27AD8F4E00A6E07A /* OpenSans-Bold.ttf */,
+				2BD907F527AD8F4F00A6E07A /* OpenSans-BoldItalic.ttf */,
+				2BD907F827AD8F4F00A6E07A /* OpenSans-ExtraBold.ttf */,
+				2BD907F427AD8F4E00A6E07A /* OpenSans-ExtraBoldItalic.ttf */,
+				2BD907F627AD8F4F00A6E07A /* OpenSans-Italic.ttf */,
+				2BD907EC27AD8F4E00A6E07A /* OpenSans-Light.ttf */,
+				2BD907F127AD8F4E00A6E07A /* OpenSans-LightItalic.ttf */,
+				2BD907F727AD8F4F00A6E07A /* OpenSans-Medium.ttf */,
+				2BD907FA27AD8F4F00A6E07A /* OpenSans-MediumItalic.ttf */,
+				2BD907F927AD8F4F00A6E07A /* OpenSans-Regular.ttf */,
+				2BD907F327AD8F4E00A6E07A /* OpenSans-SemiBold.ttf */,
+				2BD907F227AD8F4E00A6E07A /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = Fontes;
+			sourceTree = "<group>";
+		};
+		2BD9080A27AD928700A6E07A /* Telas */ = {
+			isa = PBXGroup;
+			children = (
+				2B26023E27B2ADDA00746775 /* Cafes */,
+				2B87C50027B168AB00F91DAD /* DetalhesCafe */,
+				2BD9080B27AD931D00A6E07A /* MenuProdutosViewController.swift */,
+			);
+			path = Telas;
+			sourceTree = "<group>";
+		};
+		2BD9080F27AD980800A6E07A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2BD9081027AD982F00A6E07A /* UIColor+Paleta.swift */,
+				2B87C4F527B142C800F91DAD /* UIImageView+Carregamento.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5265DF920DAE31FB6E1B21D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A00C163146105E09FC9166D9 /* Pods-Nospresso.debug.xcconfig */,
+				4C33088E0CDF2A69F4DC0E1F /* Pods-Nospresso.release.xcconfig */,
+				359DE79E610BD6425A8CD069 /* Pods-Nospresso-NospressoUITests.debug.xcconfig */,
+				3A635C7947898F20ECAA6A14 /* Pods-Nospresso-NospressoUITests.release.xcconfig */,
+				8CBFCDC1928927FBB92CDFD1 /* Pods-NospressoTests.debug.xcconfig */,
+				1CB1BAF6424E647F643EC60E /* Pods-NospressoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B723645101E1C40665AE6F98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBB14939DA49F1B82FC2CAA6 /* Pods_Nospresso.framework */,
+				889C84A4C1CC250D57C4EBA1 /* Pods_Nospresso_NospressoUITests.framework */,
+				A304639A3B0C7EB5EEB2901C /* Pods_NospressoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BBCF22527AD5D97004F7DE7 /* Nospresso */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BBCF25027AD5D99004F7DE7 /* Build configuration list for PBXNativeTarget "Nospresso" */;
+			buildPhases = (
+				BCA3CA97680878E2F1C857F5 /* [CP] Check Pods Manifest.lock */,
+				2BBCF22227AD5D97004F7DE7 /* Sources */,
+				2BBCF22327AD5D97004F7DE7 /* Frameworks */,
+				2BBCF22427AD5D97004F7DE7 /* Resources */,
+				6F80777BF634BB0E74DF9200 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nospresso;
+			productName = Nospresso;
+			productReference = 2BBCF22627AD5D97004F7DE7 /* Nospresso.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BBCF23B27AD5D99004F7DE7 /* NospressoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BBCF25327AD5D99004F7DE7 /* Build configuration list for PBXNativeTarget "NospressoTests" */;
+			buildPhases = (
+				D41648368691C51D51ACB82D /* [CP] Check Pods Manifest.lock */,
+				2BBCF23827AD5D99004F7DE7 /* Sources */,
+				2BBCF23927AD5D99004F7DE7 /* Frameworks */,
+				2BBCF23A27AD5D99004F7DE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BBCF23E27AD5D99004F7DE7 /* PBXTargetDependency */,
+			);
+			name = NospressoTests;
+			productName = NospressoTests;
+			productReference = 2BBCF23C27AD5D99004F7DE7 /* NospressoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BBCF24527AD5D99004F7DE7 /* NospressoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BBCF25627AD5D99004F7DE7 /* Build configuration list for PBXNativeTarget "NospressoUITests" */;
+			buildPhases = (
+				6FB33A45E2EBBA7A6BD1E0C8 /* [CP] Check Pods Manifest.lock */,
+				2BBCF24227AD5D99004F7DE7 /* Sources */,
+				2BBCF24327AD5D99004F7DE7 /* Frameworks */,
+				2BBCF24427AD5D99004F7DE7 /* Resources */,
+				4533420E692D5E7A5299A151 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BBCF24827AD5D99004F7DE7 /* PBXTargetDependency */,
+			);
+			name = NospressoUITests;
+			productName = NospressoUITests;
+			productReference = 2BBCF24627AD5D99004F7DE7 /* NospressoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BBCF21E27AD5D97004F7DE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					2BBCF22527AD5D97004F7DE7 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					2BBCF23B27AD5D99004F7DE7 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 2BBCF22527AD5D97004F7DE7;
+					};
+					2BBCF24527AD5D99004F7DE7 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 2BBCF22527AD5D97004F7DE7;
+					};
+				};
+			};
+			buildConfigurationList = 2BBCF22127AD5D97004F7DE7 /* Build configuration list for PBXProject "Nospresso" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BBCF21D27AD5D97004F7DE7;
+			productRefGroup = 2BBCF22727AD5D97004F7DE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BBCF22527AD5D97004F7DE7 /* Nospresso */,
+				2BBCF23B27AD5D99004F7DE7 /* NospressoTests */,
+				2BBCF24527AD5D99004F7DE7 /* NospressoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BBCF22427AD5D97004F7DE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BBCF23627AD5D99004F7DE7 /* LaunchScreen.storyboard in Resources */,
+				2BBCF23327AD5D99004F7DE7 /* Assets.xcassets in Resources */,
+				2BD9080227AD8F4F00A6E07A /* OpenSans-SemiBold.ttf in Resources */,
+				2BD9080627AD8F4F00A6E07A /* OpenSans-Medium.ttf in Resources */,
+				2BD9080127AD8F4F00A6E07A /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				2BD907FF27AD8F4F00A6E07A /* LICENSE.txt in Resources */,
+				2BD9080327AD8F4F00A6E07A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				2BD9080427AD8F4F00A6E07A /* OpenSans-BoldItalic.ttf in Resources */,
+				2BD9080927AD8F4F00A6E07A /* OpenSans-MediumItalic.ttf in Resources */,
+				2B87C4FB27B1559A00F91DAD /* Produtos.storyboard in Resources */,
+				2BD907FB27AD8F4F00A6E07A /* OpenSans-Light.ttf in Resources */,
+				2BD9080727AD8F4F00A6E07A /* OpenSans-ExtraBold.ttf in Resources */,
+				2BD907FC27AD8F4F00A6E07A /* OpenSans-Bold.ttf in Resources */,
+				2B87C4FD27B15BE100F91DAD /* CabecalhoView.xib in Resources */,
+				2BBCF23127AD5D97004F7DE7 /* Main.storyboard in Resources */,
+				2BD9080827AD8F4F00A6E07A /* OpenSans-Regular.ttf in Resources */,
+				2BD9080027AD8F4F00A6E07A /* OpenSans-LightItalic.ttf in Resources */,
+				2BD9080527AD8F4F00A6E07A /* OpenSans-Italic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BBCF23A27AD5D99004F7DE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BBCF24427AD5D99004F7DE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4533420E692D5E7A5299A151 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F80777BF634BB0E74DF9200 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nospresso/Pods-Nospresso-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nospresso/Pods-Nospresso-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nospresso/Pods-Nospresso-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FB33A45E2EBBA7A6BD1E0C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nospresso-NospressoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCA3CA97680878E2F1C857F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nospresso-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D41648368691C51D51ACB82D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NospressoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BBCF22227AD5D97004F7DE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B87C50227B168CE00F91DAD /* DetalhesCafeViewController.swift in Sources */,
+				2B87C4F627B142C800F91DAD /* UIImageView+Carregamento.swift in Sources */,
+				2BBCF22A27AD5D97004F7DE7 /* AppDelegate.swift in Sources */,
+				2B89113227ADBFFF00E9B473 /* CafeTableViewCell.swift in Sources */,
+				2B7BEBFA27B1BFA80088CFE4 /* Favoritos.swift in Sources */,
+				2BBCF26827AD5EA7004F7DE7 /* Maquinas.swift in Sources */,
+				2BD9081127AD982F00A6E07A /* UIColor+Paleta.swift in Sources */,
+				2BD9080C27AD931D00A6E07A /* MenuProdutosViewController.swift in Sources */,
+				2BBCF25F27AD5DF6004F7DE7 /* ErroRequisicao.swift in Sources */,
+				2B87C50627B16B2B00F91DAD /* DetalhesCafeView.swift in Sources */,
+				2BBCF25B27AD5DD3004F7DE7 /* API.swift in Sources */,
+				2BBCF22C27AD5D97004F7DE7 /* SceneDelegate.swift in Sources */,
+				2BBCF26627AD5E99004F7DE7 /* Acessorios.swift in Sources */,
+				2B87C4F927B144CD00F91DAD /* Double+Dinheiros.swift in Sources */,
+				2B87C4FF27B15E5A00F91DAD /* CabecalhoView.swift in Sources */,
+				2B87C50427B1699200F91DAD /* DetalhesCafePresenter.swift in Sources */,
+				2B7F7F4227B197300054E2D6 /* ContandorIntensidadeStackView.swift in Sources */,
+				2BBCF26427AD5E74004F7DE7 /* Capsulas.swift in Sources */,
+				2BD9080E27AD934F00A6E07A /* CafesViewController.swift in Sources */,
+				2BBCF25D27AD5DDF004F7DE7 /* Endpoint.swift in Sources */,
+				2BBCF26227AD5E67004F7DE7 /* Cafe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BBCF23827AD5D99004F7DE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B26023727B2990B00746775 /* DetalhesViewMock.swift in Sources */,
+				2B26023B27B29F3000746775 /* FavoritosMock.swift in Sources */,
+				2B26023927B299B800746775 /* DetalhesCafePresenterTests.swift in Sources */,
+				2BBCF24127AD5D99004F7DE7 /* NospressoTests.swift in Sources */,
+				2B26023D27B2A64700746775 /* APIMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BBCF24227AD5D99004F7DE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BBCF24B27AD5D99004F7DE7 /* NospressoUITests.swift in Sources */,
+				2BBCF24D27AD5D99004F7DE7 /* NospressoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BBCF23E27AD5D99004F7DE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BBCF22527AD5D97004F7DE7 /* Nospresso */;
+			targetProxy = 2BBCF23D27AD5D99004F7DE7 /* PBXContainerItemProxy */;
+		};
+		2BBCF24827AD5D99004F7DE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BBCF22527AD5D97004F7DE7 /* Nospresso */;
+			targetProxy = 2BBCF24727AD5D99004F7DE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BBCF22F27AD5D97004F7DE7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BBCF23027AD5D97004F7DE7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2BBCF23427AD5D99004F7DE7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BBCF23527AD5D99004F7DE7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2BBCF24E27AD5D99004F7DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BBCF24F27AD5D99004F7DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BBCF25127AD5D99004F7DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A00C163146105E09FC9166D9 /* Pods-Nospresso.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BP2C5R8HZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nospresso/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumertz.Nospresso;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BBCF25227AD5D99004F7DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C33088E0CDF2A69F4DC0E1F /* Pods-Nospresso.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BP2C5R8HZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nospresso/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumertz.Nospresso;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BBCF25427AD5D99004F7DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CBFCDC1928927FBB92CDFD1 /* Pods-NospressoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BP2C5R8HZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumertz.NospressoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nospresso.app/Nospresso";
+			};
+			name = Debug;
+		};
+		2BBCF25527AD5D99004F7DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CB1BAF6424E647F643EC60E /* Pods-NospressoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BP2C5R8HZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumertz.NospressoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nospresso.app/Nospresso";
+			};
+			name = Release;
+		};
+		2BBCF25727AD5D99004F7DE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 359DE79E610BD6425A8CD069 /* Pods-Nospresso-NospressoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BP2C5R8HZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumertz.NospressoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nospresso;
+			};
+			name = Debug;
+		};
+		2BBCF25827AD5D99004F7DE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A635C7947898F20ECAA6A14 /* Pods-Nospresso-NospressoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BP2C5R8HZ6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lumertz.NospressoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nospresso;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BBCF22127AD5D97004F7DE7 /* Build configuration list for PBXProject "Nospresso" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BBCF24E27AD5D99004F7DE7 /* Debug */,
+				2BBCF24F27AD5D99004F7DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BBCF25027AD5D99004F7DE7 /* Build configuration list for PBXNativeTarget "Nospresso" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BBCF25127AD5D99004F7DE7 /* Debug */,
+				2BBCF25227AD5D99004F7DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BBCF25327AD5D99004F7DE7 /* Build configuration list for PBXNativeTarget "NospressoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BBCF25427AD5D99004F7DE7 /* Debug */,
+				2BBCF25527AD5D99004F7DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BBCF25627AD5D99004F7DE7 /* Build configuration list for PBXNativeTarget "NospressoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BBCF25727AD5D99004F7DE7 /* Debug */,
+				2BBCF25827AD5D99004F7DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BBCF21E27AD5D97004F7DE7 /* Project object */;
+}
