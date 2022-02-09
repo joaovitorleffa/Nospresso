@@ -9,7 +9,7 @@ import UIKit
 
 protocol DetalhesAcessorioViewControllerProtocolo {
     func atualizarFavorito(valor: Bool)
-    func produtoAdicionadoASacola()
+    func produtoAdicionadoASacola(produto: Produto)
 }
 
 class DetalhesAcessorioViewController: UIViewController {
@@ -57,8 +57,12 @@ extension DetalhesAcessorioViewController: DetalhesAcessorioViewControllerProtoc
         favoritoButton.setImage(imagem, for: .normal)
     }
     
-    func produtoAdicionadoASacola() {
-        // TODO: feedback para o usuário
+    func produtoAdicionadoASacola(produto: Produto) {
+        let alerta = UIAlertController(title: "Produto adicionado a sacola!", message: "Você adicionou o produto \"\(produto.nome)\" a sacola", preferredStyle: .alert)
+        
+        alerta.addAction(UIAlertAction(title: "Show", style: .default))
+        
+        present(alerta, animated: true)
     }
 }
 

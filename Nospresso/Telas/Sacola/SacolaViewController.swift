@@ -9,10 +9,10 @@ import UIKit
 
 protocol SacolaViewControllerProtocolo {
     func recebeu(produtos: [Produto])
-    func atualizarSacola(sacola: [Any]) // TODO: Usar tipo [Sacola]
 }
 
 class SacolaViewController: UIViewController {
+    @IBOutlet weak var valorTotalDaCompra: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var produtos: [Produto] = []
@@ -37,6 +37,7 @@ class SacolaViewController: UIViewController {
     private func configurarTabela() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UINib(nibName: "ProdutoTableViewCell", bundle: nil), forCellReuseIdentifier: ProdutoTableViewCell.identificador)
     }
     
     private func configurarBarraDeNavegacao() {
@@ -62,7 +63,7 @@ extension SacolaViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let acaoRemover = UIContextualAction(style: .normal, title: "Remover") { acao, view, concluirManipulacao in
-            self.acaoParaOGestoRemover()
+            self.presenter?.remover(produto: self.produtos[indexPath.row])
             concluirManipulacao(true)
         }
         
@@ -75,10 +76,6 @@ extension SacolaViewController: UITableViewDelegate {
     func acaoParaOGestoFavoritar() {
         
     }
-    
-    func acaoParaOGestoRemover() {
-        
-    }
 }
 
 extension SacolaViewController: UITableViewDataSource {
@@ -89,22 +86,23 @@ extension SacolaViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = tableView.dequeueReusableCell(withIdentifier: "sacola-celula", for: indexPath)
+        let celula = tableView.dequeueReusableCell(withIdentifier: ProdutoTableViewCell.identificador, for: indexPath)
+        
+        if let celulaDeProduto = celula as? ProdutoTableViewCell {
+            celulaDeProduto.configurar(produto: produtos[indexPath.row])
+        }
         
         return celula
     }
 }
 
-extension SacolaViewController: SacolaViewControllerProtocolo {    
-    func atualizarSacola(sacola: [Any]) {
-        
-    }
-    
+extension SacolaViewController: SacolaViewControllerProtocolo {
     func recebeu(produtos: [Produto]) {
         self.produtos = produtos
-        print(produtos)
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            let total = produtos.reduce(0, { $0 + $1.preco })
+            self.valorTotalDaCompra.text = total.comoDinheiro
         }
     }
 }

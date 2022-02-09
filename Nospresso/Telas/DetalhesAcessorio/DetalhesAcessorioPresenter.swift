@@ -33,7 +33,7 @@ extension DetalhesAcessorioPresenter: DetalhesAcessorioPresenterProtocolo {
         if let acessorio = acessorio {
             let produto = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem)
             sacola?.adicionar(produto: produto)
-            tela?.produtoAdicionadoASacola()
+            tela?.produtoAdicionadoASacola(produto: produto)
         }
     }
 }

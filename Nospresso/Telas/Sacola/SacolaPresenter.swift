@@ -9,6 +9,7 @@ import Foundation
 
 protocol SacolaPresenterProtocolo {
     func telaCarregou()
+    func remover(produto: Produto)
 }
 
 class SacolaPresenter {
@@ -23,11 +24,19 @@ class SacolaPresenter {
     }
 }
 
+extension SacolaPresenter {
+    func buscarProdutos() -> [Produto] {
+        return sacola?.buscar() ?? []
+    }
+}
+
 extension SacolaPresenter: SacolaPresenterProtocolo {
     func telaCarregou() {
-        let sacolaProdutos = sacola?.buscar()
-        if let sacolaProdutos = sacolaProdutos {
-            tela?.recebeu(produtos: sacolaProdutos)
-        }
+        tela?.recebeu(produtos: buscarProdutos())
+    }
+    
+    func remover(produto: Produto) {
+        sacola?.remover(produto: produto)
+        tela?.recebeu(produtos: buscarProdutos())
     }
 }

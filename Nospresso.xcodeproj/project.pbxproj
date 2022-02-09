@@ -17,7 +17,7 @@
 		2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */; };
 		2B3965C627B2F02F0093CF85 /* SacolaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */; };
 		2B3965C827B2FD5E0093CF85 /* Sacola.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3965C727B2FD5E0093CF85 /* Sacola.storyboard */; };
-		2B3965CB27B301970093CF85 /* SacolaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CA27B301970093CF85 /* SacolaTableViewCell.swift */; };
+		2B3965CB27B301970093CF85 /* ProdutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */; };
 		2B3965CD27B306660093CF85 /* Sacola.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CC27B306660093CF85 /* Sacola.swift */; };
 		2B3965CF27B306960093CF85 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CE27B306960093CF85 /* Produto.swift */; };
 		2B3965D127B30FD80093CF85 /* SacolaPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965D027B30FD80093CF85 /* SacolaPresenter.swift */; };
@@ -63,6 +63,7 @@
 		2BD9080C27AD931D00A6E07A /* MenuProdutosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9080B27AD931D00A6E07A /* MenuProdutosViewController.swift */; };
 		2BD9080E27AD934F00A6E07A /* CafesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9080D27AD934F00A6E07A /* CafesViewController.swift */; };
 		2BD9081127AD982F00A6E07A /* UIColor+Paleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9081027AD982F00A6E07A /* UIColor+Paleta.swift */; };
+		2BFE538927B3E1F30051B7DD /* ProdutoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFE538827B3E1F30051B7DD /* ProdutoTableViewCell.xib */; };
 		367C5BD2F79EA2FB32801901 /* Pods_Nospresso_NospressoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889C84A4C1CC250D57C4EBA1 /* Pods_Nospresso_NospressoUITests.framework */; };
 		C3FFC44CE7549C8BF25784E2 /* Pods_NospressoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A304639A3B0C7EB5EEB2901C /* Pods_NospressoTests.framework */; };
 		C6B07FE66C98B271055F9C68 /* Pods_Nospresso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB14939DA49F1B82FC2CAA6 /* Pods_Nospresso.framework */; };
@@ -97,7 +98,7 @@
 		2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioPresenter.swift; sourceTree = "<group>"; };
 		2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaViewController.swift; sourceTree = "<group>"; };
 		2B3965C727B2FD5E0093CF85 /* Sacola.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sacola.storyboard; sourceTree = "<group>"; };
-		2B3965CA27B301970093CF85 /* SacolaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaTableViewCell.swift; sourceTree = "<group>"; };
+		2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoTableViewCell.swift; sourceTree = "<group>"; };
 		2B3965CC27B306660093CF85 /* Sacola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sacola.swift; sourceTree = "<group>"; };
 		2B3965CE27B306960093CF85 /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		2B3965D027B30FD80093CF85 /* SacolaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaPresenter.swift; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		2BD9080B27AD931D00A6E07A /* MenuProdutosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProdutosViewController.swift; sourceTree = "<group>"; };
 		2BD9080D27AD934F00A6E07A /* CafesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesViewController.swift; sourceTree = "<group>"; };
 		2BD9081027AD982F00A6E07A /* UIColor+Paleta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Paleta.swift"; sourceTree = "<group>"; };
+		2BFE538827B3E1F30051B7DD /* ProdutoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProdutoTableViewCell.xib; sourceTree = "<group>"; };
 		359DE79E610BD6425A8CD069 /* Pods-Nospresso-NospressoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A635C7947898F20ECAA6A14 /* Pods-Nospresso-NospressoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.release.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4C33088E0CDF2A69F4DC0E1F /* Pods-Nospresso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso.release.xcconfig"; path = "Target Support Files/Pods-Nospresso/Pods-Nospresso.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,15 +195,6 @@
 			path = Celulas;
 			sourceTree = "<group>";
 		};
-		2B07DC2827B2CC5F00EDEB7F /* Celulas */ = {
-			isa = PBXGroup;
-			children = (
-				2B87C4FC27B15BE100F91DAD /* CabecalhoView.xib */,
-				2B87C4FE27B15E5A00F91DAD /* CabecalhoView.swift */,
-			);
-			path = Celulas;
-			sourceTree = "<group>";
-		};
 		2B26023E27B2ADDA00746775 /* Cafes */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,7 +236,6 @@
 		2B3965C427B2F01E0093CF85 /* Sacola */ = {
 			isa = PBXGroup;
 			children = (
-				2B3965C927B301710093CF85 /* Celulas */,
 				2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */,
 				2B3965D027B30FD80093CF85 /* SacolaPresenter.swift */,
 			);
@@ -253,7 +245,10 @@
 		2B3965C927B301710093CF85 /* Celulas */ = {
 			isa = PBXGroup;
 			children = (
-				2B3965CA27B301970093CF85 /* SacolaTableViewCell.swift */,
+				2B87C4FC27B15BE100F91DAD /* CabecalhoView.xib */,
+				2B87C4FE27B15E5A00F91DAD /* CabecalhoView.swift */,
+				2BFE538827B3E1F30051B7DD /* ProdutoTableViewCell.xib */,
+				2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */,
 			);
 			path = Celulas;
 			sourceTree = "<group>";
@@ -267,12 +262,12 @@
 			path = Servicos;
 			sourceTree = "<group>";
 		};
-		2B7F7F4027B196EA0054E2D6 /* Components */ = {
+		2B7F7F4027B196EA0054E2D6 /* Componentes */ = {
 			isa = PBXGroup;
 			children = (
 				2B7F7F4127B197300054E2D6 /* ContandorIntensidadeStackView.swift */,
 			);
-			path = Components;
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 		2B87C4F727B144AD00F91DAD /* Extensoes */ = {
@@ -287,7 +282,7 @@
 		2B87C50027B168AB00F91DAD /* DetalhesCafe */ = {
 			isa = PBXGroup;
 			children = (
-				2B7F7F4027B196EA0054E2D6 /* Components */,
+				2B7F7F4027B196EA0054E2D6 /* Componentes */,
 				2B87C50127B168CE00F91DAD /* DetalhesCafeViewController.swift */,
 				2B87C50327B1699200F91DAD /* DetalhesCafePresenter.swift */,
 				2B87C50527B16B2B00F91DAD /* DetalhesCafeView.swift */,
@@ -417,9 +412,9 @@
 		2BD9080A27AD928700A6E07A /* Telas */ = {
 			isa = PBXGroup;
 			children = (
+				2BFE538A27B3E5840051B7DD /* Componentes */,
 				2B3965C427B2F01E0093CF85 /* Sacola */,
 				2B269B6D27B2DBAD00CA559C /* DetalhesAcessorio */,
-				2B07DC2827B2CC5F00EDEB7F /* Celulas */,
 				2B26024027B2B36600746775 /* Acessorios */,
 				2B26023E27B2ADDA00746775 /* Cafes */,
 				2B87C50027B168AB00F91DAD /* DetalhesCafe */,
@@ -435,6 +430,14 @@
 				2B87C4F527B142C800F91DAD /* UIImageView+Carregamento.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2BFE538A27B3E5840051B7DD /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				2B3965C927B301710093CF85 /* Celulas */,
+			);
+			path = Componentes;
 			sourceTree = "<group>";
 		};
 		5265DF920DAE31FB6E1B21D7 /* Pods */ = {
@@ -582,6 +585,7 @@
 				2BD907FB27AD8F4F00A6E07A /* OpenSans-Light.ttf in Resources */,
 				2BD9080727AD8F4F00A6E07A /* OpenSans-ExtraBold.ttf in Resources */,
 				2BD907FC27AD8F4F00A6E07A /* OpenSans-Bold.ttf in Resources */,
+				2BFE538927B3E1F30051B7DD /* ProdutoTableViewCell.xib in Resources */,
 				2B87C4FD27B15BE100F91DAD /* CabecalhoView.xib in Resources */,
 				2BBCF23127AD5D97004F7DE7 /* Main.storyboard in Resources */,
 				2BD9080827AD8F4F00A6E07A /* OpenSans-Regular.ttf in Resources */,
@@ -732,7 +736,7 @@
 				2BBCF22C27AD5D97004F7DE7 /* SceneDelegate.swift in Sources */,
 				2B3965CD27B306660093CF85 /* Sacola.swift in Sources */,
 				2BBCF26627AD5E99004F7DE7 /* Acessorios.swift in Sources */,
-				2B3965CB27B301970093CF85 /* SacolaTableViewCell.swift in Sources */,
+				2B3965CB27B301970093CF85 /* ProdutoTableViewCell.swift in Sources */,
 				2B87C4F927B144CD00F91DAD /* Double+Dinheiros.swift in Sources */,
 				2B87C4FF27B15E5A00F91DAD /* CabecalhoView.swift in Sources */,
 				2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */,
