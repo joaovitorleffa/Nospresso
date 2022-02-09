@@ -21,7 +21,7 @@ class SacolaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configurarBarraDeNavegacao()
-        presenter = SacolaPresenter(produtos: produtos, tela: self)
+        presenter = SacolaPresenter(tela: self)
         configurarTabela()
     }
     

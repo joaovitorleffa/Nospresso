@@ -18,6 +18,9 @@
 		2B34FED227B42BC100169803 /* Favoritos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B34FED127B42BC100169803 /* Favoritos.storyboard */; };
 		2B34FED527B42C0300169803 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FED427B42C0300169803 /* FavoritosViewController.swift */; };
 		2B34FED727B42CB200169803 /* FavoritosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FED627B42CB200169803 /* FavoritosPresenter.swift */; };
+		2B34FED927B44DC300169803 /* SacolaPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FED827B44DC300169803 /* SacolaPresenterTests.swift */; };
+		2B34FEDB27B44E3500169803 /* SacolaViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEDA27B44E3500169803 /* SacolaViewMock.swift */; };
+		2B34FEDE27B4510400169803 /* SacolaMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEDD27B4510400169803 /* SacolaMock.swift */; };
 		2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */; };
 		2B3965C627B2F02F0093CF85 /* SacolaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */; };
 		2B3965CB27B301970093CF85 /* ProdutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */; };
@@ -105,6 +108,9 @@
 		2B34FED127B42BC100169803 /* Favoritos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favoritos.storyboard; sourceTree = "<group>"; };
 		2B34FED427B42C0300169803 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
 		2B34FED627B42CB200169803 /* FavoritosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosPresenter.swift; sourceTree = "<group>"; };
+		2B34FED827B44DC300169803 /* SacolaPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaPresenterTests.swift; sourceTree = "<group>"; };
+		2B34FEDA27B44E3500169803 /* SacolaViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaViewMock.swift; sourceTree = "<group>"; };
+		2B34FEDD27B4510400169803 /* SacolaMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaMock.swift; sourceTree = "<group>"; };
 		2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioPresenter.swift; sourceTree = "<group>"; };
 		2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaViewController.swift; sourceTree = "<group>"; };
 		2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoTableViewCell.swift; sourceTree = "<group>"; };
@@ -370,6 +376,9 @@
 				2B26023827B299B800746775 /* DetalhesCafePresenterTests.swift */,
 				2B26023A27B29F3000746775 /* FavoritosMock.swift */,
 				2B26023C27B2A64700746775 /* APIMock.swift */,
+				2B34FED827B44DC300169803 /* SacolaPresenterTests.swift */,
+				2B34FEDA27B44E3500169803 /* SacolaViewMock.swift */,
+				2B34FEDD27B4510400169803 /* SacolaMock.swift */,
 			);
 			path = NospressoTests;
 			sourceTree = "<group>";
@@ -788,9 +797,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B34FEDE27B4510400169803 /* SacolaMock.swift in Sources */,
 				2B26023727B2990B00746775 /* DetalhesViewMock.swift in Sources */,
 				2B26023B27B29F3000746775 /* FavoritosMock.swift in Sources */,
+				2B34FEDB27B44E3500169803 /* SacolaViewMock.swift in Sources */,
 				2B26023927B299B800746775 /* DetalhesCafePresenterTests.swift in Sources */,
+				2B34FED927B44DC300169803 /* SacolaPresenterTests.swift in Sources */,
 				2BBCF24127AD5D99004F7DE7 /* NospressoTests.swift in Sources */,
 				2B26023D27B2A64700746775 /* APIMock.swift in Sources */,
 			);

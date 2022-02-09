@@ -9,19 +9,19 @@ import Foundation
 @testable import Nospresso
 
 class FavoritosMock {
-    var favoritos: Set<Favorito> = []
+    var favoritos: Set<Produto> = []
 }
 
 extension FavoritosMock: FavoritosProtocolo {
-    func estaFavoritado(favorito: Favorito) -> Bool {
+    func estaFavoritado(favorito: Produto) -> Bool {
         favoritos.contains(favorito)
     }
     
-    func adicionar(favorito: Favorito) {
+    func adicionar(favorito: Produto) {
         favoritos.insert(favorito)
     }
     
-    func remover(favorito: Favorito) {
+    func remover(favorito: Produto) {
         favoritos.remove(favorito)
     }
     
@@ -29,7 +29,7 @@ extension FavoritosMock: FavoritosProtocolo {
         favoritos.removeAll()
     }
     
-    func buscar() -> [Favorito] {
+    func buscar() -> [Produto] {
         return Array(favoritos)
     }
 }

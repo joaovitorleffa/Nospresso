@@ -15,16 +15,13 @@ protocol SacolaPresenterProtocolo {
 
 class SacolaPresenter {
     weak var tela: SacolaViewControllerProtocolo?
-    var produtos: [Produto]?
-    var sacola: SacolaProtocolo?
+    var sacola: SacolaProtocolo
     var favoritos: FavoritosProtocolo
     
-    init(produtos: [Produto],
-         tela: SacolaViewControllerProtocolo,
-         sacola: Sacola = Sacola.instancia,
-         favoritos: Favoritos = Favoritos.instancia
+    init(tela: SacolaViewControllerProtocolo,
+         sacola: SacolaProtocolo = Sacola.instancia,
+         favoritos: FavoritosProtocolo = Favoritos.instancia
     ) {
-        self.produtos = produtos
         self.tela = tela
         self.sacola = sacola
         self.favoritos = favoritos
@@ -33,7 +30,7 @@ class SacolaPresenter {
 
 extension SacolaPresenter {
     func buscarProdutos() -> [Produto] {
-        return sacola?.buscar() ?? []
+        return sacola.buscar()
     }
 }
 
@@ -43,7 +40,7 @@ extension SacolaPresenter: SacolaPresenterProtocolo {
     }
     
     func remover(produto: Produto) {
-        sacola?.remover(produto: produto)
+        sacola.remover(produto: produto)
         tela?.recebeu(produtos: buscarProdutos())
     }
     
