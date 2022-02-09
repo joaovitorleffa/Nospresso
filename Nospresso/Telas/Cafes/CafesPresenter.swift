@@ -25,8 +25,6 @@ class CafesPresenter {
 
 extension CafesPresenter: CafesPresenterProtocolo {
     func telaCarregou() {
-        tela.iniciouBuscaPorCapsulas()
-        
         api.requisitar(endpoint: .capsulas) { [weak self] (capsulas: [Capsulas]) in
             self?.tela.recebeu(capsulas: capsulas)
         } falha: { [weak self] erro in

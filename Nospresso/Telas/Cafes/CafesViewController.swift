@@ -8,7 +8,6 @@
 import UIKit
 
 protocol CafesViewControllerProtocolo {
-    func iniciouBuscaPorCapsulas()
     func recebeu(capsulas: [Capsulas])
     func recebeu(erro: ErroRequisicao)
 }
@@ -25,20 +24,9 @@ class CafesViewController: UIViewController {
     
     var estado: Estado = .carregando {
         didSet {
-            switch estado {
-            case .carregando:
-                tableView.isHidden = true
-                erroView.isHidden = true
-                activityIndicator.isHidden = false
-            case .dadosProntos:
-                tableView.isHidden = false
-                erroView.isHidden = true
-                activityIndicator.isHidden = true
-            case .erro:
-                activityIndicator.isHidden = true
-                erroView.isHidden = false
-                break
-            }
+            tableView.isHidden = estado == .carregando || estado == .erro
+            erroView.isHidden = estado == .carregando || estado == .dadosProntos
+            activityIndicator.isHidden = estado == .dadosProntos || estado == .erro
         }
     }
     
@@ -139,10 +127,6 @@ extension CafesViewController: UITableViewDataSource {
 }
 
 extension CafesViewController: CafesViewControllerProtocolo {
-    func iniciouBuscaPorCapsulas() {
-        estado = .carregando
-    }
-    
     func recebeu(capsulas: [Capsulas]) {
         self.capsulas = capsulas
         DispatchQueue.main.async {

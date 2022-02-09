@@ -206,6 +206,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="boW-0j-l2c">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erro ao carregar os dados..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs5-hM-7Vm">
+                                        <rect key="frame" x="8" y="393" width="398" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="gs5-hM-7Vm" firstAttribute="leading" secondItem="boW-0j-l2c" secondAttribute="leading" constant="8" id="eKt-p7-U4E"/>
+                                    <constraint firstAttribute="trailing" secondItem="gs5-hM-7Vm" secondAttribute="trailing" constant="8" id="eTF-vG-q7r"/>
+                                    <constraint firstItem="gs5-hM-7Vm" firstAttribute="centerY" secondItem="boW-0j-l2c" secondAttribute="centerY" id="hHM-q7-aHW"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="X4X-m4-OM7">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -296,19 +313,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="EYv-Cn-BOR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8Da-Il-ZDR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="X4X-m4-OM7" firstAttribute="top" secondItem="8Da-Il-ZDR" secondAttribute="top" id="6Ey-wo-HKJ"/>
+                            <constraint firstItem="boW-0j-l2c" firstAttribute="trailing" secondItem="8Da-Il-ZDR" secondAttribute="trailing" id="9jd-Oz-jms"/>
                             <constraint firstItem="X4X-m4-OM7" firstAttribute="leading" secondItem="8Da-Il-ZDR" secondAttribute="leading" id="DwK-Xp-JJM"/>
+                            <constraint firstItem="EYv-Cn-BOR" firstAttribute="leading" secondItem="8Da-Il-ZDR" secondAttribute="leading" id="Q4Y-C2-wao"/>
+                            <constraint firstItem="EYv-Cn-BOR" firstAttribute="trailing" secondItem="8Da-Il-ZDR" secondAttribute="trailing" id="U0W-mR-bB3"/>
+                            <constraint firstItem="EYv-Cn-BOR" firstAttribute="top" secondItem="Kgn-5U-E8R" secondAttribute="top" id="ZWC-FG-OKa"/>
                             <constraint firstItem="8Da-Il-ZDR" firstAttribute="trailing" secondItem="X4X-m4-OM7" secondAttribute="trailing" id="aRg-37-lwH"/>
+                            <constraint firstItem="boW-0j-l2c" firstAttribute="leading" secondItem="8Da-Il-ZDR" secondAttribute="leading" id="bE9-pJ-EDB"/>
+                            <constraint firstItem="8Da-Il-ZDR" firstAttribute="bottom" secondItem="boW-0j-l2c" secondAttribute="bottom" id="gaD-Zm-fZ8"/>
+                            <constraint firstItem="8Da-Il-ZDR" firstAttribute="bottom" secondItem="EYv-Cn-BOR" secondAttribute="bottom" id="k8q-5f-erZ"/>
+                            <constraint firstItem="boW-0j-l2c" firstAttribute="top" secondItem="Kgn-5U-E8R" secondAttribute="top" id="kOS-xS-Ckj"/>
                             <constraint firstItem="8Da-Il-ZDR" firstAttribute="bottom" secondItem="X4X-m4-OM7" secondAttribute="bottom" id="xTa-ZF-NdW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Acessórios" id="6o2-R3-2md"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="EYv-Cn-BOR" id="vfb-sB-E3C"/>
+                        <outlet property="erroView" destination="boW-0j-l2c" id="a6e-5B-cB7"/>
                         <outlet property="tableView" destination="X4X-m4-OM7" id="b9U-hV-dHy"/>
                     </connections>
                 </viewController>
@@ -523,6 +553,9 @@
                                                             <buttonConfiguration key="configuration" style="plain" image="bag.badge.plus" catalog="system">
                                                                 <color key="baseForegroundColor" name="texto-cinza"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="toqueAdicionarASacola:" destination="f2A-IL-uTU" eventType="touchUpInside" id="fq5-qZ-8h9"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>

@@ -13,11 +13,21 @@ protocol AcessoriosViewControllerProtocolo {
 }
 
 class AcessoriosViewController: UIViewController {
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var erroView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: AcessoriosPresenterProtocolo?
     var acessorios: [AcessorioCategoria] = []
     lazy var api = API()
+    
+    var estado: Estado = .carregando {
+        didSet {
+            tableView.isHidden = estado == .carregando || estado == .erro
+            erroView.isHidden = estado == .carregando || estado == .dadosProntos
+            activityIndicator.isHidden = estado == .dadosProntos || estado == .erro
+        }
+    }
     
     override func viewDidLoad() {
         presenter = AcessoriosPresenter(api: api, tela: self)
@@ -100,15 +110,24 @@ extension AcessoriosViewController: UITableViewDataSource {
     }
 }
 
-extension AcessoriosViewController: AcessoriosViewControllerProtocolo {
+extension AcessoriosViewController: AcessoriosViewControllerProtocolo {    
     func recebeu(acessorios: [AcessorioCategoria]) {
         self.acessorios = acessorios
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.estado = .dadosProntos
         }
     }
     
     func recebeu(erro: ErroRequisicao) {
-        print(erro)
+        estado = .erro
+    }
+}
+
+extension AcessoriosViewController {
+    enum Estado {
+        case carregando
+        case dadosProntos
+        case erro
     }
 }
