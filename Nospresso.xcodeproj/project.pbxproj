@@ -64,6 +64,8 @@
 		2BD9080E27AD934F00A6E07A /* CafesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9080D27AD934F00A6E07A /* CafesViewController.swift */; };
 		2BD9081127AD982F00A6E07A /* UIColor+Paleta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9081027AD982F00A6E07A /* UIColor+Paleta.swift */; };
 		2BFE538927B3E1F30051B7DD /* ProdutoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFE538827B3E1F30051B7DD /* ProdutoTableViewCell.xib */; };
+		2BFE538C27B3F14A0051B7DD /* AcessoriosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE538B27B3F14A0051B7DD /* AcessoriosPresenter.swift */; };
+		2BFE538E27B3F4C60051B7DD /* CafesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE538D27B3F4C60051B7DD /* CafesPresenter.swift */; };
 		367C5BD2F79EA2FB32801901 /* Pods_Nospresso_NospressoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889C84A4C1CC250D57C4EBA1 /* Pods_Nospresso_NospressoUITests.framework */; };
 		C3FFC44CE7549C8BF25784E2 /* Pods_NospressoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A304639A3B0C7EB5EEB2901C /* Pods_NospressoTests.framework */; };
 		C6B07FE66C98B271055F9C68 /* Pods_Nospresso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB14939DA49F1B82FC2CAA6 /* Pods_Nospresso.framework */; };
@@ -149,6 +151,8 @@
 		2BD9080D27AD934F00A6E07A /* CafesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesViewController.swift; sourceTree = "<group>"; };
 		2BD9081027AD982F00A6E07A /* UIColor+Paleta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Paleta.swift"; sourceTree = "<group>"; };
 		2BFE538827B3E1F30051B7DD /* ProdutoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProdutoTableViewCell.xib; sourceTree = "<group>"; };
+		2BFE538B27B3F14A0051B7DD /* AcessoriosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosPresenter.swift; sourceTree = "<group>"; };
+		2BFE538D27B3F4C60051B7DD /* CafesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesPresenter.swift; sourceTree = "<group>"; };
 		359DE79E610BD6425A8CD069 /* Pods-Nospresso-NospressoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A635C7947898F20ECAA6A14 /* Pods-Nospresso-NospressoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.release.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4C33088E0CDF2A69F4DC0E1F /* Pods-Nospresso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso.release.xcconfig"; path = "Target Support Files/Pods-Nospresso/Pods-Nospresso.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,8 +202,9 @@
 		2B26023E27B2ADDA00746775 /* Cafes */ = {
 			isa = PBXGroup;
 			children = (
-				2BD9080D27AD934F00A6E07A /* CafesViewController.swift */,
 				2B89113027ADBFC500E9B473 /* Celulas */,
+				2BD9080D27AD934F00A6E07A /* CafesViewController.swift */,
+				2BFE538D27B3F4C60051B7DD /* CafesPresenter.swift */,
 			);
 			path = Cafes;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 			children = (
 				2B07DC2527B2BB7D00EDEB7F /* Celulas */,
 				2B26024127B2B38200746775 /* AcessoriosViewController.swift */,
+				2BFE538B27B3F14A0051B7DD /* AcessoriosPresenter.swift */,
 			);
 			path = Acessorios;
 			sourceTree = "<group>";
@@ -728,6 +734,8 @@
 				2BBCF26827AD5EA7004F7DE7 /* Maquinas.swift in Sources */,
 				2BD9081127AD982F00A6E07A /* UIColor+Paleta.swift in Sources */,
 				2BD9080C27AD931D00A6E07A /* MenuProdutosViewController.swift in Sources */,
+				2BFE538E27B3F4C60051B7DD /* CafesPresenter.swift in Sources */,
+				2BFE538C27B3F14A0051B7DD /* AcessoriosPresenter.swift in Sources */,
 				2BBCF25F27AD5DF6004F7DE7 /* ErroRequisicao.swift in Sources */,
 				2B87C50627B16B2B00F91DAD /* DetalhesCafeView.swift in Sources */,
 				2B07DC2727B2BB9C00EDEB7F /* AcessorioTableViewCell.swift in Sources */,

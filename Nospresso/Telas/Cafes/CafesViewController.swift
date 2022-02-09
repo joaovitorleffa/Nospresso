@@ -7,14 +7,22 @@
 
 import UIKit
 
+protocol CafesViewControllerProtocolo {
+    func iniciouBuscaPorCapsulas()
+    func recebeu(capsulas: [Capsulas])
+    func recebeu(erro: ErroRequisicao)
+}
+
 class CafesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var erroView: UIView!
     
+    var presenter: CafesPresenterProtocolo?
     lazy var api = API()
     var capsulas: [Capsulas] = []
+    
     var estado: Estado = .carregando {
         didSet {
             switch estado {
@@ -36,9 +44,9 @@ class CafesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = CafesPresenter(api: api, tela: self)
         configurarTabela()
-        requisitarDados()
-        // Do any additional setup after loading the view.
+        presenter?.telaCarregou()
     }
     
     // quando a view está prestes a exibir
@@ -130,23 +138,22 @@ extension CafesViewController: UITableViewDataSource {
     }
 }
 
-// extension referente a busca de dados
-extension CafesViewController {
-    func requisitarDados() {
+extension CafesViewController: CafesViewControllerProtocolo {
+    func iniciouBuscaPorCapsulas() {
         estado = .carregando
-        api.requisitar(endpoint: .capsulas) { [weak self] (capsulas: [Capsulas]) in
-            guard let self = self else { return }
-            
-            self.capsulas = capsulas
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.estado = .dadosProntos
-            }
-        } falha: { [weak self] erro in
-            DispatchQueue.main.async {
-                self?  .estado = .erro
-            }
-            print(erro)
+    }
+    
+    func recebeu(capsulas: [Capsulas]) {
+        self.capsulas = capsulas
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.estado = .dadosProntos
+        }
+    }
+    
+    func recebeu(erro: ErroRequisicao) {
+        DispatchQueue.main.async {
+            self.estado = .erro
         }
     }
 }

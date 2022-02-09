@@ -18,3 +18,9 @@ class AcessorioTableViewCell: UITableViewCell {
         precoLabel.text = acessorio.preco.comoDinheiro
     }
 }
+
+extension AcessorioTableViewCell {
+    static var indetificador: String {
+        "acessorio-celula"
+    }
+}

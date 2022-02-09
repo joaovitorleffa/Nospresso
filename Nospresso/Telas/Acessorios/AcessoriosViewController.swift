@@ -7,15 +7,22 @@
 
 import UIKit
 
+protocol AcessoriosViewControllerProtocolo {
+    func recebeu(acessorios: [AcessorioCategoria])
+    func recebeu(erro: ErroRequisicao)
+}
+
 class AcessoriosViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    var presenter: AcessoriosPresenterProtocolo?
     var acessorios: [AcessorioCategoria] = []
     lazy var api = API()
     
     override func viewDidLoad() {
+        presenter = AcessoriosPresenter(api: api, tela: self)
         configurarTabela()
-        requisitarDados()
+        presenter?.telaCarregou()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,7 +90,7 @@ extension AcessoriosViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = tableView.dequeueReusableCell(withIdentifier: "acessorio-celula", for: indexPath)
+        let celula = tableView.dequeueReusableCell(withIdentifier: AcessorioTableViewCell.indetificador, for: indexPath)
         
         if let celulaDeAcessorio = celula as? AcessorioTableViewCell {
             celulaDeAcessorio.configurar(com: acessorios[indexPath.section].itens[indexPath.row])
@@ -93,16 +100,15 @@ extension AcessoriosViewController: UITableViewDataSource {
     }
 }
 
-extension AcessoriosViewController {
-    func requisitarDados() {
-        api.requisitar(endpoint: .acessorios) { [weak self] (acessorios: [AcessorioCategoria]) in
-            guard let self = self else { return }
-            self.acessorios = acessorios
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        } falha: { erro in
-            print(erro)
+extension AcessoriosViewController: AcessoriosViewControllerProtocolo {
+    func recebeu(acessorios: [AcessorioCategoria]) {
+        self.acessorios = acessorios
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
         }
+    }
+    
+    func recebeu(erro: ErroRequisicao) {
+        print(erro)
     }
 }
