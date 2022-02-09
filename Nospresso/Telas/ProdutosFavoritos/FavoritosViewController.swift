@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol FavoritosViewControllerProcotocolo: AnyObject {
-    func recebeu(favoritos: [Produto])
-}
-
 class FavoritosViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
@@ -65,7 +61,7 @@ extension FavoritosViewController: UITableViewDataSource {
     }
 }
 
-extension FavoritosViewController: FavoritosViewControllerProcotocolo {
+extension FavoritosViewController: FavoritosViewProtocolo {
     func recebeu(favoritos: [Produto]) {
         self.favoritos = favoritos
         guard favoritos.count > 0 else { return }

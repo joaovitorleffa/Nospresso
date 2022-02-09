@@ -13,10 +13,10 @@ protocol FavoritosPresenterProtocolo {
 }
 
 class FavoritosPresenter {
-    var favoritos: Favoritos
-    weak var tela: FavoritosViewControllerProcotocolo?
+    var favoritos: FavoritosProtocolo
+    weak var tela: FavoritosViewProtocolo?
     
-    init(tela: FavoritosViewControllerProcotocolo, favoritos: Favoritos = Favoritos.instancia) {
+    init(tela: FavoritosViewProtocolo, favoritos: FavoritosProtocolo = Favoritos.instancia) {
         self.tela = tela
         self.favoritos = favoritos
     }
@@ -24,11 +24,6 @@ class FavoritosPresenter {
 
 extension FavoritosPresenter: FavoritosPresenterProtocolo {
     func telaCarregou() {
-        tela?.recebeu(favoritos: favoritos.buscar())
-    }
-    
-    func remover(favorito: Produto) {
-        favoritos.remover(favorito: favorito)
         tela?.recebeu(favoritos: favoritos.buscar())
     }
 }
