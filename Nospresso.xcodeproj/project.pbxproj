@@ -24,6 +24,9 @@
 		2B34FEE227B454AD00169803 /* FavoritosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEE127B454AD00169803 /* FavoritosView.swift */; };
 		2B34FEE427B4559100169803 /* FavoritosPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEE327B4559100169803 /* FavoritosPresenterTests.swift */; };
 		2B34FEE627B4568500169803 /* FavoritosViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEE527B4568500169803 /* FavoritosViewMock.swift */; };
+		2B34FEEC27B4594200169803 /* DetalhesAcessorioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEEB27B4594200169803 /* DetalhesAcessorioView.swift */; };
+		2B34FEEE27B4598B00169803 /* DetalhesAcessorioViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEED27B4598B00169803 /* DetalhesAcessorioViewMock.swift */; };
+		2B34FEF027B45A9700169803 /* DetalhesAcessorioPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEEF27B45A9700169803 /* DetalhesAcessorioPresenterTests.swift */; };
 		2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */; };
 		2B3965C627B2F02F0093CF85 /* SacolaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */; };
 		2B3965CB27B301970093CF85 /* ProdutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */; };
@@ -117,6 +120,9 @@
 		2B34FEE127B454AD00169803 /* FavoritosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosView.swift; sourceTree = "<group>"; };
 		2B34FEE327B4559100169803 /* FavoritosPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosPresenterTests.swift; sourceTree = "<group>"; };
 		2B34FEE527B4568500169803 /* FavoritosViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewMock.swift; sourceTree = "<group>"; };
+		2B34FEEB27B4594200169803 /* DetalhesAcessorioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioView.swift; sourceTree = "<group>"; };
+		2B34FEED27B4598B00169803 /* DetalhesAcessorioViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioViewMock.swift; sourceTree = "<group>"; };
+		2B34FEEF27B45A9700169803 /* DetalhesAcessorioPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioPresenterTests.swift; sourceTree = "<group>"; };
 		2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioPresenter.swift; sourceTree = "<group>"; };
 		2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaViewController.swift; sourceTree = "<group>"; };
 		2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoTableViewCell.swift; sourceTree = "<group>"; };
@@ -256,6 +262,7 @@
 			children = (
 				2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */,
 				2B269B6E27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift */,
+				2B34FEEB27B4594200169803 /* DetalhesAcessorioView.swift */,
 			);
 			path = DetalhesAcessorio;
 			sourceTree = "<group>";
@@ -388,6 +395,8 @@
 				2B34FEDD27B4510400169803 /* SacolaMock.swift */,
 				2B34FEE327B4559100169803 /* FavoritosPresenterTests.swift */,
 				2B34FEE527B4568500169803 /* FavoritosViewMock.swift */,
+				2B34FEED27B4598B00169803 /* DetalhesAcessorioViewMock.swift */,
+				2B34FEEF27B45A9700169803 /* DetalhesAcessorioPresenterTests.swift */,
 			);
 			path = NospressoTests;
 			sourceTree = "<group>";
@@ -771,6 +780,7 @@
 				2B89113227ADBFFF00E9B473 /* CafeTableViewCell.swift in Sources */,
 				2B7BEBFA27B1BFA80088CFE4 /* Favoritos.swift in Sources */,
 				2B34FEE227B454AD00169803 /* FavoritosView.swift in Sources */,
+				2B34FEEC27B4594200169803 /* DetalhesAcessorioView.swift in Sources */,
 				2B34FED727B42CB200169803 /* FavoritosPresenter.swift in Sources */,
 				2BBCF26827AD5EA7004F7DE7 /* Maquinas.swift in Sources */,
 				2BD9081127AD982F00A6E07A /* UIColor+Paleta.swift in Sources */,
@@ -816,6 +826,8 @@
 				2B26023927B299B800746775 /* DetalhesCafePresenterTests.swift in Sources */,
 				2B34FED927B44DC300169803 /* SacolaPresenterTests.swift in Sources */,
 				2BBCF24127AD5D99004F7DE7 /* NospressoTests.swift in Sources */,
+				2B34FEF027B45A9700169803 /* DetalhesAcessorioPresenterTests.swift in Sources */,
+				2B34FEEE27B4598B00169803 /* DetalhesAcessorioViewMock.swift in Sources */,
 				2B26023D27B2A64700746775 /* APIMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

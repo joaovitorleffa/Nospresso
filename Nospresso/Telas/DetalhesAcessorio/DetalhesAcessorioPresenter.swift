@@ -8,20 +8,20 @@
 import Foundation
 
 protocol DetalhesAcessorioPresenterProtocolo {
-    func favoritar(produto: Produto)
+    func favoritar()
     func adicionarASacola()
 }
 
 class DetalhesAcessorioPresenter {
-    var sacola: SacolaProtocolo?
-    var acessorio: Acessorio?
-    var favoritos: Favoritos
-    weak var tela: DetalhesAcessorioViewControllerProtocolo?
+    private var sacola: SacolaProtocolo
+    private var acessorio: Acessorio
+    private var favoritos: FavoritosProtocolo
+    private weak var tela: DetalhesAcessorioViewProtocolo?
     
     init(acessorio: Acessorio,
         sacola: SacolaProtocolo = Sacola.instancia,
-        tela: DetalhesAcessorioViewControllerProtocolo,
-        favoritos: Favoritos = Favoritos.instancia
+        tela: DetalhesAcessorioViewProtocolo,
+        favoritos: FavoritosProtocolo = Favoritos.instancia
     ) {
         self.acessorio = acessorio
         self.sacola = sacola
@@ -31,7 +31,9 @@ class DetalhesAcessorioPresenter {
 }
 
 extension DetalhesAcessorioPresenter: DetalhesAcessorioPresenterProtocolo {
-    func favoritar(produto: Produto) {
+    func favoritar() {
+        let produto = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem)
+        
         if favoritos.estaFavoritado(favorito: produto) {
             favoritos.remover(favorito: produto)
             tela?.atualizarFavorito(estaFavoritado: false)
@@ -42,10 +44,8 @@ extension DetalhesAcessorioPresenter: DetalhesAcessorioPresenterProtocolo {
     }
     
     func adicionarASacola() {
-        if let acessorio = acessorio {
-            let produto = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem)
-            sacola?.adicionar(produto: produto)
-            tela?.produtoAdicionadoASacola(produto: produto)
-        }
+        let produto = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem)
+        sacola.adicionar(produto: produto)
+        tela?.produtoAdicionadoASacola(produto: produto)
     }
 }

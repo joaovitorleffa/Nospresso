@@ -9,7 +9,6 @@ import Foundation
 
 protocol FavoritosPresenterProtocolo {
     func telaCarregou()
-    func remover(favorito: Produto)
 }
 
 class FavoritosPresenter {

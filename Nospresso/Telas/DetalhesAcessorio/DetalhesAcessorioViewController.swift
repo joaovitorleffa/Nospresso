@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol DetalhesAcessorioViewControllerProtocolo: AnyObject {
-    func atualizarFavorito(estaFavoritado: Bool)
-    func produtoAdicionadoASacola(produto: Produto)
-}
-
 class DetalhesAcessorioViewController: UIViewController {
     @IBOutlet weak var acessorioImageView: UIImageView!
     @IBOutlet weak var descricaoLabel: UILabel!
@@ -20,9 +15,7 @@ class DetalhesAcessorioViewController: UIViewController {
     @IBOutlet weak var favoritoButton: UIButton!
     
     @IBAction func toqueBotaoFavoritar(_ sender: UIButton) {
-        if let acessorio = item {
-            presenter?.favoritar(produto: Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem))
-        }
+        presenter?.favoritar()
     }
     
     @IBAction func toqueBotaoFechar(_ sender: UIButton) {
@@ -54,7 +47,7 @@ class DetalhesAcessorioViewController: UIViewController {
     }
 }
 
-extension DetalhesAcessorioViewController: DetalhesAcessorioViewControllerProtocolo {
+extension DetalhesAcessorioViewController: DetalhesAcessorioViewProtocolo {
     func atualizarFavorito(estaFavoritado: Bool) {
         let imagem = estaFavoritado
             ? UIImage(systemName: "heart.fill")?.withTintColor(.favoritoPreenchido ?? .red, renderingMode: .alwaysOriginal)
