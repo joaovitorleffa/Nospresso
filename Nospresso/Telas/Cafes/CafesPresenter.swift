@@ -9,15 +9,13 @@ import Foundation
 
 protocol CafesPresenterProtocolo {
     func telaCarregou()
-    func adicionarASacola(cafe: Cafe)
-    func favoritar(cafe: Cafe)
 }
 
 class CafesPresenter {
-    var api: APIProtocolo
-    weak var tela: CafesViewControllerProtocolo?
+    private var api: APIProtocolo
+    private weak var tela: CafesViewProtocolo?
     
-    init(api: APIProtocolo, tela: CafesViewControllerProtocolo) {
+    init(api: APIProtocolo, tela: CafesViewProtocolo) {
         self.api = api
         self.tela = tela
     }
@@ -30,13 +28,5 @@ extension CafesPresenter: CafesPresenterProtocolo {
         } falha: { [weak self] erro in
             self?.tela?.recebeu(erro: erro)
         }
-    }
-    
-    func adicionarASacola(cafe: Cafe) {
-        
-    }
-    
-    func favoritar(cafe: Cafe) {
-        
     }
 }

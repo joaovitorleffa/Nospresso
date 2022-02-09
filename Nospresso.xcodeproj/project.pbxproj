@@ -27,6 +27,13 @@
 		2B34FEEC27B4594200169803 /* DetalhesAcessorioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEEB27B4594200169803 /* DetalhesAcessorioView.swift */; };
 		2B34FEEE27B4598B00169803 /* DetalhesAcessorioViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEED27B4598B00169803 /* DetalhesAcessorioViewMock.swift */; };
 		2B34FEF027B45A9700169803 /* DetalhesAcessorioPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEEF27B45A9700169803 /* DetalhesAcessorioPresenterTests.swift */; };
+		2B34FEF227B45EE600169803 /* SacolaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEF127B45EE600169803 /* SacolaView.swift */; };
+		2B34FEF427B45F1800169803 /* AcessoriosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEF327B45F1800169803 /* AcessoriosView.swift */; };
+		2B34FEF627B45F6A00169803 /* AcessoriosViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEF527B45F6A00169803 /* AcessoriosViewMock.swift */; };
+		2B34FEF827B45FCA00169803 /* AcessoriosPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEF727B45FCA00169803 /* AcessoriosPresenterTests.swift */; };
+		2B34FEFA27B4620F00169803 /* CafesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEF927B4620F00169803 /* CafesView.swift */; };
+		2B34FEFC27B4625900169803 /* CafesViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEFB27B4625900169803 /* CafesViewMock.swift */; };
+		2B34FEFE27B462AA00169803 /* CafesViewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FEFD27B462AA00169803 /* CafesViewPresenterTests.swift */; };
 		2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */; };
 		2B3965C627B2F02F0093CF85 /* SacolaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */; };
 		2B3965CB27B301970093CF85 /* ProdutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */; };
@@ -123,6 +130,13 @@
 		2B34FEEB27B4594200169803 /* DetalhesAcessorioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioView.swift; sourceTree = "<group>"; };
 		2B34FEED27B4598B00169803 /* DetalhesAcessorioViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioViewMock.swift; sourceTree = "<group>"; };
 		2B34FEEF27B45A9700169803 /* DetalhesAcessorioPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioPresenterTests.swift; sourceTree = "<group>"; };
+		2B34FEF127B45EE600169803 /* SacolaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaView.swift; sourceTree = "<group>"; };
+		2B34FEF327B45F1800169803 /* AcessoriosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosView.swift; sourceTree = "<group>"; };
+		2B34FEF527B45F6A00169803 /* AcessoriosViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosViewMock.swift; sourceTree = "<group>"; };
+		2B34FEF727B45FCA00169803 /* AcessoriosPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosPresenterTests.swift; sourceTree = "<group>"; };
+		2B34FEF927B4620F00169803 /* CafesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesView.swift; sourceTree = "<group>"; };
+		2B34FEFB27B4625900169803 /* CafesViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesViewMock.swift; sourceTree = "<group>"; };
+		2B34FEFD27B462AA00169803 /* CafesViewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesViewPresenterTests.swift; sourceTree = "<group>"; };
 		2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioPresenter.swift; sourceTree = "<group>"; };
 		2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaViewController.swift; sourceTree = "<group>"; };
 		2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoTableViewCell.swift; sourceTree = "<group>"; };
@@ -231,6 +245,7 @@
 				2B89113027ADBFC500E9B473 /* Celulas */,
 				2BD9080D27AD934F00A6E07A /* CafesViewController.swift */,
 				2BFE538D27B3F4C60051B7DD /* CafesPresenter.swift */,
+				2B34FEF927B4620F00169803 /* CafesView.swift */,
 			);
 			path = Cafes;
 			sourceTree = "<group>";
@@ -253,6 +268,7 @@
 				2B07DC2527B2BB7D00EDEB7F /* Celulas */,
 				2B26024127B2B38200746775 /* AcessoriosViewController.swift */,
 				2BFE538B27B3F14A0051B7DD /* AcessoriosPresenter.swift */,
+				2B34FEF327B45F1800169803 /* AcessoriosView.swift */,
 			);
 			path = Acessorios;
 			sourceTree = "<group>";
@@ -282,6 +298,7 @@
 			children = (
 				2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */,
 				2B3965D027B30FD80093CF85 /* SacolaPresenter.swift */,
+				2B34FEF127B45EE600169803 /* SacolaView.swift */,
 			);
 			path = Sacola;
 			sourceTree = "<group>";
@@ -397,6 +414,10 @@
 				2B34FEE527B4568500169803 /* FavoritosViewMock.swift */,
 				2B34FEED27B4598B00169803 /* DetalhesAcessorioViewMock.swift */,
 				2B34FEEF27B45A9700169803 /* DetalhesAcessorioPresenterTests.swift */,
+				2B34FEF527B45F6A00169803 /* AcessoriosViewMock.swift */,
+				2B34FEF727B45FCA00169803 /* AcessoriosPresenterTests.swift */,
+				2B34FEFB27B4625900169803 /* CafesViewMock.swift */,
+				2B34FEFD27B462AA00169803 /* CafesViewPresenterTests.swift */,
 			);
 			path = NospressoTests;
 			sourceTree = "<group>";
@@ -778,6 +799,7 @@
 				2B87C4F627B142C800F91DAD /* UIImageView+Carregamento.swift in Sources */,
 				2BBCF22A27AD5D97004F7DE7 /* AppDelegate.swift in Sources */,
 				2B89113227ADBFFF00E9B473 /* CafeTableViewCell.swift in Sources */,
+				2B34FEF227B45EE600169803 /* SacolaView.swift in Sources */,
 				2B7BEBFA27B1BFA80088CFE4 /* Favoritos.swift in Sources */,
 				2B34FEE227B454AD00169803 /* FavoritosView.swift in Sources */,
 				2B34FEEC27B4594200169803 /* DetalhesAcessorioView.swift in Sources */,
@@ -803,9 +825,11 @@
 				2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */,
 				2B87C50427B1699200F91DAD /* DetalhesCafePresenter.swift in Sources */,
 				2B3965C627B2F02F0093CF85 /* SacolaViewController.swift in Sources */,
+				2B34FEFA27B4620F00169803 /* CafesView.swift in Sources */,
 				2B7F7F4227B197300054E2D6 /* ContandorIntensidadeStackView.swift in Sources */,
 				2BBCF26427AD5E74004F7DE7 /* Capsulas.swift in Sources */,
 				2BD9080E27AD934F00A6E07A /* CafesViewController.swift in Sources */,
+				2B34FEF427B45F1800169803 /* AcessoriosView.swift in Sources */,
 				2BBCF25D27AD5DDF004F7DE7 /* Endpoint.swift in Sources */,
 				2B3965D127B30FD80093CF85 /* SacolaPresenter.swift in Sources */,
 				2BBCF26227AD5E67004F7DE7 /* Cafe.swift in Sources */,
@@ -817,13 +841,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B34FEFE27B462AA00169803 /* CafesViewPresenterTests.swift in Sources */,
 				2B34FEDE27B4510400169803 /* SacolaMock.swift in Sources */,
 				2B26023727B2990B00746775 /* DetalhesViewMock.swift in Sources */,
 				2B34FEE627B4568500169803 /* FavoritosViewMock.swift in Sources */,
 				2B26023B27B29F3000746775 /* FavoritosMock.swift in Sources */,
+				2B34FEFC27B4625900169803 /* CafesViewMock.swift in Sources */,
 				2B34FEDB27B44E3500169803 /* SacolaViewMock.swift in Sources */,
 				2B34FEE427B4559100169803 /* FavoritosPresenterTests.swift in Sources */,
 				2B26023927B299B800746775 /* DetalhesCafePresenterTests.swift in Sources */,
+				2B34FEF827B45FCA00169803 /* AcessoriosPresenterTests.swift in Sources */,
+				2B34FEF627B45F6A00169803 /* AcessoriosViewMock.swift in Sources */,
 				2B34FED927B44DC300169803 /* SacolaPresenterTests.swift in Sources */,
 				2BBCF24127AD5D99004F7DE7 /* NospressoTests.swift in Sources */,
 				2B34FEF027B45A9700169803 /* DetalhesAcessorioPresenterTests.swift in Sources */,

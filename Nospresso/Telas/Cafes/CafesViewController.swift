@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol CafesViewControllerProtocolo: AnyObject {
-    func recebeu(capsulas: [Capsulas])
-    func recebeu(erro: ErroRequisicao)
-}
-
 class CafesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView! 
@@ -126,7 +121,7 @@ extension CafesViewController: UITableViewDataSource {
     }
 }
 
-extension CafesViewController: CafesViewControllerProtocolo {
+extension CafesViewController: CafesViewProtocolo {
     func recebeu(capsulas: [Capsulas]) {
         self.capsulas = capsulas
         DispatchQueue.main.async {

@@ -14,11 +14,11 @@ protocol SacolaPresenterProtocolo {
 }
 
 class SacolaPresenter {
-    weak var tela: SacolaViewControllerProtocolo?
+    weak var tela: SacolaViewProtocolo?
     var sacola: SacolaProtocolo
     var favoritos: FavoritosProtocolo
     
-    init(tela: SacolaViewControllerProtocolo,
+    init(tela: SacolaViewProtocolo,
          sacola: SacolaProtocolo = Sacola.instancia,
          favoritos: FavoritosProtocolo = Favoritos.instancia
     ) {

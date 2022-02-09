@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct AcessorioCategoria: Decodable {
+struct AcessorioCategoria: Decodable, Equatable {
     let categoria: String
     let itens: [Acessorio]
 }
 
-struct Acessorio: Decodable {
+struct Acessorio: Decodable, Equatable {
     let id: Int
     let nome: String
     let preco: Double

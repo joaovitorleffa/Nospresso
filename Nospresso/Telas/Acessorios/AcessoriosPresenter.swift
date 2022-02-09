@@ -12,10 +12,10 @@ protocol AcessoriosPresenterProtocolo {
 }
 
 class AcessoriosPresenter {
-    var api: APIProtocolo
-    weak var tela: AcessoriosViewControllerProtocolo?
+    private var api: APIProtocolo
+    private weak var tela: AcessoriosViewProtocolo?
     
-    init(api: APIProtocolo, tela: AcessoriosViewControllerProtocolo) {
+    init(api: APIProtocolo, tela: AcessoriosViewProtocolo) {
         self.api = api
         self.tela = tela
     }

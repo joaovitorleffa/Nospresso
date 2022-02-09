@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Cafe: Codable, Hashable {
+struct Cafe: Codable, Hashable, Equatable {
     let id: Int
     let nome: String
     let preco: Double

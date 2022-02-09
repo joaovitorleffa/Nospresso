@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Capsulas: Decodable {
+struct Capsulas: Decodable, Equatable {
     let categoria: String
     let cafes: [Cafe]
 }

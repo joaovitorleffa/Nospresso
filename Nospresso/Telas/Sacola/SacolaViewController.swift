@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol SacolaViewControllerProtocolo: AnyObject {
-    func recebeu(produtos: [Produto])
-}
-
 class SacolaViewController: UIViewController {
     @IBOutlet weak var valorTotalDaCompra: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -100,7 +96,7 @@ extension SacolaViewController: UITableViewDataSource {
     }
 }
 
-extension SacolaViewController: SacolaViewControllerProtocolo {
+extension SacolaViewController: SacolaViewProtocolo {
     func recebeu(produtos: [Produto]) {
         self.produtos = produtos
         guard produtos.count > 0 else { return }

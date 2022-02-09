@@ -12,8 +12,8 @@ protocol FavoritosPresenterProtocolo {
 }
 
 class FavoritosPresenter {
-    var favoritos: FavoritosProtocolo
-    weak var tela: FavoritosViewProtocolo?
+    private var favoritos: FavoritosProtocolo
+    private weak var tela: FavoritosViewProtocolo?
     
     init(tela: FavoritosViewProtocolo, favoritos: FavoritosProtocolo = Favoritos.instancia) {
         self.tela = tela

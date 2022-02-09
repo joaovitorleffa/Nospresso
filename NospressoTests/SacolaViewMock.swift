@@ -12,7 +12,7 @@ class SacolaViewMock {
     var produtosRecebidos: [Produto]?
 }
 
-extension SacolaViewMock: SacolaViewControllerProtocolo {
+extension SacolaViewMock: SacolaViewProtocolo {
     func recebeu(produtos: [Produto]) {
         produtosRecebidos = produtos
     }

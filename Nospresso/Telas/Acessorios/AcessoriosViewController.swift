@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol AcessoriosViewControllerProtocolo: AnyObject {
-    func recebeu(acessorios: [AcessorioCategoria])
-    func recebeu(erro: ErroRequisicao)
-}
-
 class AcessoriosViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var erroView: UIView!
@@ -110,7 +105,7 @@ extension AcessoriosViewController: UITableViewDataSource {
     }
 }
 
-extension AcessoriosViewController: AcessoriosViewControllerProtocolo {    
+extension AcessoriosViewController: AcessoriosViewProtocolo {    
     func recebeu(acessorios: [AcessorioCategoria]) {
         self.acessorios = acessorios
         DispatchQueue.main.async {
