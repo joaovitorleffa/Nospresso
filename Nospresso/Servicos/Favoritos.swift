@@ -8,11 +8,11 @@
 import Foundation
 
 protocol FavoritosProtocolo {
-    func estaFavoritado(cafe: Cafe) -> Bool
-    func adicionar(cafe: Cafe)
-    func remover(cafe: Cafe)
+    func estaFavoritado(favorito: Produto) -> Bool
+    func adicionar(favorito: Produto)
+    func remover(favorito: Produto)
     func limpar()
-    func buscar() -> [Cafe]
+    func buscar() -> [Produto]
 }
 
 class Favoritos {
@@ -23,44 +23,44 @@ class Favoritos {
     
     private init() {} // não permite a inicialização de uma instância em outros lugares
     
-    var cafes: Set<Cafe> = [] {
+    var favoritos: Set<Produto> = [] {
         didSet {
             atualizarBanco()
         }
     }
     
     private func atualizarBanco() {
-        guard let dadosJson = try? JSONEncoder().encode(cafes) else { return }
+        guard let dadosJson = try? JSONEncoder().encode(favoritos) else { return }
         
         padroesDeUsuario.setValue(dadosJson, forKey: chave)
     }
     
     private func buscarDoArmazenamentoLocal() {
         guard let dados = padroesDeUsuario.data(forKey: chave),
-              let favoritos = try? JSONDecoder().decode([Cafe].self, from: dados) else { return }
+              let favoritados = try? JSONDecoder().decode([Produto].self, from: dados) else { return }
     
-        cafes = Set(favoritos)
+        favoritos = Set(favoritados)
     }
 }
 
 extension Favoritos: FavoritosProtocolo {
-    func estaFavoritado(cafe: Cafe) -> Bool {
-        cafes.contains(cafe)
+    func estaFavoritado(favorito: Produto) -> Bool {
+        favoritos.contains(favorito)
     }
     
-    func adicionar(cafe: Cafe) {
-        cafes.insert(cafe)
+    func adicionar(favorito: Produto) {
+        favoritos.insert(favorito)
     }
     
-    func remover(cafe: Cafe) {
-        cafes.remove(cafe)
+    func remover(favorito: Produto) {
+        favoritos.remove(favorito)
     }
     
     func limpar() {
-        cafes.removeAll()
+        favoritos.removeAll()
     }
     
-    func buscar() -> [Cafe] {
-        return Array(cafes)
+    func buscar() -> [Produto] {
+        return Array(favoritos)
     }
 }

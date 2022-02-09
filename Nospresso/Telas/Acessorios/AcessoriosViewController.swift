@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AcessoriosViewControllerProtocolo {
+protocol AcessoriosViewControllerProtocolo: AnyObject {
     func recebeu(acessorios: [AcessorioCategoria])
     func recebeu(erro: ErroRequisicao)
 }

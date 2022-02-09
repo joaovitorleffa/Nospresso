@@ -14,9 +14,12 @@
 		2B26023D27B2A64700746775 /* APIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26023C27B2A64700746775 /* APIMock.swift */; };
 		2B26024227B2B38200746775 /* AcessoriosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B26024127B2B38200746775 /* AcessoriosViewController.swift */; };
 		2B269B6F27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B269B6E27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift */; };
+		2B34FED027B42B5A00169803 /* Sacola.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B34FECF27B42B5A00169803 /* Sacola.storyboard */; };
+		2B34FED227B42BC100169803 /* Favoritos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B34FED127B42BC100169803 /* Favoritos.storyboard */; };
+		2B34FED527B42C0300169803 /* FavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FED427B42C0300169803 /* FavoritosViewController.swift */; };
+		2B34FED727B42CB200169803 /* FavoritosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B34FED627B42CB200169803 /* FavoritosPresenter.swift */; };
 		2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */; };
 		2B3965C627B2F02F0093CF85 /* SacolaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */; };
-		2B3965C827B2FD5E0093CF85 /* Sacola.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B3965C727B2FD5E0093CF85 /* Sacola.storyboard */; };
 		2B3965CB27B301970093CF85 /* ProdutoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */; };
 		2B3965CD27B306660093CF85 /* Sacola.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CC27B306660093CF85 /* Sacola.swift */; };
 		2B3965CF27B306960093CF85 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3965CE27B306960093CF85 /* Produto.swift */; };
@@ -66,6 +69,7 @@
 		2BFE538927B3E1F30051B7DD /* ProdutoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFE538827B3E1F30051B7DD /* ProdutoTableViewCell.xib */; };
 		2BFE538C27B3F14A0051B7DD /* AcessoriosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE538B27B3F14A0051B7DD /* AcessoriosPresenter.swift */; };
 		2BFE538E27B3F4C60051B7DD /* CafesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE538D27B3F4C60051B7DD /* CafesPresenter.swift */; };
+		2BFE539027B4072C0051B7DD /* Favorito.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE538F27B4072C0051B7DD /* Favorito.swift */; };
 		367C5BD2F79EA2FB32801901 /* Pods_Nospresso_NospressoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889C84A4C1CC250D57C4EBA1 /* Pods_Nospresso_NospressoUITests.framework */; };
 		C3FFC44CE7549C8BF25784E2 /* Pods_NospressoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A304639A3B0C7EB5EEB2901C /* Pods_NospressoTests.framework */; };
 		C6B07FE66C98B271055F9C68 /* Pods_Nospresso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB14939DA49F1B82FC2CAA6 /* Pods_Nospresso.framework */; };
@@ -97,9 +101,12 @@
 		2B26023C27B2A64700746775 /* APIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMock.swift; sourceTree = "<group>"; };
 		2B26024127B2B38200746775 /* AcessoriosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosViewController.swift; sourceTree = "<group>"; };
 		2B269B6E27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioViewController.swift; sourceTree = "<group>"; };
+		2B34FECF27B42B5A00169803 /* Sacola.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sacola.storyboard; sourceTree = "<group>"; };
+		2B34FED127B42BC100169803 /* Favoritos.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favoritos.storyboard; sourceTree = "<group>"; };
+		2B34FED427B42C0300169803 /* FavoritosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosViewController.swift; sourceTree = "<group>"; };
+		2B34FED627B42CB200169803 /* FavoritosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritosPresenter.swift; sourceTree = "<group>"; };
 		2B3965C227B2E5990093CF85 /* DetalhesAcessorioPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesAcessorioPresenter.swift; sourceTree = "<group>"; };
 		2B3965C527B2F02F0093CF85 /* SacolaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SacolaViewController.swift; sourceTree = "<group>"; };
-		2B3965C727B2FD5E0093CF85 /* Sacola.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sacola.storyboard; sourceTree = "<group>"; };
 		2B3965CA27B301970093CF85 /* ProdutoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutoTableViewCell.swift; sourceTree = "<group>"; };
 		2B3965CC27B306660093CF85 /* Sacola.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sacola.swift; sourceTree = "<group>"; };
 		2B3965CE27B306960093CF85 /* Produto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
@@ -153,6 +160,7 @@
 		2BFE538827B3E1F30051B7DD /* ProdutoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProdutoTableViewCell.xib; sourceTree = "<group>"; };
 		2BFE538B27B3F14A0051B7DD /* AcessoriosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcessoriosPresenter.swift; sourceTree = "<group>"; };
 		2BFE538D27B3F4C60051B7DD /* CafesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafesPresenter.swift; sourceTree = "<group>"; };
+		2BFE538F27B4072C0051B7DD /* Favorito.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorito.swift; sourceTree = "<group>"; };
 		359DE79E610BD6425A8CD069 /* Pods-Nospresso-NospressoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3A635C7947898F20ECAA6A14 /* Pods-Nospresso-NospressoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso-NospressoUITests.release.xcconfig"; path = "Target Support Files/Pods-Nospresso-NospressoUITests/Pods-Nospresso-NospressoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4C33088E0CDF2A69F4DC0E1F /* Pods-Nospresso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nospresso.release.xcconfig"; path = "Target Support Files/Pods-Nospresso/Pods-Nospresso.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,9 +221,10 @@
 			isa = PBXGroup;
 			children = (
 				2BBCF23427AD5D99004F7DE7 /* LaunchScreen.storyboard */,
+				2B34FED127B42BC100169803 /* Favoritos.storyboard */,
+				2B34FECF27B42B5A00169803 /* Sacola.storyboard */,
 				2B87C4FA27B1559A00F91DAD /* Produtos.storyboard */,
 				2BBCF22F27AD5D97004F7DE7 /* Main.storyboard */,
-				2B3965C727B2FD5E0093CF85 /* Sacola.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -237,6 +246,15 @@
 				2B269B6E27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift */,
 			);
 			path = DetalhesAcessorio;
+			sourceTree = "<group>";
+		};
+		2B34FED327B42BE100169803 /* ProdutosFavoritos */ = {
+			isa = PBXGroup;
+			children = (
+				2B34FED427B42C0300169803 /* FavoritosViewController.swift */,
+				2B34FED627B42CB200169803 /* FavoritosPresenter.swift */,
+			);
+			path = ProdutosFavoritos;
 			sourceTree = "<group>";
 		};
 		2B3965C427B2F01E0093CF85 /* Sacola */ = {
@@ -383,6 +401,7 @@
 				2BBCF26527AD5E99004F7DE7 /* Acessorios.swift */,
 				2BBCF26727AD5EA7004F7DE7 /* Maquinas.swift */,
 				2B3965CE27B306960093CF85 /* Produto.swift */,
+				2BFE538F27B4072C0051B7DD /* Favorito.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -419,6 +438,7 @@
 			isa = PBXGroup;
 			children = (
 				2BFE538A27B3E5840051B7DD /* Componentes */,
+				2B34FED327B42BE100169803 /* ProdutosFavoritos */,
 				2B3965C427B2F01E0093CF85 /* Sacola */,
 				2B269B6D27B2DBAD00CA559C /* DetalhesAcessorio */,
 				2B26024027B2B36600746775 /* Acessorios */,
@@ -581,6 +601,7 @@
 				2BBCF23627AD5D99004F7DE7 /* LaunchScreen.storyboard in Resources */,
 				2BBCF23327AD5D99004F7DE7 /* Assets.xcassets in Resources */,
 				2BD9080227AD8F4F00A6E07A /* OpenSans-SemiBold.ttf in Resources */,
+				2B34FED027B42B5A00169803 /* Sacola.storyboard in Resources */,
 				2BD9080627AD8F4F00A6E07A /* OpenSans-Medium.ttf in Resources */,
 				2BD9080127AD8F4F00A6E07A /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				2BD907FF27AD8F4F00A6E07A /* LICENSE.txt in Resources */,
@@ -593,9 +614,9 @@
 				2BD907FC27AD8F4F00A6E07A /* OpenSans-Bold.ttf in Resources */,
 				2BFE538927B3E1F30051B7DD /* ProdutoTableViewCell.xib in Resources */,
 				2B87C4FD27B15BE100F91DAD /* CabecalhoView.xib in Resources */,
+				2B34FED227B42BC100169803 /* Favoritos.storyboard in Resources */,
 				2BBCF23127AD5D97004F7DE7 /* Main.storyboard in Resources */,
 				2BD9080827AD8F4F00A6E07A /* OpenSans-Regular.ttf in Resources */,
-				2B3965C827B2FD5E0093CF85 /* Sacola.storyboard in Resources */,
 				2BD9080027AD8F4F00A6E07A /* OpenSans-LightItalic.ttf in Resources */,
 				2BD9080527AD8F4F00A6E07A /* OpenSans-Italic.ttf in Resources */,
 			);
@@ -731,6 +752,7 @@
 				2BBCF22A27AD5D97004F7DE7 /* AppDelegate.swift in Sources */,
 				2B89113227ADBFFF00E9B473 /* CafeTableViewCell.swift in Sources */,
 				2B7BEBFA27B1BFA80088CFE4 /* Favoritos.swift in Sources */,
+				2B34FED727B42CB200169803 /* FavoritosPresenter.swift in Sources */,
 				2BBCF26827AD5EA7004F7DE7 /* Maquinas.swift in Sources */,
 				2BD9081127AD982F00A6E07A /* UIColor+Paleta.swift in Sources */,
 				2BD9080C27AD931D00A6E07A /* MenuProdutosViewController.swift in Sources */,
@@ -743,8 +765,10 @@
 				2B3965CF27B306960093CF85 /* Produto.swift in Sources */,
 				2BBCF22C27AD5D97004F7DE7 /* SceneDelegate.swift in Sources */,
 				2B3965CD27B306660093CF85 /* Sacola.swift in Sources */,
+				2B34FED527B42C0300169803 /* FavoritosViewController.swift in Sources */,
 				2BBCF26627AD5E99004F7DE7 /* Acessorios.swift in Sources */,
 				2B3965CB27B301970093CF85 /* ProdutoTableViewCell.swift in Sources */,
+				2BFE539027B4072C0051B7DD /* Favorito.swift in Sources */,
 				2B87C4F927B144CD00F91DAD /* Double+Dinheiros.swift in Sources */,
 				2B87C4FF27B15E5A00F91DAD /* CabecalhoView.swift in Sources */,
 				2B3965C327B2E5990093CF85 /* DetalhesAcessorioPresenter.swift in Sources */,

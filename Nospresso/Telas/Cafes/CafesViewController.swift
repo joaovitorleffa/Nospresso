@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CafesViewControllerProtocolo {
+protocol CafesViewControllerProtocolo: AnyObject {
     func recebeu(capsulas: [Capsulas])
     func recebeu(erro: ErroRequisicao)
 }

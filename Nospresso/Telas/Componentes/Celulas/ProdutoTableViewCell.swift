@@ -16,7 +16,8 @@ class ProdutoTableViewCell: UITableViewCell {
     func configurar(produto: Produto) {
         produtoImageView.carregarImagem(da: produto.imagem)
         nomeLabel.text = produto.nome
-        tipoLabel.text = "\(produto.tipo)"
+        tipoLabel.text = String(describing: produto.tipo).uppercased()
+        tipoLabel.textColor = .tipoProduto(tipo: produto.tipo)
         precoLabel.text = produto.preco.comoDinheiro
     }
 }

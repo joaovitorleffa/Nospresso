@@ -20,6 +20,8 @@ class DetalhesCafePresenterTests: XCTestCase {
                           torrefacao:nil,
                           perfilAromatico: nil)
     
+    let cafeParaFavoritar = Favorito(nome: "Café com leite", tipo: .cafes, preco: 2.99, imagem: "whatever")
+    
     lazy var apiMock = APIMock(sucesso: cafe)
     
     var tela = DetalhesViewMock()
@@ -47,7 +49,7 @@ class DetalhesCafePresenterTests: XCTestCase {
     func test_favoritou() {
         presenter.favoritou()
         
-        XCTAssertTrue(favoritoMock.estaFavoritado(cafe: cafe))
+        XCTAssertTrue(favoritoMock.estaFavoritado(favorito: cafeParaFavoritar))
         XCTAssertTrue(tela.foiAtualizado == true)
     }
     
@@ -55,7 +57,7 @@ class DetalhesCafePresenterTests: XCTestCase {
         presenter.favoritou()
         presenter.favoritou()
         
-        XCTAssertFalse(favoritoMock.estaFavoritado(cafe: cafe))
+        XCTAssertFalse(favoritoMock.estaFavoritado(favorito: cafeParaFavoritar))
         XCTAssertTrue(tela.foiAtualizado == false)
     }
 }

@@ -32,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ZJR-2j-gbd">
-                                <rect key="frame" x="112" y="27.5" width="224" height="45.5"/>
+                                <rect key="frame" x="112" y="27" width="224" height="46.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SzC-CQ-EAE">
                                         <rect key="frame" x="0.0" y="0.0" width="50.5" height="27.5"/>
@@ -41,8 +41,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQL-eC-93b">
-                                        <rect key="frame" x="0.0" y="31.5" width="25.5" height="14"/>
-                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="10"/>
+                                        <rect key="frame" x="0.0" y="31.5" width="30" height="15"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="11"/>
                                         <color key="textColor" name="maquinas"/>
                                         <nil key="highlightedColor"/>
                                     </label>

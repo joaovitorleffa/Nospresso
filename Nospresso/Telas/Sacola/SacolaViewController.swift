@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SacolaViewControllerProtocolo {
+protocol SacolaViewControllerProtocolo: AnyObject {
     func recebeu(produtos: [Produto])
 }
 
@@ -20,6 +20,7 @@ class SacolaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurarBarraDeNavegacao()
         presenter = SacolaPresenter(produtos: produtos, tela: self)
         configurarTabela()
     }
@@ -30,19 +31,28 @@ class SacolaViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configurarBarraDeNavegacao()
         presenter?.telaCarregou()
+    }
+    
+    private func configurarBarraDeNavegacao() {
+        navigationController?.navigationBar.barTintColor = .verdaoVendedor
+        navigationController?.navigationBar.tintColor = .label
     }
     
     private func configurarTabela() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ProdutoTableViewCell", bundle: nil), forCellReuseIdentifier: ProdutoTableViewCell.identificador)
+       configurarTabelaVazia()
     }
     
-    private func configurarBarraDeNavegacao() {
-        navigationController?.navigationBar.barTintColor = .verdaoVendedor
-        navigationController?.navigationBar.tintColor = .label
+    private func configurarTabelaVazia() {
+        let messageLabel = UILabel()
+        messageLabel.text = "Nenhum item adicionado a sacola"
+        messageLabel.textColor = .textoCinza
+        messageLabel.textAlignment = .center
+        messageLabel.font = UIFont(name: "Open Sans", size: 20)
+        tableView.backgroundView = messageLabel
     }
 }
 
@@ -51,7 +61,7 @@ extension SacolaViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let acaoFavoritar = UIContextualAction(style: .normal, title: "Favoritar") { acao, view, concluirManipulacao in
-            self.acaoParaOGestoFavoritar()
+            self.presenter?.favoritar(produto: self.produtos[indexPath.row])
             concluirManipulacao(true)
         }
         
@@ -72,15 +82,9 @@ extension SacolaViewController: UITableViewDelegate {
         
         return configuracaoGesto
     }
-    
-    func acaoParaOGestoFavoritar() {
-        
-    }
 }
 
 extension SacolaViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int { 1 }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         produtos.count
     }
@@ -99,7 +103,10 @@ extension SacolaViewController: UITableViewDataSource {
 extension SacolaViewController: SacolaViewControllerProtocolo {
     func recebeu(produtos: [Produto]) {
         self.produtos = produtos
+        guard produtos.count > 0 else { return }
+        
         DispatchQueue.main.async {
+            self.tableView.backgroundView = nil
             self.tableView.reloadData()
             let total = produtos.reduce(0, { $0 + $1.preco })
             self.valorTotalDaCompra.text = total.comoDinheiro

@@ -13,7 +13,7 @@ protocol AcessoriosPresenterProtocolo {
 
 class AcessoriosPresenter {
     var api: APIProtocolo
-    var tela: AcessoriosViewControllerProtocolo
+    weak var tela: AcessoriosViewControllerProtocolo?
     
     init(api: APIProtocolo, tela: AcessoriosViewControllerProtocolo) {
         self.api = api
@@ -24,9 +24,9 @@ class AcessoriosPresenter {
 extension AcessoriosPresenter: AcessoriosPresenterProtocolo {
     func telaCarregou() {
         api.requisitar(endpoint: .acessorios) { [weak self] (acessorios: [AcessorioCategoria]) in
-            self?.tela.recebeu(acessorios: acessorios)
+            self?.tela?.recebeu(acessorios: acessorios)
         } falha: { [weak self] erro in
-            self?.tela.recebeu(erro: erro)
+            self?.tela?.recebeu(erro: erro)
         }
     }
 }

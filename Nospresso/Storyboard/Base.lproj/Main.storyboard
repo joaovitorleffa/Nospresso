@@ -20,6 +20,7 @@
                     <connections>
                         <segue destination="DnV-eT-OLu" kind="relationship" relationship="viewControllers" id="B72-ff-G8g"/>
                         <segue destination="4FK-99-sAV" kind="relationship" relationship="viewControllers" id="4iH-Nv-ycf"/>
+                        <segue destination="jSs-ca-yuo" kind="relationship" relationship="viewControllers" id="E8t-kr-Ydh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syl-ah-EFi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -36,6 +37,16 @@
             </objects>
             <point key="canvasLocation" x="-833" y="78"/>
         </scene>
+        <!--Favoritos-->
+        <scene sceneID="k8h-4F-J2Y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Favoritos" id="jSs-ca-yuo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Qiv-79-1WL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DF9-V6-Vxx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-833" y="115"/>
+        </scene>
         <!--Sacola-->
         <scene sceneID="Uuy-8J-Gta">
             <objects>
@@ -44,7 +55,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5r-1R-cD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-844" y="136"/>
+            <point key="canvasLocation" x="-844" y="156"/>
         </scene>
     </scenes>
 </document>

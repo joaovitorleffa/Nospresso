@@ -15,7 +15,7 @@ protocol CafesPresenterProtocolo {
 
 class CafesPresenter {
     var api: APIProtocolo
-    var tela: CafesViewControllerProtocolo
+    weak var tela: CafesViewControllerProtocolo?
     
     init(api: APIProtocolo, tela: CafesViewControllerProtocolo) {
         self.api = api
@@ -26,9 +26,9 @@ class CafesPresenter {
 extension CafesPresenter: CafesPresenterProtocolo {
     func telaCarregou() {
         api.requisitar(endpoint: .capsulas) { [weak self] (capsulas: [Capsulas]) in
-            self?.tela.recebeu(capsulas: capsulas)
+            self?.tela?.recebeu(capsulas: capsulas)
         } falha: { [weak self] erro in
-            self?.tela.recebeu(erro: erro)
+            self?.tela?.recebeu(erro: erro)
         }
     }
     

@@ -274,6 +274,10 @@
                                                             <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="">
                                                                 <color key="baseForegroundColor" name="texto-cinza"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="toqueBotaoFavoritar:" destination="ndn-Dv-LnJ" eventType="touchUpInside" id="fix-Xw-5BU"/>
+                                                                <action selector="toqueBotaoFavoritar:" destination="PEz-vK-6JW" eventType="touchUpInside" id="quV-p7-Izc"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhN-5z-afe" userLabel="BagButton">
                                                             <rect key="frame" x="0.0" y="43" width="40" height="40"/>
@@ -288,6 +292,9 @@
                                                             <buttonConfiguration key="configuration" style="plain" image="bag.badge.plus" catalog="system">
                                                                 <color key="baseForegroundColor" name="texto-cinza"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="toqueBotaoAdicionarASacola:" destination="PEz-vK-6JW" eventType="touchUpInside" id="4rg-fZ-wuw"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -307,6 +314,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="acessorioImageView" destination="G4S-go-paM" id="cBI-bD-SWZ"/>
+                                            <outlet property="favoritarButton" destination="Gze-Si-m4K" id="oOg-gp-LbN"/>
                                             <outlet property="nomeLabel" destination="gd0-86-YEu" id="Os2-8z-jVp"/>
                                             <outlet property="precoLabel" destination="Cb8-cx-2hx" id="gqb-0N-BHk"/>
                                         </connections>
@@ -343,6 +351,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o4F-zO-Oxe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ndn-Dv-LnJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1162" y="806"/>
         </scene>
@@ -379,6 +388,9 @@
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="heart" catalog="system"/>
+                                        <connections>
+                                            <action selector="toqueBotaoFavoritar:" destination="gsB-Ih-AXY" eventType="touchUpInside" id="fv1-nN-TBY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -539,6 +551,9 @@
                                                             <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title="">
                                                                 <color key="baseForegroundColor" name="texto-cinza"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="toqueBotaoFavoritar:" destination="f2A-IL-uTU" eventType="touchUpInside" id="tcY-cE-OlS"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnL-Bm-x7H" userLabel="BagButton">
                                                             <rect key="frame" x="0.0" y="43" width="45.5" height="40"/>
@@ -554,7 +569,7 @@
                                                                 <color key="baseForegroundColor" name="texto-cinza"/>
                                                             </buttonConfiguration>
                                                             <connections>
-                                                                <action selector="toqueAdicionarASacola:" destination="f2A-IL-uTU" eventType="touchUpInside" id="fq5-qZ-8h9"/>
+                                                                <action selector="toqueBotaoAdicionarASacola:" destination="f2A-IL-uTU" eventType="touchUpInside" id="zV3-bB-Vaq"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -583,6 +598,7 @@
                                         <connections>
                                             <outlet property="capsulaImageView" destination="5vw-pr-XWM" id="9bL-Hk-Wwx"/>
                                             <outlet property="descricaoLabel" destination="pKn-3b-NrA" id="EQg-4l-lTw"/>
+                                            <outlet property="favoritarButton" destination="E0r-6k-ued" id="nxg-Kk-iyR"/>
                                             <outlet property="intensidadeLabel" destination="PQh-uJ-Cna" id="fRv-O0-U21"/>
                                             <outlet property="nomeLabel" destination="Sy5-GV-9eo" id="Xe2-kh-0fx"/>
                                             <outlet property="precoLabel" destination="Tjz-LX-PMF" id="PDj-2x-v96"/>
