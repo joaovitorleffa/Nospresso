@@ -18,21 +18,13 @@ class DetalhesCafeViewController: UIViewController {
     @IBOutlet weak var nomeCafeLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var formasDeDegustacaoStackView: UIStackView!
     
     var presenter: DetalhesCafePresenterProtocolo?
     var estado: Estado = .carregando {
         didSet {
-            switch estado {
-            case .carregando:
-                scrollView.isHidden = true
-                activityIndicator.isHidden = false
-            case .dadosProntos:
-                activityIndicator.isHidden = true
-                scrollView.isHidden = false
-            case .erro:
-                activityIndicator.isHidden = true
-                scrollView.isHidden = false
-            }
+            scrollView.isHidden = estado == .carregando || estado == .erro
+            activityIndicator.isHidden = estado == .dadosProntos || estado == .erro
         }
     }
     
@@ -82,6 +74,14 @@ extension DetalhesCafeViewController: DetalhesCafeViewProtocolo {
                                             action: #selector(toqueBotaoFavorito))
     
         navigationItem.rightBarButtonItem = botaoFavorito
+    }
+    
+    func cafeAdicionadoASacola(produto: Produto) {
+        let alerta = UIAlertController(title: "Produto adicionado a sacola!", message: "Você adicionou o produto \"\(produto.nome)\" a sacola", preferredStyle: .alert)
+        
+        alerta.addAction(UIAlertAction(title: "Show", style: .default))
+        
+        present(alerta, animated: true)
     }
 }
 

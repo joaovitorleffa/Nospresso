@@ -20,15 +20,16 @@ class DetalhesCafePresenterTests: XCTestCase {
                           torrefacao:nil,
                           perfilAromatico: nil)
     
-    let cafeParaFavoritar = Produto(nome: "Café com leite", tipo: .cafes, preco: 2.99, imagem: "whatever")
+    let cafeProduto = Produto(nome: "Café com leite", tipo: .cafes, preco: 2.99, imagem: "whatever")
     
     lazy var apiMock = APIMock(sucesso: cafe)
     
-    var tela = DetalhesViewMock()
+    var tela = DetalhesCafeViewMock()
     
     var favoritoMock = FavoritosMock()
+    var sacolaMock = SacolaMock()
     
-    lazy var presenter = DetalhesCafePresenter(api: apiMock, cafe: cafe, favoritos: favoritoMock, tela: tela)
+    lazy var presenter = DetalhesCafePresenter(api: apiMock, cafe: cafe, favoritos: favoritoMock, sacola: sacolaMock, tela: tela)
     
     func test_telaCarregouComSucesso() {
         presenter.telaCarregou()
@@ -49,7 +50,7 @@ class DetalhesCafePresenterTests: XCTestCase {
     func test_favoritou() {
         presenter.favoritou()
         
-        XCTAssertTrue(favoritoMock.estaFavoritado(favorito: cafeParaFavoritar))
+        XCTAssertTrue(favoritoMock.estaFavoritado(favorito: cafeProduto))
         XCTAssertTrue(tela.foiAtualizado == true)
     }
     
@@ -57,7 +58,14 @@ class DetalhesCafePresenterTests: XCTestCase {
         presenter.favoritou()
         presenter.favoritou()
         
-        XCTAssertFalse(favoritoMock.estaFavoritado(favorito: cafeParaFavoritar))
+        XCTAssertFalse(favoritoMock.estaFavoritado(favorito: cafeProduto))
         XCTAssertTrue(tela.foiAtualizado == false)
+    }
+    
+    func test_adicionouASacola() {
+        presenter.adicionouASacola()
+        
+        XCTAssertEqual(sacolaMock.buscar(), [cafeProduto])
+        XCTAssertEqual(tela.produtoAdicionadoASacola, cafeProduto)
     }
 }

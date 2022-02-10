@@ -8,13 +8,14 @@
 import Foundation
 @testable import Nospresso
 
-class DetalhesViewMock {
+class DetalhesCafeViewMock {
     var cafeRecebido: Cafe?
     var erroRecebido: ErroRequisicao?
     var foiAtualizado: Bool?
+    var produtoAdicionadoASacola: Produto?
 }
 
-extension DetalhesViewMock: DetalhesCafeViewProtocolo {
+extension DetalhesCafeViewMock: DetalhesCafeViewProtocolo {
     func recebeu(cafe: Cafe) {
         cafeRecebido = cafe
     }
@@ -25,5 +26,9 @@ extension DetalhesViewMock: DetalhesCafeViewProtocolo {
     
     func atualizarFavorito(valor: Bool) {
         foiAtualizado = valor
+    }
+    
+    func cafeAdicionadoASacola(produto: Produto) {
+        produtoAdicionadoASacola = produto
     }
 }

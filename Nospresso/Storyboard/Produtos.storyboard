@@ -680,16 +680,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="flh-zJ-KHQ">
-                                                        <rect key="frame" x="281" y="1" width="101" height="33"/>
+                                                        <rect key="frame" x="321.5" y="1" width="60.5" height="33"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsV-Ci-SYd">
-                                                                <rect key="frame" x="0.0" y="8" width="30.5" height="16.5"/>
-                                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
-                                                                <color key="textColor" name="texto-discreto"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGG-tz-lzc">
-                                                                <rect key="frame" x="40.5" y="0.0" width="60.5" height="33"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="33"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -772,7 +766,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oW-q3-Jvy">
+                                                    <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="8oW-q3-Jvy">
                                                         <rect key="frame" x="0.0" y="22" width="382" height="38"/>
                                                     </stackView>
                                                 </subviews>
@@ -826,6 +820,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="8MF-YF-48T" id="1zV-xO-GdS"/>
                         <outlet property="cafeImageView" destination="8rn-Gm-8b3" id="8zT-Ky-xWG"/>
+                        <outlet property="formasDeDegustacaoStackView" destination="8oW-q3-Jvy" id="YXQ-Ka-EH3"/>
                         <outlet property="intensidadeLabel" destination="7dr-HZ-qXR" id="793-LN-rXP"/>
                         <outlet property="intesidadeStackView" destination="6sE-mW-2w6" id="1fU-Zf-g7A"/>
                         <outlet property="nomeCafeLabel" destination="dpw-gM-5sL" id="Jdg-b7-5TF"/>
@@ -838,7 +833,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rK4-eC-A74" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2855.072463768116" y="77.678571428571431"/>
+            <point key="canvasLocation" x="2853.6231884057975" y="77.678571428571431"/>
         </scene>
     </scenes>
     <resources>

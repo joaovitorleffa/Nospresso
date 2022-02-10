@@ -11,4 +11,5 @@ protocol DetalhesCafeViewProtocolo: AnyObject {
     func recebeu(cafe: Cafe)
     func recebeu(erro: ErroRequisicao)
     func atualizarFavorito(valor: Bool)
+    func cafeAdicionadoASacola(produto: Produto)
 }

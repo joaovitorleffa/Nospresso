@@ -19,14 +19,16 @@ class DetalhesCafePresenter {
     let cafe: Cafe
     var favoritos: FavoritosProtocolo
     var cafeParaFavoritar: Produto
+    var sacola: SacolaProtocolo
     weak var tela: DetalhesCafeViewProtocolo?
     
-    init(api: APIProtocolo, cafe: Cafe, favoritos: FavoritosProtocolo = Favoritos.instancia, tela: DetalhesCafeViewProtocolo) {
+    init(api: APIProtocolo, cafe: Cafe, favoritos: FavoritosProtocolo = Favoritos.instancia, sacola: SacolaProtocolo = Sacola.instancia, tela: DetalhesCafeViewProtocolo) {
         self.api = api
         self.cafe = cafe
         self.favoritos = favoritos
         self.cafeParaFavoritar = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
         self.tela = tela
+        self.sacola = sacola
     }
 }
 
@@ -46,7 +48,9 @@ extension DetalhesCafePresenter: DetalhesCafePresenterProtocolo {
     }
     
     func adicionouASacola() {
-        
+        let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
+        sacola.adicionar(produto: produto)
+        tela?.cafeAdicionadoASacola(produto: produto)
     }
     
     func favoritou() {
