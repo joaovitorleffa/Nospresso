@@ -14,7 +14,6 @@ protocol DetalhesProdutoPresenterProtocolo {
 
 class DetalhesProdutoPresenter {
     private var sacola: SacolaProtocolo
-//    private var acessorio: Acessorio
     private var favoritos: FavoritosProtocolo
     private weak var tela: DetalhesProdutoViewProtocolo?
     
@@ -23,7 +22,6 @@ class DetalhesProdutoPresenter {
         tela: DetalhesProdutoViewProtocolo,
         favoritos: FavoritosProtocolo = Favoritos.instancia
     ) {
-//        self.acessorio = acessorio
         self.sacola = sacola
         self.tela = tela
         self.favoritos = favoritos
@@ -32,8 +30,6 @@ class DetalhesProdutoPresenter {
 
 extension DetalhesProdutoPresenter: DetalhesProdutoPresenterProtocolo {
     func favoritar(_ produto: Produto) {
-//        let produto = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem)
-        
         if favoritos.estaFavoritado(favorito: produto) {
             favoritos.remover(favorito: produto)
             tela?.atualizarFavorito(estaFavoritado: false)
@@ -44,7 +40,6 @@ extension DetalhesProdutoPresenter: DetalhesProdutoPresenterProtocolo {
     }
     
     func adicionarASacola(_ produto: Produto) {
-//        let produto = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem)
         sacola.adicionar(produto: produto)
         tela?.produtoAdicionadoASacola(produto: produto)
     }

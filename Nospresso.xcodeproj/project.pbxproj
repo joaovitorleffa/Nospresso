@@ -55,6 +55,7 @@
 		2B9F024627C915060054EAEC /* MaquinaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024527C915060054EAEC /* MaquinaCollectionViewCell.swift */; };
 		2B9F024827C91B6D0054EAEC /* MaquinasPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024727C91B6D0054EAEC /* MaquinasPresenter.swift */; };
 		2B9F024E27C94D7C0054EAEC /* Estado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024D27C94D7C0054EAEC /* Estado.swift */; };
+		2B9F025027C958640054EAEC /* MaquinasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024F27C958640054EAEC /* MaquinasView.swift */; };
 		2BBCF22A27AD5D97004F7DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */; };
 		2BBCF22C27AD5D97004F7DE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */; };
 		2BBCF23127AD5D97004F7DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCF22F27AD5D97004F7DE7 /* Main.storyboard */; };
@@ -162,6 +163,7 @@
 		2B9F024527C915060054EAEC /* MaquinaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaquinaCollectionViewCell.swift; sourceTree = "<group>"; };
 		2B9F024727C91B6D0054EAEC /* MaquinasPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaquinasPresenter.swift; sourceTree = "<group>"; };
 		2B9F024D27C94D7C0054EAEC /* Estado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estado.swift; sourceTree = "<group>"; };
+		2B9F024F27C958640054EAEC /* MaquinasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaquinasView.swift; sourceTree = "<group>"; };
 		2BBCF22627AD5D97004F7DE7 /* Nospresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nospresso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				2B9F024427C914D60054EAEC /* Celulas */,
 				2B9F024227C90B630054EAEC /* MaquinasViewController.swift */,
 				2B9F024727C91B6D0054EAEC /* MaquinasPresenter.swift */,
+				2B9F024F27C958640054EAEC /* MaquinasView.swift */,
 			);
 			path = Maquinas;
 			sourceTree = "<group>";
@@ -864,6 +867,7 @@
 				2B34FEF427B45F1800169803 /* AcessoriosView.swift in Sources */,
 				2BBCF25D27AD5DDF004F7DE7 /* Endpoint.swift in Sources */,
 				2B3965D127B30FD80093CF85 /* SacolaPresenter.swift in Sources */,
+				2B9F025027C958640054EAEC /* MaquinasView.swift in Sources */,
 				2BBCF26227AD5E67004F7DE7 /* Cafe.swift in Sources */,
 				2B26024227B2B38200746775 /* AcessoriosViewController.swift in Sources */,
 			);

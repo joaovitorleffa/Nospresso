@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol MaquinasViewProtocolo: AnyObject {
-    func recebeu(maquinas: [Maquina])
-}
-
 class MaquinasViewController: UIViewController {
     @IBOutlet weak var colecao: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -55,6 +51,17 @@ extension MaquinasViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemSize = (colecao.frame.width - (colecao.contentInset.left + colecao.contentInset.right + 10)) / 2
         return CGSize(width: itemSize, height: itemSize + 80)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Produtos", bundle: .main)
+        let item = maquinas[indexPath.row]
+        let produto = Produto(nome: item.nome, tipo: .maquinas, preco: item.preco, imagem: item.imagem, descricao: item.descricao)
+        
+        guard let controlador = storyboard.instantiateViewController(withIdentifier: DetalhesProdutoViewController.identificador) as? DetalhesProdutoViewController else { return }
+        
+        controlador.produto = produto
+        present(controlador, animated: true)
     }
 }
 

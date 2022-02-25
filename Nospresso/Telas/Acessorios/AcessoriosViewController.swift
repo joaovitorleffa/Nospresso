@@ -69,9 +69,7 @@ extension AcessoriosViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Produtos", bundle: .main)
-        
         let item = acessorios[indexPath.section].itens[indexPath.row]
-        
         let produto = Produto(nome: item.nome, tipo: .acessorios, preco: item.preco, imagem: item.imagem, descricao: item.descricao)
         
         guard let controlador = storyboard
@@ -79,11 +77,6 @@ extension AcessoriosViewController: UITableViewDelegate {
                     as? DetalhesProdutoViewController else { return }
         
         controlador.produto = produto
-        
-//        let presenter = DetalhesProdutoPresenter(produto: produto, tela: controlador)
-//
-//        controlador.produto = produto
-//        controlador.presenter = presenter
         
         present(controlador, animated: true)
     }
