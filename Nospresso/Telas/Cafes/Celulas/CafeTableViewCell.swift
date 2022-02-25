@@ -21,6 +21,7 @@ class CafeTableViewCell: UITableViewCell {
     @IBOutlet weak var descricaoLabel: UILabel!
     @IBOutlet weak var precoLabel: UILabel!
     @IBOutlet weak var favoritarButton: UIButton!
+    @IBOutlet weak var sacolaButton: UIButton!
     
     @IBAction func toqueBotaoAdicionarASacola(_ sender: UIButton) {
         if let cafe = cafe {
@@ -55,6 +56,7 @@ class CafeTableViewCell: UITableViewCell {
         nomeLabel.text = cafe.nome
         descricaoLabel.text = cafe.descricao.capitalized
         precoLabel.text = cafe.preco.comoDinheiro
+        sacolaButton.addBage()
         
         if let intensidade = cafe.intensidade {
             intensidadeLabel.text = "Intesindade \(intensidade)"

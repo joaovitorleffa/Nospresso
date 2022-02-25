@@ -17,6 +17,8 @@ extension UIColor {
     static let favoritoPreenchido = UIColor(named: "favorito-preenchido")
     static let verdaoVendedor = UIColor(named: "verdao-vendedor")
     static let textoCinza = UIColor(named: "texto-cinza")
+    static let badge = UIColor(named: "badge")
+    static let badgeTitle = UIColor(named: "badge-title")
     
     static func tipoProduto(tipo: TipoProduto) -> UIColor? {
         switch tipo {

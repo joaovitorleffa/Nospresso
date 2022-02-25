@@ -609,6 +609,7 @@
                                             <outlet property="intensidadeLabel" destination="PQh-uJ-Cna" id="fRv-O0-U21"/>
                                             <outlet property="nomeLabel" destination="Sy5-GV-9eo" id="Xe2-kh-0fx"/>
                                             <outlet property="precoLabel" destination="Tjz-LX-PMF" id="PDj-2x-v96"/>
+                                            <outlet property="sacolaButton" destination="SnL-Bm-x7H" id="ut9-hR-jI9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

@@ -56,6 +56,7 @@
 		2B9F024827C91B6D0054EAEC /* MaquinasPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024727C91B6D0054EAEC /* MaquinasPresenter.swift */; };
 		2B9F024E27C94D7C0054EAEC /* Estado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024D27C94D7C0054EAEC /* Estado.swift */; };
 		2B9F025027C958640054EAEC /* MaquinasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024F27C958640054EAEC /* MaquinasView.swift */; };
+		2B9F025227C96FD50054EAEC /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F025127C96FD50054EAEC /* Badge.swift */; };
 		2BBCF22A27AD5D97004F7DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */; };
 		2BBCF22C27AD5D97004F7DE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */; };
 		2BBCF23127AD5D97004F7DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCF22F27AD5D97004F7DE7 /* Main.storyboard */; };
@@ -164,6 +165,7 @@
 		2B9F024727C91B6D0054EAEC /* MaquinasPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaquinasPresenter.swift; sourceTree = "<group>"; };
 		2B9F024D27C94D7C0054EAEC /* Estado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estado.swift; sourceTree = "<group>"; };
 		2B9F024F27C958640054EAEC /* MaquinasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaquinasView.swift; sourceTree = "<group>"; };
+		2B9F025127C96FD50054EAEC /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		2BBCF22627AD5D97004F7DE7 /* Nospresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nospresso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -413,13 +415,13 @@
 		2BBCF22827AD5D97004F7DE7 /* Nospresso */ = {
 			isa = PBXGroup;
 			children = (
-				2B26023F27B2AE2500746775 /* Storyboard */,
-				2B7BEBF827B1BF870088CFE4 /* Servicos */,
-				2B87C4F727B144AD00F91DAD /* Extensoes */,
-				2BD9080A27AD928700A6E07A /* Telas */,
 				2BD907E827AD8DD100A6E07A /* Recursos */,
+				2B87C4F727B144AD00F91DAD /* Extensoes */,
 				2BBCF26027AD5E44004F7DE7 /* Models */,
+				2B7BEBF827B1BF870088CFE4 /* Servicos */,
 				2BBCF25927AD5DBC004F7DE7 /* API */,
+				2B26023F27B2AE2500746775 /* Storyboard */,
+				2BD9080A27AD928700A6E07A /* Telas */,
 				2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */,
 				2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */,
 				2BBCF23227AD5D99004F7DE7 /* Assets.xcassets */,
@@ -515,8 +517,8 @@
 		2BD9080A27AD928700A6E07A /* Telas */ = {
 			isa = PBXGroup;
 			children = (
-				2B9F024127C90B430054EAEC /* Maquinas */,
 				2BFE538A27B3E5840051B7DD /* Componentes */,
+				2B9F024127C90B430054EAEC /* Maquinas */,
 				2B34FED327B42BE100169803 /* ProdutosFavoritos */,
 				2B3965C427B2F01E0093CF85 /* Sacola */,
 				2B269B6D27B2DBAD00CA559C /* DetalhesProduto */,
@@ -541,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				2B3965C927B301710093CF85 /* Celulas */,
+				2B9F025127C96FD50054EAEC /* Badge.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				2B9F024327C90B630054EAEC /* MaquinasViewController.swift in Sources */,
 				2B87C50227B168CE00F91DAD /* DetalhesCafeViewController.swift in Sources */,
 				2B269B6F27B2DBCB00CA559C /* DetalhesProdutoViewController.swift in Sources */,
+				2B9F025227C96FD50054EAEC /* Badge.swift in Sources */,
 				2B87C4F627B142C800F91DAD /* UIImageView+Carregamento.swift in Sources */,
 				2BBCF22A27AD5D97004F7DE7 /* AppDelegate.swift in Sources */,
 				2B89113227ADBFFF00E9B473 /* CafeTableViewCell.swift in Sources */,

@@ -22,6 +22,7 @@ class FavoritosViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         presenter?.telaCarregou()
+        navigationController?.navigationBar.isHidden = true
     }
 
     func configurarTabela() {
