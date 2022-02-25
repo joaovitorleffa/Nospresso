@@ -9,15 +9,19 @@ import Foundation
 
 protocol CafesPresenterProtocolo {
     func telaCarregou()
+    func favoritar(cafe: Cafe) -> Bool
+    func estaFavoritado(cafe: Cafe) -> Bool
 }
 
 class CafesPresenter {
     private var api: APIProtocolo
+    private var favoritos: FavoritosProtocolo
     private weak var tela: CafesViewProtocolo?
     
-    init(api: APIProtocolo, tela: CafesViewProtocolo) {
+    init(api: APIProtocolo, tela: CafesViewProtocolo, favoritos: FavoritosProtocolo = Favoritos.instancia) {
         self.api = api
         self.tela = tela
+        self.favoritos = favoritos
     }
 }
 
@@ -28,5 +32,22 @@ extension CafesPresenter: CafesPresenterProtocolo {
         } falha: { [weak self] erro in
             self?.tela?.recebeu(erro: erro)
         }
+    }
+    
+    func favoritar(cafe: Cafe) -> Bool {
+        let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
+        
+        if (favoritos.estaFavoritado(favorito: produto)) {
+            favoritos.remover(favorito: produto)
+            return false
+        }
+        
+        favoritos.adicionar(favorito: produto)
+        return true
+    }
+    
+    func estaFavoritado(cafe: Cafe) -> Bool {
+        let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
+        return favoritos.estaFavoritado(favorito: produto)
     }
 }

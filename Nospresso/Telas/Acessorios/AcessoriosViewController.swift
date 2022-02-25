@@ -118,11 +118,3 @@ extension AcessoriosViewController: AcessoriosViewProtocolo {
         estado = .erro
     }
 }
-
-extension AcessoriosViewController {
-    enum Estado {
-        case carregando
-        case dadosProntos
-        case erro
-    }
-}

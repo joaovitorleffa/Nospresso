@@ -7,7 +7,14 @@
 
 import UIKit
 
+protocol CafeTableViewCellDelegateProtocol: AnyObject {
+    func favoritar(cafe: Cafe) -> Bool
+    func estaFavoritado(cafe: Cafe) -> Bool
+}
+
 class CafeTableViewCell: UITableViewCell {
+    var delegate: CafeTableViewCellDelegateProtocol?
+    
     @IBOutlet weak var capsulaImageView: UIImageView!
     @IBOutlet weak var intensidadeLabel: UILabel!
     @IBOutlet weak var nomeLabel: UILabel!
@@ -24,15 +31,10 @@ class CafeTableViewCell: UITableViewCell {
     
     @IBAction func toqueBotaoFavoritar(_ sender: UIButton) {
         if let cafe = cafe {
-            let cafeParaFavoritar = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
-            
-            if (Favoritos.instancia.estaFavoritado(favorito: cafeParaFavoritar)) {
-                Favoritos.instancia.remover(favorito: cafeParaFavoritar)
-            } else {
-                Favoritos.instancia.adicionar(favorito: cafeParaFavoritar)
+            let favoritou = delegate?.favoritar(cafe: cafe)
+            if let favoritou = favoritou {
+                configurarFavorito(favoritado: favoritou)
             }
-            
-            configurarFavorito(com: cafeParaFavoritar)
         }
     }
     
@@ -60,14 +62,23 @@ class CafeTableViewCell: UITableViewCell {
             intensidadeLabel.isHidden = true
         }
         
-        configurarFavorito(com: Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem))
+        let estaFavoritado = delegate?.estaFavoritado(cafe: cafe)
+        if let estaFavoritado = estaFavoritado {
+            configurarFavorito(favoritado: estaFavoritado)
+        }
     }
     
-    private func configurarFavorito(com cafeParaFavoritar: Produto) {
-        let imagem = Favoritos.instancia.estaFavoritado(favorito: cafeParaFavoritar)
-            ? UIImage(systemName: "heart.fill")?.withTintColor(.favoritoPreenchido ?? .red, renderingMode: .alwaysOriginal)
-            : UIImage(systemName: "heart")
-            
+    private func estadoFavoritado() {
+        let imagem = UIImage(systemName: "heart.fill")?.withTintColor(.favoritoPreenchido ?? .red, renderingMode: .alwaysOriginal)
         favoritarButton.setImage(imagem, for: .normal)
+    }
+    
+    private func estadoNaoFavoritado() {
+        let imagem = UIImage(systemName: "heart")
+        favoritarButton.setImage(imagem, for: .normal)
+    }
+    
+    private func configurarFavorito(favoritado: Bool) {
+        favoritado ? estadoFavoritado() : estadoNaoFavoritado()
     }
 }

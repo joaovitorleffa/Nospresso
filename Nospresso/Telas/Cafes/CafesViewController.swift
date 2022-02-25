@@ -13,9 +13,9 @@ class CafesViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var erroView: UIView!
     
-    var presenter: CafesPresenterProtocolo?
-    lazy var api = API()
     var capsulas: [Capsulas] = []
+    lazy var api = API()
+    lazy var presenter: CafesPresenterProtocolo = CafesPresenter(api: api, tela: self)
     
     var estado: Estado = .carregando {
         didSet {
@@ -29,7 +29,7 @@ class CafesViewController: UIViewController {
         super.viewDidLoad()
         presenter = CafesPresenter(api: api, tela: self)
         configurarTabela()
-        presenter?.telaCarregou()
+        presenter.telaCarregou()
     }
     
     // quando a view está prestes a exibir
@@ -44,23 +44,15 @@ class CafesViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-    private func configurarTabela() {
+    func configurarTabela() {
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-    private func configurarBarraDeNavegacao() {
+    func configurarBarraDeNavegacao() {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationController?.navigationBar.barTintColor = .cafes
         navigationController?.navigationBar.tintColor = .label
-    }
-}
-
-extension CafesViewController {
-    enum Estado {
-        case carregando
-        case dadosProntos
-        case erro
     }
 }
 
@@ -114,6 +106,7 @@ extension CafesViewController: UITableViewDataSource {
         let celula = tableView.dequeueReusableCell(withIdentifier: "cafe-celula", for: indexPath)
         
         if let celulaDeCafe = celula as? CafeTableViewCell {
+            celulaDeCafe.delegate = self
             celulaDeCafe.configura(com: capsulas[indexPath.section].cafes[indexPath.row])
         }
         
@@ -134,5 +127,15 @@ extension CafesViewController: CafesViewProtocolo {
         DispatchQueue.main.async {
             self.estado = .erro
         }
+    }
+}
+
+extension CafesViewController: CafeTableViewCellDelegateProtocol {
+    func favoritar(cafe: Cafe) -> Bool {
+        presenter.favoritar(cafe: cafe)
+    }
+    
+    func estaFavoritado(cafe: Cafe) -> Bool {
+        presenter.estaFavoritado(cafe: cafe)
     }
 }

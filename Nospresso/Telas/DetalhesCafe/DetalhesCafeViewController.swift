@@ -90,11 +90,3 @@ extension DetalhesCafeViewController {
         String(describing: DetalhesCafeViewController.self)
     }
 }
-
-extension DetalhesCafeViewController {
-    enum Estado {
-        case carregando
-        case dadosProntos
-        case erro
-    }
-}

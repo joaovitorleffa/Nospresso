@@ -51,6 +51,10 @@
 		2B87C50427B1699200F91DAD /* DetalhesCafePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C50327B1699200F91DAD /* DetalhesCafePresenter.swift */; };
 		2B87C50627B16B2B00F91DAD /* DetalhesCafeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B87C50527B16B2B00F91DAD /* DetalhesCafeView.swift */; };
 		2B89113227ADBFFF00E9B473 /* CafeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B89113127ADBFFF00E9B473 /* CafeTableViewCell.swift */; };
+		2B9F024327C90B630054EAEC /* MaquinasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024227C90B630054EAEC /* MaquinasViewController.swift */; };
+		2B9F024627C915060054EAEC /* MaquinaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024527C915060054EAEC /* MaquinaCollectionViewCell.swift */; };
+		2B9F024827C91B6D0054EAEC /* MaquinasPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024727C91B6D0054EAEC /* MaquinasPresenter.swift */; };
+		2B9F024E27C94D7C0054EAEC /* Estado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F024D27C94D7C0054EAEC /* Estado.swift */; };
 		2BBCF22A27AD5D97004F7DE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */; };
 		2BBCF22C27AD5D97004F7DE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */; };
 		2BBCF23127AD5D97004F7DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCF22F27AD5D97004F7DE7 /* Main.storyboard */; };
@@ -154,6 +158,10 @@
 		2B87C50327B1699200F91DAD /* DetalhesCafePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesCafePresenter.swift; sourceTree = "<group>"; };
 		2B87C50527B16B2B00F91DAD /* DetalhesCafeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesCafeView.swift; sourceTree = "<group>"; };
 		2B89113127ADBFFF00E9B473 /* CafeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeTableViewCell.swift; sourceTree = "<group>"; };
+		2B9F024227C90B630054EAEC /* MaquinasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaquinasViewController.swift; sourceTree = "<group>"; };
+		2B9F024527C915060054EAEC /* MaquinaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaquinaCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B9F024727C91B6D0054EAEC /* MaquinasPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaquinasPresenter.swift; sourceTree = "<group>"; };
+		2B9F024D27C94D7C0054EAEC /* Estado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estado.swift; sourceTree = "<group>"; };
 		2BBCF22627AD5D97004F7DE7 /* Nospresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nospresso.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBCF22927AD5D97004F7DE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BBCF22B27AD5D97004F7DE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -359,6 +367,24 @@
 			path = Celulas;
 			sourceTree = "<group>";
 		};
+		2B9F024127C90B430054EAEC /* Maquinas */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F024427C914D60054EAEC /* Celulas */,
+				2B9F024227C90B630054EAEC /* MaquinasViewController.swift */,
+				2B9F024727C91B6D0054EAEC /* MaquinasPresenter.swift */,
+			);
+			path = Maquinas;
+			sourceTree = "<group>";
+		};
+		2B9F024427C914D60054EAEC /* Celulas */ = {
+			isa = PBXGroup;
+			children = (
+				2B9F024527C915060054EAEC /* MaquinaCollectionViewCell.swift */,
+			);
+			path = Celulas;
+			sourceTree = "<group>";
+		};
 		2BBCF21D27AD5D97004F7DE7 = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +463,7 @@
 				2BBCF25A27AD5DD3004F7DE7 /* API.swift */,
 				2BBCF25C27AD5DDF004F7DE7 /* Endpoint.swift */,
 				2BBCF25E27AD5DF6004F7DE7 /* ErroRequisicao.swift */,
+				2B9F024D27C94D7C0054EAEC /* Estado.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -485,6 +512,7 @@
 		2BD9080A27AD928700A6E07A /* Telas */ = {
 			isa = PBXGroup;
 			children = (
+				2B9F024127C90B430054EAEC /* Maquinas */,
 				2BFE538A27B3E5840051B7DD /* Componentes */,
 				2B34FED327B42BE100169803 /* ProdutosFavoritos */,
 				2B3965C427B2F01E0093CF85 /* Sacola */,
@@ -794,6 +822,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B9F024327C90B630054EAEC /* MaquinasViewController.swift in Sources */,
 				2B87C50227B168CE00F91DAD /* DetalhesCafeViewController.swift in Sources */,
 				2B269B6F27B2DBCB00CA559C /* DetalhesAcessorioViewController.swift in Sources */,
 				2B87C4F627B142C800F91DAD /* UIImageView+Carregamento.swift in Sources */,
@@ -812,6 +841,9 @@
 				2BBCF25F27AD5DF6004F7DE7 /* ErroRequisicao.swift in Sources */,
 				2B87C50627B16B2B00F91DAD /* DetalhesCafeView.swift in Sources */,
 				2B07DC2727B2BB9C00EDEB7F /* AcessorioTableViewCell.swift in Sources */,
+				2B9F024E27C94D7C0054EAEC /* Estado.swift in Sources */,
+				2B9F024827C91B6D0054EAEC /* MaquinasPresenter.swift in Sources */,
+				2B9F024627C915060054EAEC /* MaquinaCollectionViewCell.swift in Sources */,
 				2BBCF25B27AD5DD3004F7DE7 /* API.swift in Sources */,
 				2B3965CF27B306960093CF85 /* Produto.swift in Sources */,
 				2BBCF22C27AD5D97004F7DE7 /* SceneDelegate.swift in Sources */,

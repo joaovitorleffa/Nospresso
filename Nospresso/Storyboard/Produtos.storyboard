@@ -7,6 +7,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -124,6 +125,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="cdZ-NY-hqh" appends="YES" id="zK5-GU-ex5"/>
+                                    <outletCollection property="gestureRecognizers" destination="x56-AJ-hLg" appends="YES" id="6GD-ao-dUB"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mM0-A3-HMp" userLabel="AcessoriosView">
@@ -193,6 +195,11 @@
                 <tapGestureRecognizer id="PVU-yD-AFW" userLabel="Toque Acessorios">
                     <connections>
                         <segue destination="suF-ph-lgQ" kind="show" id="ErQ-fX-T0r"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="x56-AJ-hLg">
+                    <connections>
+                        <segue destination="939-4p-q4V" kind="show" id="0yu-3t-zWs"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -629,6 +636,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Cafés" id="a7A-he-Mvg"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="XPQ-QJ-B54" id="ulq-f7-sh5"/>
                         <outlet property="erroView" destination="5Vp-cu-vgk" id="uoU-Zl-bGJ"/>
@@ -637,7 +645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLN-OV-RlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2013.0434782608697" y="77.678571428571431"/>
+            <point key="canvasLocation" x="2012" y="78"/>
         </scene>
         <!--Detalhes Cafe View Controller-->
         <scene sceneID="WyT-JQ-l0a">
@@ -833,7 +841,115 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rK4-eC-A74" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2853.6231884057975" y="77.678571428571431"/>
+            <point key="canvasLocation" x="2810" y="78"/>
+        </scene>
+        <!--Máquinas-->
+        <scene sceneID="Osq-hc-c0P">
+            <objects>
+                <viewController title="Máquinas" id="939-4p-q4V" customClass="MaquinasViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VUE-mi-weM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oDl-50-7T6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
+                                <color key="backgroundColor" name="fundo-cinza"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jrh-i6-Xrq">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="maquina-celula" id="hpm-tl-st8" customClass="MaquinaCollectionViewCell" customModule="Nospresso" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="230"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hq6-E8-U6Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="230"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="YT7-aO-7FJ">
+                                                    <rect key="frame" x="12" y="12" width="156" height="206"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inissia" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WgK-Du-Ad8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="156" height="27.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="maquina-inicio" translatesAutoresizingMaskIntoConstraints="NO" id="WnY-Cc-f5F">
+                                                            <rect key="frame" x="0.0" y="31.5" width="156" height="146"/>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="E7Z-He-Rh4">
+                                                            <rect key="frame" x="0.0" y="181.5" width="156" height="24.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 29,99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2a-js-UZb">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="24.5"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="22"/>
+                                                                    <color key="textColor" name="preco"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-t0-PCs" userLabel="Like Button">
+                                                                    <rect key="frame" x="134.5" y="2.5" width="21.5" height="19.5"/>
+                                                                    <color key="tintColor" name="texto-cinza"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" image="heart" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="toqueBotaoFavoritar:" destination="hpm-tl-st8" eventType="touchUpInside" id="1kw-1I-eer"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YT7-aO-7FJ" firstAttribute="top" secondItem="Hq6-E8-U6Z" secondAttribute="top" constant="12" id="VQq-n5-YOr"/>
+                                                <constraint firstItem="YT7-aO-7FJ" firstAttribute="leading" secondItem="Hq6-E8-U6Z" secondAttribute="leading" constant="12" id="Vmi-uo-X4V"/>
+                                                <constraint firstAttribute="trailing" secondItem="YT7-aO-7FJ" secondAttribute="trailing" constant="12" id="r9t-97-4Il"/>
+                                                <constraint firstAttribute="bottom" secondItem="YT7-aO-7FJ" secondAttribute="bottom" constant="12" id="tvq-zV-dhh"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="180" height="230"/>
+                                        <connections>
+                                            <outlet property="botaoFavoritar" destination="AM3-t0-PCs" id="7xp-wS-GxO"/>
+                                            <outlet property="imagem" destination="WnY-Cc-f5F" id="cwO-Tg-bgC"/>
+                                            <outlet property="nome" destination="WgK-Du-Ad8" id="06t-v3-nk1"/>
+                                            <outlet property="preco" destination="w2a-js-UZb" id="EP9-AU-eEy"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="cyf-6r-Ss6">
+                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
+                                <color key="color" name="maquinas"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qEC-OX-7pZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oDl-50-7T6" firstAttribute="centerY" secondItem="qEC-OX-7pZ" secondAttribute="centerY" constant="-2.5" id="0r8-LU-Aet"/>
+                            <constraint firstItem="oDl-50-7T6" firstAttribute="centerX" secondItem="qEC-OX-7pZ" secondAttribute="centerX" id="A1b-j4-3ke"/>
+                            <constraint firstItem="cyf-6r-Ss6" firstAttribute="centerX" secondItem="VUE-mi-weM" secondAttribute="centerX" id="AFu-pR-hcB"/>
+                            <constraint firstItem="cyf-6r-Ss6" firstAttribute="leading" secondItem="qEC-OX-7pZ" secondAttribute="leading" id="Vsh-wY-w2r"/>
+                            <constraint firstItem="cyf-6r-Ss6" firstAttribute="top" secondItem="qEC-OX-7pZ" secondAttribute="top" id="asF-kp-BLe"/>
+                            <constraint firstItem="oDl-50-7T6" firstAttribute="leading" secondItem="qEC-OX-7pZ" secondAttribute="leading" id="bHo-KC-7FH"/>
+                            <constraint firstItem="cyf-6r-Ss6" firstAttribute="centerY" secondItem="VUE-mi-weM" secondAttribute="centerY" id="xH8-CW-Dok"/>
+                            <constraint firstItem="oDl-50-7T6" firstAttribute="top" secondItem="qEC-OX-7pZ" secondAttribute="top" id="y01-BA-7rM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Máquinas" id="ce5-3C-pMp"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="cyf-6r-Ss6" id="vqy-6g-NPG"/>
+                        <outlet property="colecao" destination="oDl-50-7T6" id="CxM-Wg-i2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5v-Lx-i2t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011.594202898551" y="-708.48214285714278"/>
         </scene>
     </scenes>
     <resources>
@@ -849,6 +965,9 @@
         </namedColor>
         <namedColor name="cafes">
             <color red="0.92900002002716064" green="0.87099999189376831" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="fundo-cinza">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="maquinas">
             <color red="0.86274509803921573" green="0.72156862745098038" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
