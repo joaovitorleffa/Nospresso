@@ -35,7 +35,7 @@ extension MaquinasPresenter: MaquinasPresenterProtocolo {
     }
     
     func favoritar(maquina: Maquina) -> Bool {
-        let produto = Produto(nome: maquina.nome, tipo: .maquinas, preco: maquina.preco, imagem: maquina.imagem)
+        let produto = Produto(nome: maquina.nome, tipo: .maquinas, preco: maquina.preco, imagem: maquina.imagem, descricao: maquina.descricao)
         let estaFavoritado = favoritos.estaFavoritado(favorito: produto)
         
         if estaFavoritado == true {
@@ -48,7 +48,7 @@ extension MaquinasPresenter: MaquinasPresenterProtocolo {
     }
     
     func estaFavoritado(maquina: Maquina) -> Bool {
-        let produto = Produto(nome: maquina.nome, tipo: .maquinas, preco: maquina.preco, imagem: maquina.imagem)
+        let produto = Produto(nome: maquina.nome, tipo: .maquinas, preco: maquina.preco, imagem: maquina.imagem, descricao: maquina.descricao)
         return favoritos.estaFavoritado(favorito: produto)
     }
 }

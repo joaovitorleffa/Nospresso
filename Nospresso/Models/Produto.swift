@@ -12,6 +12,7 @@ struct Produto: Codable, Hashable {
     let tipo: TipoProduto
     let preco: Double
     let imagem: String
+    let descricao: String?
 }
 
 enum TipoProduto: Codable, Hashable {

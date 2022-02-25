@@ -15,7 +15,7 @@ class AcessorioTableViewCell: UITableViewCell {
     
     @IBAction func toqueBotaoFavoritar(_ sender: UIButton) {
         if let acessorio = acessorio {
-            let acessorioParaFavoritar = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem)
+            let acessorioParaFavoritar = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem, descricao: acessorio.descricao)
             
             if (Favoritos.instancia.estaFavoritado(favorito: acessorioParaFavoritar)) {
                 Favoritos.instancia.remover(favorito: acessorioParaFavoritar)
@@ -29,7 +29,7 @@ class AcessorioTableViewCell: UITableViewCell {
     
     @IBAction func toqueBotaoAdicionarASacola(_ sender: UIButton) {
         if let acessorio = acessorio {
-            let produto = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem)
+            let produto = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem, descricao: acessorio.descricao)
             Sacola.instancia.adicionar(produto: produto)
         }
     }
@@ -39,7 +39,7 @@ class AcessorioTableViewCell: UITableViewCell {
     func configurar(com acessorio: Acessorio) {
         self.acessorio = acessorio
         popular(com: acessorio)
-        configurarFavorito(com: Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem))
+        configurarFavorito(com: Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem, descricao: acessorio.descricao))
     }
     
     private func popular(com acessorio: Acessorio) {

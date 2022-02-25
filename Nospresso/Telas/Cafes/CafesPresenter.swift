@@ -35,7 +35,7 @@ extension CafesPresenter: CafesPresenterProtocolo {
     }
     
     func favoritar(cafe: Cafe) -> Bool {
-        let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
+        let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem, descricao: cafe.descricao)
         
         if (favoritos.estaFavoritado(favorito: produto)) {
             favoritos.remover(favorito: produto)
@@ -47,7 +47,7 @@ extension CafesPresenter: CafesPresenterProtocolo {
     }
     
     func estaFavoritado(cafe: Cafe) -> Bool {
-        let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
+        let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem, descricao: cafe.descricao)
         return favoritos.estaFavoritado(favorito: produto)
     }
 }

@@ -18,7 +18,7 @@ class DetalhesAcessorioViewMock {
     }
 }
 
-extension DetalhesAcessorioViewMock: DetalhesAcessorioViewProtocolo {
+extension DetalhesAcessorioViewMock: DetalhesProdutoViewProtocolo {
     func atualizarFavorito(estaFavoritado: Bool) {
         acessorioEstaFavoriado = estaFavoritado
     }

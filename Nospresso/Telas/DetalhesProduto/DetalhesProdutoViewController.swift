@@ -1,5 +1,5 @@
 //
-//  DetalhesAcessorioViewController.swift
+//  DetalhesProdutoViewController.swift
 //  Nospresso
 //
 //  Created by joaovitor on 08/02/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetalhesAcessorioViewController: UIViewController {
+class DetalhesProdutoViewController: UIViewController {
     @IBOutlet weak var acessorioImageView: UIImageView!
     @IBOutlet weak var descricaoLabel: UILabel!
     @IBOutlet weak var precoLabel: UILabel!
@@ -15,7 +15,9 @@ class DetalhesAcessorioViewController: UIViewController {
     @IBOutlet weak var favoritoButton: UIButton!
     
     @IBAction func toqueBotaoFavoritar(_ sender: UIButton) {
-        presenter?.favoritar()
+        if let produto = produto {
+            presenter.favoritar(produto)
+        }
     }
     
     @IBAction func toqueBotaoFechar(_ sender: UIButton) {
@@ -23,11 +25,13 @@ class DetalhesAcessorioViewController: UIViewController {
     }
     
     @IBAction func adicionarASacola(_ sender: UIButton) {
-        presenter?.adicionarASacola()
+        if let produto = produto {
+            presenter.adicionarASacola(produto)
+        }
     }
     
-    var item: Acessorio?
-    var presenter: DetalhesAcessorioPresenterProtocolo?
+    var produto: Produto?
+    lazy var presenter: DetalhesProdutoPresenterProtocolo = DetalhesProdutoPresenter(tela: self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +39,7 @@ class DetalhesAcessorioViewController: UIViewController {
     }
     
     func configurarDetalhes() {
-        guard let dados = item else { return }
+        guard let dados = produto else { return }
         
         acessorioImageView.carregarImagem(da: dados.imagem)
         nomeLabel.text = dados.nome
@@ -47,7 +51,7 @@ class DetalhesAcessorioViewController: UIViewController {
     }
 }
 
-extension DetalhesAcessorioViewController: DetalhesAcessorioViewProtocolo {
+extension DetalhesProdutoViewController: DetalhesProdutoViewProtocolo {
     func atualizarFavorito(estaFavoritado: Bool) {
         let imagem = estaFavoritado
             ? UIImage(systemName: "heart.fill")?.withTintColor(.favoritoPreenchido ?? .red, renderingMode: .alwaysOriginal)
@@ -65,8 +69,8 @@ extension DetalhesAcessorioViewController: DetalhesAcessorioViewProtocolo {
     }
 }
 
-extension DetalhesAcessorioViewController {
+extension DetalhesProdutoViewController {
     static var identificador: String {
-        String(describing: DetalhesAcessorioViewController.self)
+        String(describing: self)
     }
 }

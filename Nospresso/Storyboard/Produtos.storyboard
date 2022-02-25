@@ -362,10 +362,10 @@
             </objects>
             <point key="canvasLocation" x="1162" y="806"/>
         </scene>
-        <!--Detalhes Acessorio View Controller-->
+        <!--Detalhes Produto View Controller-->
         <scene sceneID="xKx-nl-rk7">
             <objects>
-                <viewController storyboardIdentifier="DetalhesAcessorioViewController" id="gsB-Ih-AXY" customClass="DetalhesAcessorioViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetalhesProdutoViewController" id="gsB-Ih-AXY" customClass="DetalhesProdutoViewController" customModule="Nospresso" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NyL-QP-NQ5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

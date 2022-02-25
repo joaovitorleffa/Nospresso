@@ -17,7 +17,7 @@ class DetalhesAcessorioPresenterTests: XCTestCase {
     var favoritosMock = FavoritosMock()
     var sacolaMock = SacolaMock()
     
-    lazy var presenter = DetalhesAcessorioPresenter(acessorio: acessorio, sacola: sacolaMock, tela: tela, favoritos: favoritosMock)
+    lazy var presenter = DetalhesProdutoPresenter(acessorio: acessorio, sacola: sacolaMock, tela: tela, favoritos: favoritosMock)
     
     func test_favoritarAcessorio() {
         presenter.favoritar()

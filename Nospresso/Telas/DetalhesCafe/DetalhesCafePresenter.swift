@@ -26,7 +26,7 @@ class DetalhesCafePresenter {
         self.api = api
         self.cafe = cafe
         self.favoritos = favoritos
-        self.cafeParaFavoritar = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
+        self.cafeParaFavoritar = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem, descricao: cafe.descricao)
         self.tela = tela
         self.sacola = sacola
     }
@@ -48,7 +48,7 @@ extension DetalhesCafePresenter: DetalhesCafePresenterProtocolo {
     }
     
     func adicionouASacola() {
-        let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
+        let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem, descricao: cafe.descricao)
         sacola.adicionar(produto: produto)
         tela?.cafeAdicionadoASacola(produto: produto)
     }

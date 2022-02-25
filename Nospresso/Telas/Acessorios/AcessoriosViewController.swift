@@ -72,14 +72,18 @@ extension AcessoriosViewController: UITableViewDelegate {
         
         let item = acessorios[indexPath.section].itens[indexPath.row]
         
+        let produto = Produto(nome: item.nome, tipo: .acessorios, preco: item.preco, imagem: item.imagem, descricao: item.descricao)
+        
         guard let controlador = storyboard
-                .instantiateViewController(withIdentifier: DetalhesAcessorioViewController.identificador)
-                    as? DetalhesAcessorioViewController else { return }
+                .instantiateViewController(withIdentifier: DetalhesProdutoViewController.identificador)
+                    as? DetalhesProdutoViewController else { return }
         
-        let presenter = DetalhesAcessorioPresenter(acessorio: item, tela: controlador)
+        controlador.produto = produto
         
-        controlador.item = item
-        controlador.presenter = presenter
+//        let presenter = DetalhesProdutoPresenter(produto: produto, tela: controlador)
+//
+//        controlador.produto = produto
+//        controlador.presenter = presenter
         
         present(controlador, animated: true)
     }

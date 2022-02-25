@@ -24,7 +24,7 @@ class CafeTableViewCell: UITableViewCell {
     
     @IBAction func toqueBotaoAdicionarASacola(_ sender: UIButton) {
         if let cafe = cafe {
-            let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem)
+            let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem, descricao: cafe.descricao)
             Sacola.instancia.adicionar(produto: produto)
         }
     }
