@@ -131,6 +131,14 @@ extension CafesViewController: CafesViewProtocolo {
 }
 
 extension CafesViewController: CafeTableViewCellDelegateProtocol {
+    func quantidadeNaSacola(cafe: Cafe) -> Int {
+        presenter.quantidadeNaSacola(cafe: cafe)
+    }
+    
+    func adicionarASacola(cafe: Cafe) {
+        presenter.adicionarASacola(cafe: cafe)
+    }
+    
     func favoritar(cafe: Cafe) -> Bool {
         presenter.favoritar(cafe: cafe)
     }

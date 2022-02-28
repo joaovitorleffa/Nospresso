@@ -11,6 +11,7 @@ protocol SacolaProtocolo {
     func adicionar(produto: Produto)
     func remover(produto: Produto)
     func buscar() -> [Produto]
+    func quantidade(por produto: Produto) -> Int
 }
 
 class Sacola {
@@ -45,6 +46,10 @@ extension Sacola: SacolaProtocolo {
     
     func buscar() -> [Produto] {
         return Array(produtos)
+    }
+    
+    func quantidade(por produto: Produto) -> Int {
+        produtos.filter { $0 == produto }.count
     }
 }
 

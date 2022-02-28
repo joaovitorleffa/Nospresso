@@ -324,6 +324,7 @@
                                             <outlet property="favoritarButton" destination="Gze-Si-m4K" id="oOg-gp-LbN"/>
                                             <outlet property="nomeLabel" destination="gd0-86-YEu" id="Os2-8z-jVp"/>
                                             <outlet property="precoLabel" destination="Cb8-cx-2hx" id="gqb-0N-BHk"/>
+                                            <outlet property="sacolaButton" destination="zhN-5z-afe" id="Dpd-GG-4pp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

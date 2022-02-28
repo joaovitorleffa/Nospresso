@@ -12,9 +12,10 @@ class AcessoriosViewController: UIViewController {
     @IBOutlet weak var erroView: UIView!
     @IBOutlet weak var tableView: UITableView!
     
-    var presenter: AcessoriosPresenterProtocolo?
+    
     var acessorios: [AcessorioCategoria] = []
     lazy var api = API()
+    lazy var presenter: AcessoriosPresenterProtocolo = AcessoriosPresenter(api: api, tela: self)
     
     var estado: Estado = .carregando {
         didSet {
@@ -27,7 +28,7 @@ class AcessoriosViewController: UIViewController {
     override func viewDidLoad() {
         presenter = AcessoriosPresenter(api: api, tela: self)
         configurarTabela()
-        presenter?.telaCarregou()
+        presenter.telaCarregou()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -95,6 +96,7 @@ extension AcessoriosViewController: UITableViewDataSource {
         let celula = tableView.dequeueReusableCell(withIdentifier: AcessorioTableViewCell.indetificador, for: indexPath)
         
         if let celulaDeAcessorio = celula as? AcessorioTableViewCell {
+            celulaDeAcessorio.delegate = self
             celulaDeAcessorio.configurar(com: acessorios[indexPath.section].itens[indexPath.row])
         }
         
@@ -113,5 +115,23 @@ extension AcessoriosViewController: AcessoriosViewProtocolo {
     
     func recebeu(erro: ErroRequisicao) {
         estado = .erro
+    }
+}
+
+extension AcessoriosViewController: AcessorioTableViewCellDelegateProtocol {
+    func favoritar(acessorio: Acessorio) -> Bool {
+        presenter.favoritar(acessorio: acessorio)
+    }
+    
+    func estaFavoritado(acessorio: Acessorio) -> Bool {
+        presenter.estaFavoritado(acessorio: acessorio)
+    }
+    
+    func quantidadeNaSacola(acessorio: Acessorio) -> Int {
+        presenter.quantidadeNaSacola(acessorio: acessorio)
+    }
+    
+    func adicionarASacola(acessorio: Acessorio) {
+        presenter.adicionarASacola(acessorio: acessorio)
     }
 }

@@ -10,10 +10,13 @@ import UIKit
 protocol CafeTableViewCellDelegateProtocol: AnyObject {
     func favoritar(cafe: Cafe) -> Bool
     func estaFavoritado(cafe: Cafe) -> Bool
+    func quantidadeNaSacola(cafe: Cafe) -> Int
+    func adicionarASacola(cafe: Cafe)
 }
 
 class CafeTableViewCell: UITableViewCell {
     var delegate: CafeTableViewCellDelegateProtocol?
+    private var hub: BadgeHub?
     
     @IBOutlet weak var capsulaImageView: UIImageView!
     @IBOutlet weak var intensidadeLabel: UILabel!
@@ -25,8 +28,9 @@ class CafeTableViewCell: UITableViewCell {
     
     @IBAction func toqueBotaoAdicionarASacola(_ sender: UIButton) {
         if let cafe = cafe {
-            let produto = Produto(nome: cafe.nome, tipo: .cafes, preco: cafe.preco, imagem: cafe.imagem, descricao: cafe.descricao)
-            Sacola.instancia.adicionar(produto: produto)
+            delegate?.adicionarASacola(cafe: cafe)
+            let quantidadeNaSacola = delegate?.quantidadeNaSacola(cafe: cafe)
+            hub!.setCount(quantidadeNaSacola!)
         }
     }
     
@@ -56,7 +60,14 @@ class CafeTableViewCell: UITableViewCell {
         nomeLabel.text = cafe.nome
         descricaoLabel.text = cafe.descricao.capitalized
         precoLabel.text = cafe.preco.comoDinheiro
-        sacolaButton.addBage()
+    
+        hub = BadgeHub(view: sacolaButton)
+        hub?.setCircleColor(.badge, label: .badgeTitle)
+        
+        let quantidadeNaSacola = delegate?.quantidadeNaSacola(cafe: cafe) ?? 0
+        if quantidadeNaSacola > 0 && hub?.count == 0 {
+            hub?.setCount(quantidadeNaSacola)
+        }
         
         if let intensidade = cafe.intensidade {
             intensidadeLabel.text = "Intesindade \(intensidade)"

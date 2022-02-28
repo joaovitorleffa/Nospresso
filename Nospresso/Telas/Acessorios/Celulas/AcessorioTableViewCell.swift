@@ -7,30 +7,37 @@
 
 import UIKit
 
+protocol AcessorioTableViewCellDelegateProtocol: AnyObject {
+    func favoritar(acessorio: Acessorio) -> Bool
+    func estaFavoritado(acessorio: Acessorio) -> Bool
+    func quantidadeNaSacola(acessorio: Acessorio) -> Int
+    func adicionarASacola(acessorio: Acessorio)
+}
+
 class AcessorioTableViewCell: UITableViewCell {
+    var delegate: AcessorioTableViewCellDelegateProtocol?
+    private var hub: BadgeHub?
+    
     @IBOutlet weak var acessorioImageView: UIImageView!
     @IBOutlet weak var nomeLabel: UILabel!
     @IBOutlet weak var precoLabel: UILabel!
     @IBOutlet weak var favoritarButton: UIButton!
+    @IBOutlet weak var sacolaButton: UIButton!
     
     @IBAction func toqueBotaoFavoritar(_ sender: UIButton) {
         if let acessorio = acessorio {
-            let acessorioParaFavoritar = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem, descricao: acessorio.descricao)
-            
-            if (Favoritos.instancia.estaFavoritado(favorito: acessorioParaFavoritar)) {
-                Favoritos.instancia.remover(favorito: acessorioParaFavoritar)
-            } else {
-                Favoritos.instancia.adicionar(favorito: acessorioParaFavoritar)
+            let favoritou = delegate?.favoritar(acessorio: acessorio)
+            if let favoritou = favoritou {
+                configurarFavorito(favoritado: favoritou)
             }
-            
-            configurarFavorito(com: acessorioParaFavoritar)
         }
     }
     
     @IBAction func toqueBotaoAdicionarASacola(_ sender: UIButton) {
         if let acessorio = acessorio {
-            let produto = Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem, descricao: acessorio.descricao)
-            Sacola.instancia.adicionar(produto: produto)
+            delegate?.adicionarASacola(acessorio: acessorio)
+            let quantidadeNaSacola = delegate?.quantidadeNaSacola(acessorio: acessorio)
+            hub!.setCount(quantidadeNaSacola!)
         }
     }
     
@@ -39,7 +46,19 @@ class AcessorioTableViewCell: UITableViewCell {
     func configurar(com acessorio: Acessorio) {
         self.acessorio = acessorio
         popular(com: acessorio)
-        configurarFavorito(com: Produto(nome: acessorio.nome, tipo: .acessorios, preco: acessorio.preco, imagem: acessorio.imagem, descricao: acessorio.descricao))
+        
+        hub = BadgeHub(view: sacolaButton)
+        hub?.setCircleColor(.badge, label: .badgeTitle)
+        
+        let quantidadeNaSacola = delegate?.quantidadeNaSacola(acessorio: acessorio) ?? 0
+        if quantidadeNaSacola > 0 && hub?.count == 0 {
+            hub?.setCount(quantidadeNaSacola)
+        }
+        
+        let estaFavoritado = delegate?.estaFavoritado(acessorio: acessorio)
+        if let estaFavoritado = estaFavoritado {
+            configurarFavorito(favoritado: estaFavoritado)
+        }
     }
     
     private func popular(com acessorio: Acessorio) {
@@ -48,12 +67,18 @@ class AcessorioTableViewCell: UITableViewCell {
         precoLabel.text = acessorio.preco.comoDinheiro
     }
     
-    private func configurarFavorito(com cafeParaFavoritar: Produto) {
-        let imagem = Favoritos.instancia.estaFavoritado(favorito: cafeParaFavoritar)
-            ? UIImage(systemName: "heart.fill")?.withTintColor(.favoritoPreenchido ?? .red, renderingMode: .alwaysOriginal)
-            : UIImage(systemName: "heart")
-            
+    private func estadoFavoritado() {
+        let imagem = UIImage(systemName: "heart.fill")?.withTintColor(.favoritoPreenchido ?? .red, renderingMode: .alwaysOriginal)
         favoritarButton.setImage(imagem, for: .normal)
+    }
+    
+    private func estadoNaoFavoritado() {
+        let imagem = UIImage(systemName: "heart")
+        favoritarButton.setImage(imagem, for: .normal)
+    }
+    
+    private func configurarFavorito(favoritado: Bool) {
+        favoritado ? estadoFavoritado() : estadoNaoFavoritado()
     }
 }
 
