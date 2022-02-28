@@ -13,6 +13,10 @@ class SacolaMock {
 }
 
 extension SacolaMock: SacolaProtocolo {
+    func quantidade(por produto: Produto) -> Int {
+        produtos.filter { $0 == produto }.count
+    }
+    
     func adicionar(produto: Produto) {
         produtos.insert(produto)
     }

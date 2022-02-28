@@ -20,7 +20,7 @@ class DetalhesCafePresenterTests: XCTestCase {
                           torrefacao:nil,
                           perfilAromatico: nil)
     
-    let cafeProduto = Produto(nome: "Café com leite", tipo: .cafes, preco: 2.99, imagem: "whatever")
+    let cafeProduto = Produto(nome: "Café com leite", tipo: .cafes, preco: 2.99, imagem: "whatever", descricao: "Café com leite")
     
     lazy var apiMock = APIMock(sucesso: cafe)
     

@@ -9,7 +9,7 @@ import XCTest
 @testable import Nospresso
 
 class FavoritosPresenterTests: XCTestCase {
-    let produto = Produto(nome: "Xícara", tipo: .acessorios, preco: 9.90, imagem: "whatever")
+    let produto = Produto(nome: "Xícara", tipo: .acessorios, preco: 9.90, imagem: "whatever", descricao: nil)
     
     var tela = FavoritosViewMock()
     var favoritosMock = FavoritosMock()
